@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profile</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <div class="nav">
+        <div class="nav__logo">
+            <img src="./images/linkedin-512.png">
+        </div>
+        <div class="nav__search">
+            <i class="fas fa-search"></i>
+            <input class="search_box " placeholder="  Search">
+        </div>
+        <ul class="nav__menu">
+            <li class="menu__item">
+                <a class="item__link">
+                    <div>
+                        <i class="fas fa-home"></i>
+                        Home
+                    </div>
+                </a>
+            </li>
+            <li class="menu__item">
+                <a class="item__link">
+                    <div>
+                        <i class="fas fa-user-friends"></i>
+                        My Network
+                    </div>
+                </a>
+            </li>
+            <li class="menu__item">
+                <a class="item__link">
+                    <div>
+                        <i class="fas fa-briefcase"></i>
+                        Jobs
+                    </div>
+                </a>
+            </li>
+            <li class="menu__item">
+                <a class="item__link">
+                    <div>
+                        <i class="far fa-comments"></i>
+                        Messaging
+                    </div>
+                </a>
+            </li>
+            <li class="menu__item">
+                <a class="item__link">
+                    <div>
+                        <i class="far fa-bell"></i>
+                        Notifications
+                    </div>
+                </a>
+            </li>
+            <li class="menu__item border">
+                <a class="item__link">
+                    <!-- <div class="image"></div> -->
+                    <img class="image" src="./images/user.jpg">
+                    <div class="image__border">
+                        Me <span>&blacktriangledown; </span>
+                    </div>
+                </a>
+            </li>
+            <li class="menu__item">
+                <a class="item__link">
+                    <div>
+                        <i class="fas fa-th"></i>
+                        Work <span> &blacktriangledown;</span>
+                        <!-- <i class="fas fa-caret-down arrow"></i> -->
+                    </div>
+                </a>
+            </li>
+
+        </ul>
+    </div>
+ 
+    <!-- profile -->
+    <!-- <div class="profile">
+        <div class="profile__main">
+            <div class="cover">
+                cover
+            </div>
+            <div class="photo">
+                photo
+            </div>
+            <div>
+                data
+            </div>
+        </div>
+        <div class="profile__aside">
+            holla
+            <button class="btn btn-danger">bootstrab</button>
+        </div>
+    </div> -->
+    
+
+    <!--ayyaaaa-->
+   
+    <div class="profile">
+        <div class="profile__pictures">
+            <div class="profile__pictures__background">
+                <img class="profile__pictures__background"
+                 alt="cover" src="./images/download.jpg">
+            </div>
+            <img alt="profile" class="profile__pictures__photo" src="./images/one.png">    
+        </div>
+    <div class="profile__container">
+    <div class="profile__container__controls" >
+       <button class="profile__container__controls__addsection" >
+        <!-- <span>Add Profile Section</span> -->
+        Add Profile Section
+        <span><i >&blacktriangledown;</i></span>
+       </button>
+        <button type="button" class="profile__container__controls__morebtn">More...</button>
+        <div class="profile__container__controls__editebtn">
+            <span><i class="fas fa-pencil-alt edit_pen"></i></span>
+        </div>
+    </div>
+    <div class="profile__container__persondetails ">
+        <h3>Aya Rabea</h3>
+        <h5>Front-End Developer</h5>
+    <div class="profile__container__persondetails__contactInfo">
+     <h6>Alexandria</h6>
+     <a href="#">Contact Info</a>
+    </div>
+</div>
+    </div>
+    <div class="profile__dropdown hidden">
+        <ul>
+            <li><a href="#">Intro</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Featured</a></li>
+            <li><a href="#">Skill</a></li>
+            <li><a href="#">background</a></li>
+
+        </ul>
+    </div>
+     <!--About section--> 
+   <div class="profile__about">
+       <div class="profile__about__header">
+        <h4 class="h4">About</h4>
+        <div class=" profile__about__header__btn  profile__container__controls__editebtn">
+         <span><i class="fas fa-pencil-alt edit_pen"></i></span>
+         </div>
+       </div>
+     <div class="profile__about__content">
+        <p>developer</p>
+     </div>
+   </div>
+   <!--here add_form_component-->
+   <div class="profile__editeAbout hidden">
+   <div class="profile__editeAbout__editeContainer">
+       <div  class=" profile__editeAbout__editeContainer__header">
+        <h5 class="h5">Edite about</h5>
+        <span  class=" profile__editeAbout__editeContainer__header__icon"
+         ><i class=" i fa fa-window-close" aria-hidden="true"></i></span>
+       </div>
+       <hr>
+       <div class="profile__editeAbout__editeContainer__body">
+           <form>
+               <label>Summary</label>
+               <textarea placeholder="Enter Your About" 
+               class="profile__editeAbout__editeContainer__body__text"></textarea>
+               <hr>
+               <div>
+                   <button class="profile__editeAbout__editeContainer__body__button">Save</button>
+               </div>
+            </form>
+       </div>
+       
+       
+   </div>
+   </div>
+    <!--end of add_form_component -->
+
+    <!-- skill section-->
+    <div class="profile__about ">
+      <div class="profile__about__header">
+       <h6 class="h4">Skills &Endorsements</h6>
+       <div class="skill__edite">
+        <button class="skill__edite__btn" >Add a new skill</button>
+        <div class=" profile__container__controls__editebtn skill__edite__icon">
+         <span><i class="fas fa-pencil-alt edit_pen"></i></span>
+         </div>
+         </div>
+      </div>
+    <div class="profile__about__content skill__content">
+       <p>Adobe Photoshop</p>
+       <hr>
+    </div>
+  </div>
+  <!--here add_form_component for skill-->
+  <div class="profile__editeAbout hidden">
+  <div class="profile__editeAbout__editeContainer">
+      <div  class=" profile__editeAbout__editeContainer__header">
+       <h5 class="h5">Add Skills</h5>
+       <span  class=" profile__editeAbout__editeContainer__header__icon">
+        <i class=" i fa fa-window-close" aria-hidden="true"></i></span>
+      </div>
+      <hr>
+      <div class="profile__editeAbout__editeContainer__body">
+      <div class="skill__search ">
+      <form>
+     <!-- <span class="fa fa-search form-control-feedback"></span> -->
+     <input placeholder="Skill (ex:Data Anaysis)" type="text" class="skill__search__input"  list="skillName" >
+    <datalist class="skill__search__options " id="skillName">
+      <option value=" Adobe Photoshop">
+      <option value="Drawing">
+      <option value="Develope">
+    </datalist>
+    <div class="skill__search__data">
+      <p class="para">Photoshop</p>
+      <p class="para">Photoshop</p>
+    </div>
+    <div class="skill__search__submit">
+      <hr>
+        <button class="profile__editeAbout__editeContainer__body__button">Add</button>
+    </div>
+  </form>
+       </div>
+        <!---->
+      </div>
+    
+  </div>
+  </div>
+  <!--edite skill-->
+  <div class="profile__editeAbout hidden">
+    <div class="profile__editeAbout__editeContainer">
+        <div  class=" profile__editeAbout__editeContainer__header">
+         <h5 class="h5">Edite skill</h5>
+         <span  class=" profile__editeAbout__editeContainer__header__icon"
+          ><i class=" i fa fa-window-close" aria-hidden="true"></i></span>
+        </div>
+        <hr>
+        <div class="profile__editeAbout__editeContainer__body">
+          <div class="top-skill">
+            <p>Top Skills</p>
+          </div>
+          <hr style="margin-top:0.5px;">
+          <div>
+            <div class="edite-list">
+             <div class="edite-list__item">
+               <p>Photoshop</p>
+               <span><i class=" i fa fa-trash" aria-hidden="true"></i></span>
+            </div> 
+              <hr style="margin-top:0px ;">
+            </div>
+            
+          </div>
+        
+           <div class="saveEdite">
+            <hr>
+                    <button class="profile__editeAbout__editeContainer__body__button">Save</button>
+                </div>
+        </div>  
+    </div>
+    </div>
+
+
+
+  <!--end of skill-->
+    
+   <!-- iterest section-->
+        <div class="profile__interest">
+
+        </div>
+
+
+
+
+
+
+   <!--section aside-->
+   <div class="profile__aside">
+       <div class="profile__aside__picture">
+       <img src="./images/man.jpg">
+    </div>
+    <hr>
+    <div class="profile__aside__videos" >
+
+    </div>
+
+   </div>
+
+    </div>
+
+<!-- /// -->
+
+</body>
+
+</html>

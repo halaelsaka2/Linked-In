@@ -1,0 +1,35 @@
+.newPostContainer {
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: white;
+  &__listIcons {
+    padding: 0rem;
+    margin: 0rem;
+    display: flex;
+    // align-items: center;
+    list-style-type: none;
+
+    &__icon {
+      padding: 1rem;
+      border: 1px solid #d9d9d9;
+    }
+  }
+  &__writeArtical {
+    a{
+      padding: 0.3rem;
+      color: $primary-blue;
+
+    }
+    padding: 0.5rem;
+    color: $fourthly-gray;
+    width: 100%;
+    border: 1px solid #d9d9d9;
+  }
+}
+.writeIcon {
+  padding-left:1rem;
+  color: $fifthly-gray;
+  width: 15rem;
+}

@@ -1,0 +1,64 @@
+.writePost{
+    background-color: #FFF;
+    &__header{
+
+        &__content{
+            background-color: #0097B2;
+            color: #FFF;
+            padding: 10px;
+            margin: 0;
+        }
+        &__image{
+            display: flex;
+
+            background-color: #FFF;
+            border-radius:  5px 5px 0 0;
+
+            img{
+                border-radius: 50%;
+                // position: relative;
+                // top: 20px;
+                border: 3px solid #FFF;
+                width: 1.9rem;
+                height: 2rem;
+                margin: 5px;
+            }
+            &__username{
+                margin: 10px;
+            }
+
+        }
+        &__username{
+
+        }
+    }
+
+    &__content{
+        margin: 0rem;
+        
+        textarea{
+            margin: 0rem;
+            border: none;
+            // padding: 0rem;
+        }
+        &__list{
+            background-color: #FFF;
+            margin: 0;
+            padding: 0rem;
+           
+            &__listIcons{
+                // padding: 0rem;
+                margin: 0rem;
+                display: flex;
+                // align-items: center;
+                list-style-type: none;
+                &__icon{
+                    
+                    margin: 5px;
+                    padding: 5px;
+                    // border: 1px solid #d9d9d9;
+                }
+        }
+    }
+    }
+}

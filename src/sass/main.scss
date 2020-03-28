@@ -1,0 +1,62 @@
+@import url("//node_modules/@fortawesome/fontawesome-free/css/all.min.css");
+@import url("//node_modules/bootstrap/dist/css/bootstrap.min.css");
+    //abstracts
+@import
+  'abstracts/variables',
+  'abstracts/functions',
+  'abstracts/mixins',
+  'abstracts/placeholders';
+
+    //Vendors
+@import
+  'vendors/bootstrap';
+
+
+   //base
+@import
+  'base/reset',
+  'base/typography',
+  'base/utilities';
+
+
+
+  //layout
+@import
+  'layout/navigation',
+  'layout/header',
+  'layout/footer';
+
+
+   //component
+@import
+    'components/editeForm',
+    'components/edit-info',
+    'components/add_form',
+    'components/newPostContainer',
+    'components/buttons',
+    'components/card',
+    'components/add-section-button',
+    'components/save-button',
+    'components/more-button',
+    'components/pen-button',
+    'components/buttons',
+    // 'components/profile',
+    'components/formpost',
+    'components/buttons';
+
+
+    //pages
+@import
+    'pages/contactus',
+    'pages/home',
+    'pages/profile';
+ 
+
+    //themes
+
+
+
+
+
+
+

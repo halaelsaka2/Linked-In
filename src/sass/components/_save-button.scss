@@ -1,0 +1,19 @@
+.profile__editeAbout__editeContainer__body__button{
+    width:50px;
+    height:38px;
+    justify-content: center;
+    align-self: flex-end;
+    padding: 5px;
+    border-style: none;
+    margin-left: 91%;
+    margin-top:-8px;
+    background-color: rgb(12, 127, 189);
+    color:white;
+    display:relative;
+    &:hover{
+        background-color: rgb(27, 92, 129);
+        cursor: pointer;
+        }
+
+
+}

@@ -1,0 +1,16 @@
+.footer{
+    position: sticky;
+    top:0;
+    &__linksList{
+        width: 80%;
+        list-style-type:none;
+        display: flex;
+        flex-wrap: wrap;
+        margin-left:2rem;
+        padding:0rem;
+        &__link{
+            color: $secondary-gray;
+            margin-left: 1rem;
+        }
+    }
+}

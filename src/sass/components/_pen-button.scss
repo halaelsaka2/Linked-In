@@ -1,0 +1,19 @@
+.profile__container__controls__editebtn{
+//margin:5px;
+width: 40px;
+height: 40px;
+border-radius: 50%;
+justify-content: center;
+background-color:white;
+ &:hover{
+    background-color:rgb(155, 209, 235);
+}
+span{
+    i{
+        color: rgb(39, 92, 153);
+        border: 0px solid darkcyan;
+        margin: 25%;
+
+    }
+}
+}

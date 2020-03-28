@@ -1,0 +1,21 @@
+.profile__container__controls__addsection{
+    //display: flex;
+    //width:100px;
+    margin-top: -10px;
+    margin-right:5px;
+    height:38px;
+    justify-content: center;
+    align-self: flex-end;
+    padding: 10px;
+    border-style: none;
+    margin-left: 50%;
+    background-color: rgb(12, 127, 189);
+    // &span{
+        //font-size: 2rem;
+        color: white;
+        font-weight: bold;
+    // }
+    &:hover{
+        background-color: rgb(27, 92, 129);
+        }
+  }

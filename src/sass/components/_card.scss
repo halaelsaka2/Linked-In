@@ -1,0 +1,107 @@
+.card {
+        width: 200px;
+        // height: 400px;
+        position: relative;
+        font-family: Arial,Tahoma;
+        margin-bottom: 10px;
+    &__body{
+        background-color: #FFF;
+        border-radius: 10px;
+        border: 1px solid #DDD;
+        text-align: center;
+        &__image {
+            background-color: #0097B2;
+            border-radius:  5px 5px 0 0;
+            img {
+                border-radius: 50%;
+                position: relative;
+                top: 30px;
+                border: 3px solid #FFF;
+                width: 3.9rem;
+                height: 4rem;
+            }
+        }
+        &__name {
+            margin-top: 50px;
+        }
+        &__title {
+            font-family: Arial,Tahoma;
+            font-size: 13px;
+        }
+        &__textContainer{
+            margin: 0 10px;
+            display: flex;
+            justify-content: space-between;
+            &__profile {
+                font-family: Arial,Tahoma;
+                color: #666;
+                margin: 0rem;
+                padding: 0rem;
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+            &__numberProfile {
+                color:#0097B2 ;
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+        &__connections {
+            font-family: Arial,Tahoma;
+            margin: 0rem;
+            padding: 0rem;
+            color: #666;
+            &:hover{
+                cursor: pointer;
+            }
+        }
+        &__numberConnections {
+            color:#0097B2 ;
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
+
+    }
+
+}
+
+.secondCard{
+        width: 200px;
+        height: 400px;
+        // position: relative;
+        // font-family: Arial,Tahoma;
+        position: sticky;
+        top:0;
+    &__body{
+        background-color: #FFF;
+        border-radius: 10px;
+        border: 1px solid #DDD;
+        // text-align: center;
+        &__textContainer{
+            margin: 0 10px;
+            
+            &__text,&__text2 
+            {
+                font-family: Arial,Tahoma;
+                color: #0097B2;
+                margin: 10px 3px;
+                padding: 0rem;
+                &:hover{
+                    cursor: pointer;
+                }
+            } 
+        }
+        &__displayMore{
+            background-color: #DDD;
+            text-align: center;
+            &__content{
+                // margin: 10px 10px;
+                padding: 10px 10px;
+                color: black
+            }
+        }
+    }
+}

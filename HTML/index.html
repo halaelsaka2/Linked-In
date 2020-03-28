@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <div class="nav">
+      <div class="nav__logo">
+        <img src="./images/linkedin-512.png" />
+      </div>
+      <div class="nav__search">
+        <i class="fas fa-search"></i>
+        <input class="search_box " placeholder="  Search" />
+      </div>
+      <ul class="nav__menu">
+        <li class="menu__item">
+          <a class="item__link">
+            <div>
+              <i class="fas fa-home"></i>
+              Home
+            </div>
+          </a>
+        </li>
+        <li class="menu__item">
+          <a class="item__link">
+            <div>
+              <i class="fas fa-user-friends"></i>
+              My Network
+            </div>
+          </a>
+        </li>
+        <li class="menu__item">
+          <a class="item__link">
+            <div>
+              <i class="fas fa-briefcase"></i>
+              Jobs
+            </div>
+          </a>
+        </li>
+        <li class="menu__item">
+          <a class="item__link">
+            <div>
+              <i class="far fa-comments"></i>
+              Messaging
+            </div>
+          </a>
+        </li>
+        <li class="menu__item">
+          <a class="item__link">
+            <div>
+              <i class="far fa-bell"></i>
+              Notifications
+            </div>
+          </a>
+        </li>
+        <li class="menu__item border">
+          <a class="item__link">
+            <!-- <div class="image"></div> -->
+            <img class="image" src="./images/user.jpg" />
+            <div class="image__border">
+              Me <span>&blacktriangledown; </span>
+            </div>
+          </a>
+        </li>
+        <li class="menu__item">
+          <a class="item__link">
+            <div>
+              <i class="fas fa-th"></i>
+              Work <span> &blacktriangledown;</span>
+              <!-- <i class="fas fa-caret-down arrow"></i> -->
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="homeContainer">
+      <div class="leftContainer" width="50%">
+        <div class="card">
+          <div class="card__body">
+            <header class="card__body__image">
+              <img src="./images/user.jpg" alt="image of user" />
+            </header>
+            <h3 class="card__body__name">Hala Elsaka</h3>
+            <p class="card__body__title">
+              Web&UI development Trainee at ITI (Information Technology
+              Institute)
+            </p>
+            <hr />
+            <div class="card__body__textContainer">
+                <h5 class="card__body__textContainer__profile">Who viewed your profile</h5>
+                <span class="card__body__textContainer__numberProfile">45</span>
+            </div>
+            <div class="card__body__textContainer">
+                <h5 class="card__body__textContainer__connections">Connections</h5>
+                <span class="card__body__textContainer__numberConnections">639</span>
+            </div>
+          </div>
+        </div>
+        <div class="secondCard">
+          <div class="secondCard__body">
+            <div class="secondCard__body__textContainer">
+              <h5 class="secondCard__body__textContainer__text">Groups</h5>
+              <h5 class="secondCard__body__textContainer__text2">Events</h5>
+            </div>
+
+            <div class="secondCard__body__displayMore">
+              <div class="secondCard__body__displayMore__content">
+                Discove More
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="middleContainer">
+        <div class="newPostContainer">
+          <ul class="newPostContainer__listIcons">
+            <li class="newPostContainer__listIcons__icon writeIcon">
+              <span>Start a post </span>
+            </li>
+            <li class="newPostContainer__listIcons__icon">
+              <img src="./images/001-camera.svg" width="30rem" />
+            </li>
+            <li class="newPostContainer__listIcons__icon">
+              <img src="./images/002-film.svg" width="30rem" />
+            </li>
+            <li class="newPostContainer__listIcons__icon">
+              <img src="./images/003-document.svg" width="25rem" />
+            </li>
+          </ul>
+
+          <div class="newPostContainer__writeArtical">
+            <a> Write an artical</a>on linkedIn
+          </div>
+        </div>
+
+        <div class="writePost">
+          <div class="writePost__header">
+              <h4 class="writePost__header__content">Create post</h4>
+              <div class="writePost__header__image">
+                <img src="./images/user.jpg" alt="image of user" />
+              <div class="writePost__header__image__username">Hala Elsaka</div>
+              </div>
+          </div>
+          <div class="writePost__content">
+            <textarea placeholder="What do you want to talk about" rows="10" cols="73"></textarea>
+              <div class="writePost__content__list">
+                <ul class="writePost__content__list__listIcons">
+                  <li class="writePost__content__list__listIcons__icon">
+                    <img src="./images/001-camera.svg" width="30rem" />
+                  </li>
+                  <li class="writePost__content__list__listIcons__icon">
+                    <img src="./images/002-film.svg" width="30rem" />
+                  </li>
+                  <li class="writePost__content__list__listIcons__icon">
+                    <img src="./images/003-document.svg" width="25rem" />
+                  </li>
+                </ul>
+                
+              </div>
+              <button class="btn">Post</button>
+          </div>
+          
+        <div class="postContainer">
+          <div class="postContainer__info">
+            <div class="postContainer__info__img">
+              <img src="https://media-exp1.licdn.com/dms/image/C5603AQGGfmPGzsTgCg/profile-displayphoto-shrink_100_100/0?e=1590624000&v=beta&t=wwEDcdtUtjfqwBGEGavkAYfDjDvSvKnrYYOkxWM1hxY"
+              width="30rem"
+              style=" border-radius: 50%" />
+            </div>
+            <div class="postContainer__info__details">
+              <div class=postContainer__info__details__name">
+                <a>Ahmed Abd Elaziz</a>
+              </div>
+              <div class=postContainer__info__details__job">
+                junior Front-End Developer
+              </div>
+              <div class=postContainer__info__details__postingTime">
+                <span> 1W</span> <img src="./images/world.svg" width="10rem">
+              </div>
+            </div>
+          </div>
+          <div class="postContainer__content" >
+            akfjgkslfgl;sdfgjkl;kgl;ja;lkfal
+            akfjgkslfgl;sdfgjkl;kgl;ja;lkfal
+            akfjgkslfgl;sdfgjkl;kgl;ja;lkfal
+            akfjgkslfgl;sdfgjkl;kgl;ja;lkfal
+            akfjgkslfgl;sdfgjkl;kgl;ja;lkfal
+          </div>
+          <div class="postContainer__reaction">
+            <div class="postContainer__reaction__icon">
+             <a></a> <img src="./images/004-like.svg" width="17rem"/> <span>like</span>
+            </div>
+            <div class="postContainer__reaction__icon">
+              <img src="./images/005-comment.svg" width="17rem"/> <span>comment</span>
+            </div>
+            <div class="postContainer__reaction__icon">
+              <img src="./images/006-share.svg" width="17rem"> <span>share</span>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="rightContainer">
+        <div
+          class="leftContainer__Img"
+          style="border: 0.09rem solid rgb(213, 217, 219);
+          margin-left: 1rem;"
+        >
+          <img
+            src="https://static-exp1.licdn.com/scds/common/u/images/promo/ads/li_evergreen_jobs_ad_300x250_v1.jpg"
+            style="border: 0.5rem solid white;"
+          />
+        </div>
+        <hr />
+        <div class="footer">
+          <ul class="footer__linksList">
+            <li class="footer__linksList__link">
+              <a>About</a>
+            </li>
+            <li class="footer__linksList__link">
+              <a>Help Center</a>
+            </li>
+            <li class="footer__linksList__link">
+              <a>Privacy & Terms</a>
+            </li>
+            <li class="footer__linksList__link">
+              <a>Advertising</a>
+            </li>
+            <li class="footer__linksList__link">
+              <a>Business Services</a>
+            </li>
+            <li class="footer__linksList__link">
+              <a>About</a>
+            </li>
+            <li class="footer__linksList__link">
+              <a>Get the LinkedIn app</a>
+            </li>
+            <li class="footer__linksList__link">
+              <a>more</a>
+            </li>
+          </ul>
+        </div>
+      </div> 
+
+     
+
+      <!-- profile -->
+      <!-- <div class="profile">
+        <div class="profile__main">
+            <div class="cover">
+                cover
+            </div>
+            <div class="photo">
+                photo
+            </div>
+            <div>
+                data
+            </div>
+        </div>
+        <div class="profile__aside">
+            holla
+            <button class="btn btn-danger">bootstrab</button>
+        </div>
+    </div> -->
+
+      <!--ayyaaaa-->
+
+    <!-- /// -->
+  </body>
+</html>

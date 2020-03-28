@@ -1,0 +1,70 @@
+.profile__editForm {
+   
+
+    &__editFormContainer{
+        position: fixed;
+      
+    
+        overflow-y: auto;
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+        
+        
+       &__editInput{
+        height: 100%;
+        
+       ///////////////put it here Manaaaaaaaaaaaaaaaaaarrrrr/////////
+           form{
+            position: relative;
+           
+            z-index: 5;
+            margin-top: 15%; 
+            margin-right: 10%   ;
+            padding: 20px;
+            z-index: 20;
+            
+               .flex{
+                   display: flex;
+                   margin-bottom: 30px;
+               }
+               .name{
+                margin-right: 15px;
+                }
+                h6{
+                    color: black;
+                    span{
+                        color: $primary-blue;
+                    }
+                }
+                input{
+                    border-color: black;
+                    border-width: 0.5px;
+                    width: 320px;
+                }
+                .edit-form{
+                    width: 650px;
+                    border-color: black;
+                border-width: 0.5px;
+                }
+                .education{
+                    margin-top: 20px;
+                    select{
+                        height: 30px; ;
+                       
+                    }
+                }
+                .edit-btn{
+                    //position: sticky;
+                    margin-top: 40px;
+                    margin-left: 104%;
+                }
+                }
+            }
+
+    }
+
+
+    }
+
+
