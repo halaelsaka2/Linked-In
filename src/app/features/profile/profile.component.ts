@@ -15,11 +15,37 @@ export class ProfileComponent implements OnInit {
   isAddSkillClicked = true;
   isEditSkillClicked = true;
   isAddProfileClick = true;
-  constructor(private users: Users) { }
-  firstName: string = "";
+  firstName: string = " ";
   user: User[] = [];
+  
+  
+  constructor(private usersService: Users) { }
   ngOnInit(): void {
+    this.user=this.usersService.getAll();
   }
+  
+  
+  
+  
+  onSubmit(myForm:HTMLFormElement){
+    console.log(myForm);
+    this.usersService.users[0].name.firstName=myForm.value.userFirstName;
+    console.log(this.usersService.users[0].name.firstName);
+    
+    // this.usersService.users[0].name.firstName=firstName.value;
+    // console.log(this.usersService.users[0].name.firstName);
+    
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   displayEditForm() {
     this.isEditProfileClicked = !this.isEditProfileClicked
   }

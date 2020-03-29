@@ -23,12 +23,12 @@
         <form #myForm="ngForm">
           <div class="flex">
             <div class="name">
-              <h6>Name<span>*</span></h6>
+              <h6>FirstName<span>*</span></h6>
 
-              <input ngModel name="userFirstName" #firstName [value]="firstName">
+              <input ngModel name="userFirstName" #firstName >
             </div>
             <div class="headline">
-              <h6>NameLast<span>*</span></h6>
+              <h6>LastName<span>*</span></h6>
               <input ngModel name="userLastName">
             </div>
           </div>
@@ -43,7 +43,7 @@
             </select>
           </div>
           <div class="edit-btn">
-            <button class="profile__editeAbout__editeContainer__body__button">Save</button>
+            <button type="submit" class="profile__editeAbout__editeContainer__body__button" (click)="onSubmit(myForm)">Save</button>
           </div>
         </form>
       </div>
@@ -71,7 +71,7 @@
       </div>
     </div>
     <div class="profile__container__persondetails ">
-      <h3>{{this.firstName}}</h3>
+      <h3>{{user[0].name.firstName}}</h3>
       <h5>Front-End Developer</h5>
       <div class="profile__container__persondetails__contactInfo">
         <h6>Alexandria</h6>
