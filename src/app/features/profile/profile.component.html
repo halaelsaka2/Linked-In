@@ -35,22 +35,22 @@
           </div>
           <div class="headline">
             <h6>Headline<span>*</span></h6>
-            <textarea [(ngModel)]="user[0].profile.headLine" class="edit-form"  name="headLine"></textarea>
+            <textarea [(ngModel)]="user[0].profile.headLine" class="edit-form" name="headLine"></textarea>
           </div>
           <div class="education">
             <h6>Education<span>*</span></h6>
-            <select class="edit-form" >
-              <option *ngFor="let item of user[0].profile.education; let i = index; " >{{item}}</option>
+            <select class="edit-form">
+              <option *ngFor="let item of user[0].profile.education; let i = index; ">{{item}}</option>
             </select>
           </div>
 
           <div class="education">
             <h6>Address<span>*</span></h6>
-            <input [(ngModel)]="user[0].address" name="address"/>
+            <input [(ngModel)]="user[0].address" name="address" />
           </div>
 
           <div class="edit-btn">
-            <button  class="profile__editeAbout__editeContainer__body__button" (click)="onSubmit(myForm)">Save</button>
+            <button class="profile__editeAbout__editeContainer__body__button" (click)="onSubmit(myForm)">Save</button>
           </div>
         </form>
       </div>
@@ -120,10 +120,12 @@
       <div class="profile__editeAbout__editeContainer__body">
         <form #myForm2="ngForm">
           <label>Summary</label>
-          <textarea [(ngModel)]="user[0].profile.about" name="aboutUser" placeholder="Enter Your About" class="profile__editeAbout__editeContainer__body__text"></textarea>
+          <textarea [(ngModel)]="user[0].profile.about" name="aboutUser" placeholder="Enter Your About"
+            class="profile__editeAbout__editeContainer__body__text"></textarea>
           <hr>
           <div>
-            <button class="profile__editeAbout__editeContainer__body__button" (click)="onSubmitAbout(myForm2)">Save</button>
+            <button class="profile__editeAbout__editeContainer__body__button"
+              (click)="onSubmitAbout(myForm2)">Save</button>
           </div>
         </form>
       </div>
@@ -144,8 +146,8 @@
         </div>
       </div>
     </div>
-    <div class="profile__about__content skill__content">
-      <p>Adobe Photoshop</p>
+    <div *ngFor="let skill of user[0].profile.skills" class="profile__about__content skill__content">
+      <p>{{skill}}</p>
       <hr>
     </div>
   </div>
@@ -162,15 +164,19 @@
         <div class="skill__search ">
           <form>
             <!-- <span class="fa fa-search form-control-feedback"></span> -->
-            <input placeholder="Skill (ex:Data Anaysis)" type="text" class="skill__search__input" list="skillName">
-            <datalist class="skill__search__options " id="skillName">
+            <input #skill (keyup.enter)="onSkillAdded(skill)" placeholder="Skill (ex:Data Anaysis)" type="text"
+              class="skill__search__input" list="skillName">
+            <!-- <datalist class="skill__search__options " id="skillName">
               <option value=" Adobe Photoshop">
               <option value="Drawing">
               <option value="Develope">
-            </datalist>
-            <div class="skill__search__data">
-              <p class="para">Photoshop</p>
-              <p class="para">Photoshop</p>
+            </datalist> -->
+            <!-- <input class="skill__search__options "> -->
+            <div *ngFor="let skill of user[0].profile.skills" class="skill__search__data">
+
+              <p style="display: inline-block;" class="para">{{skill}}</p>
+
+
             </div>
             <div class="skill__search__submit">
               <hr>
@@ -199,9 +205,9 @@
         <hr style="margin-top:0.5px;">
         <div>
           <div class="edite-list">
-            <div class="edite-list__item">
-              <p>Photoshop</p>
-              <span><i class=" i fa fa-trash" aria-hidden="true"></i></span>
+            <div *ngFor="let item of user[0].profile.skills" class="edite-list__item">
+              <p>{{item}}</p>
+              <span (click)="OnSkillDeleted(item)"><i class=" i fa fa-trash" aria-hidden="true"></i></span>
             </div>
             <hr style="margin-top:0px ;">
           </div>

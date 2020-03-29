@@ -17,44 +17,48 @@ export class ProfileComponent implements OnInit {
   isEditSkillClicked = true;
   isAddProfileClick = true;
   user: User[] = [];
-  
-  
+
+
   constructor(private usersService: UserSrevice) { }
   ngOnInit(): void {
-    this.user=this.usersService.getAll();
+    this.user = this.usersService.getAll();
+    this.user[0].profile.skills = []
   }
-  
-  
-  
-  
-  onSubmit(myForm){
+
+
+
+
+  onSubmit(myForm) {
     console.log(myForm);
     // this.usersService.users[0].name.firstName=myForm.value.userFirstName;
     // console.log(this.usersService.users[0].name.firstName);
     // this.usersService.users[0].name.firstName=firstName.value;
     // console.log(this.usersService.users[0].name.firstName);
-    const user : User = { id:1,
+    const user: User = {
+      id: 1,
       name:
-      {firstName:myForm.value.userFirstName,
-        lastName:myForm.value.userLastName },
-        profile:{headLine:myForm.value.headLine},
-        address:myForm.value.address
-      }
-      this.usersService.Update(user)
-      console.log(this.usersService.users);
-      
+      {
+        firstName: myForm.value.userFirstName,
+        lastName: myForm.value.userLastName
+      },
+      profile: { headLine: myForm.value.headLine },
+      address: myForm.value.address
+    }
+    this.usersService.Update(user)
+    console.log(this.usersService.users);
+
   }
-  
-  onSubmitAbout(myForm2){
+
+  onSubmitAbout(myForm2) {
     console.log(myForm2);
-    
-    const user2 :User={
-      id:1,
-      profile:{about:myForm2.value.aboutUser}
-    }  
+
+    const user2: User = {
+      id: 1,
+      profile: { about: myForm2.value.aboutUser }
+    }
     this.usersService.Update(user2)
     console.log(this.usersService.users);
-    
+
   }
 
   displayEditForm() {
@@ -74,6 +78,24 @@ export class ProfileComponent implements OnInit {
     this.isAddProfileClick = !this.isAddProfileClick
   }
 
+  onSkillAdded(skill) {
+    this.user[0].profile.skills.push(skill.value)
+    skill.value = ""
+    console.log(this.user[0].profile.skills);
 
+  }
+  OnSkillDeleted(itm) {
+    for (let i = 0; i < this.user[0].profile.skills.length; i++) {
+
+      this.user[0].profile.skills = this.user[0].profile.skills.filter(ele => {
+        return ele !== itm;
+      })
+    }
+  }
+  // onTagAdded(tagName: HTMLInputElement) {
+  //   this.product.tags.push({ name: tagName.value });
+  //   tagName.value = "";
+  //   //console.log(this.product.tags);
+  // }
 
 }
