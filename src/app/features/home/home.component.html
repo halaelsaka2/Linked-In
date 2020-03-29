@@ -41,7 +41,7 @@
   <div class="middleContainer">
     <div class="newPostContainer">
       <ul class="newPostContainer__listIcons">
-        <li class="newPostContainer__listIcons__icon writeIcon">
+        <li class="newPostContainer__listIcons__icon writeIcon" (click)="showPostForm()">
           <span>Start a post </span>
         </li>
         <li class="newPostContainer__listIcons__icon">
@@ -59,7 +59,11 @@
         <a> Write an artical</a>on linkedIn
       </div>
     </div>
-    <div class="profile__editeAbout hidden">
+    <div
+     class="profile__editeAbout" 
+    [ngClass]={hidden:isStartPostClicked}
+    
+     >
       <div class="writePost profile__editeAbout__editeContainer" >
         <div class="writePost__header">
             <h4 class="writePost__header__content">Create post</h4>
@@ -85,6 +89,8 @@
               
             </div>
             <button class="btn">Post</button>
+            <button class="btn"  (click)="hidePostContainer()">Cancel</button>
+
       </div>
       </div>  
     </div>
