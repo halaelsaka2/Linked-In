@@ -6,10 +6,29 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./profile.component.scss']
 })
 export class ProfileComponent implements OnInit {
-
+  isEditProfileClicked = true;
+  isAboutFormClicked= true;
+  isAddSkillClicked = true;
+  isEditSkillClicked = true;
+  isAddProfileClick=true;
   constructor() { }
 
   ngOnInit(): void {
   }
-
+  displayEditForm(){
+    this.isEditProfileClicked = !this.isEditProfileClicked
+  }
+  
+  displayAboutForm(){
+    this.isAboutFormClicked =!this.isAboutFormClicked
+  }
+  displayAddSkillForm(){
+    this.isAddSkillClicked=!this.isAddSkillClicked
+  }
+  displayEditSkillForm(){
+    this.isEditSkillClicked=!this.isEditSkillClicked
+  }
+  dispalyAddProfileForm(){
+    this.isAddProfileClick =!this.isAddProfileClick  
+  }
 }

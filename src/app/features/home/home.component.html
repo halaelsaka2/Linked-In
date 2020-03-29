@@ -3,7 +3,7 @@
     <div class="card">
       <div class="card__body">
         <header class="card__body__image">
-          <img src="./images/user.jpg" alt="image of user" />
+          <img src="../../../assets/images/user.jpg" alt="image of user" />
         </header>
         <h3 class="card__body__name">Hala Elsaka</h3>
         <p class="card__body__title">
@@ -41,17 +41,17 @@
   <div class="middleContainer">
     <div class="newPostContainer">
       <ul class="newPostContainer__listIcons">
-        <li class="newPostContainer__listIcons__icon writeIcon">
+        <li class="newPostContainer__listIcons__icon writeIcon" (click)="showPostForm()">
           <span>Start a post </span>
         </li>
         <li class="newPostContainer__listIcons__icon">
-          <img src="./images/001-camera.svg" width="30rem" />
+          <img src="../../../assets/images/001-camera.svg" width="30rem" />
         </li>
         <li class="newPostContainer__listIcons__icon">
-          <img src="./images/002-film.svg" width="30rem" />
+          <img src="../../../assets/images/002-film.svg" width="30rem" />
         </li>
         <li class="newPostContainer__listIcons__icon">
-          <img src="./images/003-document.svg" width="25rem" />
+          <img src="../../../assets/images/003-document.svg" width="25rem" />
         </li>
       </ul>
 
@@ -59,12 +59,16 @@
         <a> Write an artical</a>on linkedIn
       </div>
     </div>
-    <div class="profile__editeAbout hidden">
+    <div
+     class="profile__editeAbout" 
+    [ngClass]={hidden:isStartPostClicked}
+    
+     >
       <div class="writePost profile__editeAbout__editeContainer" >
         <div class="writePost__header">
             <h4 class="writePost__header__content">Create post</h4>
             <div class="writePost__header__image">
-              <img src="./images/user.jpg" alt="image of user" />
+              <img src="../../../assets/images/user.jpg" alt="image of user" />
             <div class="writePost__header__image__username">Hala Elsaka</div>
             </div>
         </div>
@@ -73,18 +77,20 @@
             <div class="writePost__content__list">
               <ul class="writePost__content__list__listIcons">
                 <li class="writePost__content__list__listIcons__icon">
-                  <img src="./images/001-camera.svg" width="30rem" />
+                  <img src="../../../assets/images/001-camera.svg" width="30rem" />
                 </li>
                 <li class="writePost__content__list__listIcons__icon">
-                  <img src="./images/002-film.svg" width="30rem" />
+                  <img src="../../../assets/images/002-film.svg" width="30rem" />
                 </li>
                 <li class="writePost__content__list__listIcons__icon">
-                  <img src="./images/003-document.svg" width="25rem" />
+                  <img src="../../../assets/images/003-document.svg" width="25rem" />
                 </li>
               </ul>
               
             </div>
             <button class="btn">Post</button>
+            <button class="btn"  (click)="hidePostContainer()">Cancel</button>
+
       </div>
       </div>  
     </div>
@@ -103,7 +109,7 @@
             junior Front-End Developer
           </div>
           <div class="postContainer__info__details__postingTime">
-            <span> 1W</span> <img src="./images/world.svg" width="10rem">
+            <span> 1W</span> <img src="../../../assets/images/world.svg" width="10rem">
           </div>
         </div>
       </div>
@@ -116,13 +122,13 @@
       </div>
       <div class="postContainer__reaction">
         <div class="postContainer__reaction__icon">
-         <a></a> <img src="./images/004-like.svg" width="17rem"/> <span>like</span>
+         <a></a> <img src="../../../assets/images/004-like.svg" width="17rem"/> <span>like</span>
         </div>
         <div class="postContainer__reaction__icon">
-          <img src="./images/005-comment.svg" width="17rem"/> <span>comment</span>
+          <img src="../../../assets/images/005-comment.svg" width="17rem"/> <span>comment</span>
         </div>
         <div class="postContainer__reaction__icon">
-          <img src="./images/006-share.svg" width="17rem"> <span>share</span>
+          <img src="../../../assets/images/006-share.svg" width="17rem"> <span>share</span>
           
         </div>
       </div>

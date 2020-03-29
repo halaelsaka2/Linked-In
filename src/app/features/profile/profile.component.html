@@ -1,11 +1,11 @@
 <div class="profile">
   <!-- edit profile data here active for display-->
-<div class="profile__editForm profile__editeAbout">
+<div class="profile__editForm profile__editeAbout " [ngClass]={hidden:isEditProfileClicked}  >
   <div class=" profile__editeAbout__editeContainer profile__editForm__editFormContainer" >
 
        <div class=" profile__editeAbout__editeContainer__header "> 
           <h5 class="h5">Edite Info</h5>
-          <span class=" profile__editeAbout__editeContainer__header__icon"><i class=" i fa fa-window-close"
+          <span class=" profile__editeAbout__editeContainer__header__icon" (click)="displayEditForm()"><i class=" i fa fa-window-close"
                   aria-hidden="true"></i></span>
       </div>
 
@@ -60,13 +60,13 @@
     </div>
 <div class="profile__container">
 <div class="profile__container__controls" >
-   <button class="profile__container__controls__addsection" >
+   <button class="profile__container__controls__addsection" (click)="dispalyAddProfileForm()" >
   
     Add Profile Section
     <!-- <span><i >&blacktriangledown;</i></span> -->
    </button>
     <button type="button" class="profile__container__controls__morebtn">More...</button>
-    <div class="profile__container__controls__editebtn">
+    <div class="profile__container__controls__editebtn" (click)="displayEditForm()">
         <span><i class="fas fa-pencil-alt edit_pen"></i></span>
     </div>
 </div>
@@ -79,13 +79,13 @@
 </div>
 </div>
 </div>
-<div class="profile__dropdown hidden">
+<div class="profile__dropdown " [ngClass]={hidden:isAddProfileClick}>
     <ul>
-        <li><a href="#">Intro</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Featured</a></li>
-        <li><a href="#">Skill</a></li>
-        <li><a href="#">background</a></li>
+        <li ><a  (click)="displayEditForm()">Intro</a></li>
+        <li><a >About</a></li>
+        <li><a >Featured</a></li>
+        <li><a >Skill</a></li>
+        <li><a >background</a></li>
 
     </ul>
 </div>
@@ -93,8 +93,8 @@
 <div class="profile__about">
    <div class="profile__about__header">
     <h4 class="h4">About</h4>
-    <div class=" profile__about__header__btn  profile__container__controls__editebtn">
-     <span><i class="fas fa-pencil-alt edit_pen"></i></span>
+    <div class=" profile__about__header__btn  profile__container__controls__editebtn" >
+     <span (click)="displayAboutForm()"><i class="fas fa-pencil-alt edit_pen"></i></span>
      </div>
    </div>
  <div class="profile__about__content">
@@ -102,11 +102,13 @@
  </div>
 </div>
 <!--here add_form_component-->
-<div class="profile__editeAbout hidden">
+<div class="profile__editeAbout " [ngClass]={hidden:isAboutFormClicked} >
 <div class="profile__editeAbout__editeContainer">
    <div  class=" profile__editeAbout__editeContainer__header">
     <h5 class="h5">Edite about</h5>
-    <span  class=" profile__editeAbout__editeContainer__header__icon"
+    <span  
+    class=" profile__editeAbout__editeContainer__header__icon"
+    (click)="displayAboutForm()"
      ><i class=" i fa fa-window-close" aria-hidden="true"></i></span>
    </div>
    <hr>
@@ -132,9 +134,9 @@
   <div class="profile__about__header">
    <h4 class="h4">Skills &Endorsements</h4>
    <div class="skill__edite">
-    <button class="skill__edite__btn" >Add a new skill</button>
-    <div class=" profile__container__controls__editebtn skill__edite__icon">
-     <span><i class="fas fa-pencil-alt edit_pen"></i></span>
+    <button class="skill__edite__btn"(click)="displayAddSkillForm()"  >Add a new skill</button>
+    <div class=" profile__container__controls__editebtn skill__edite__icon" >
+     <span (click)="displayEditSkillForm()"><i class="fas fa-pencil-alt edit_pen"></i></span>
      </div>
      </div>
   </div>
@@ -144,12 +146,15 @@
 </div>
 </div>
 <!--here add_form_component for skill-->
-<div class="profile__editeAbout hidden">
+<div class="profile__editeAbout " [ngClass]={hidden:isAddSkillClicked}>
 <div class="profile__editeAbout__editeContainer">
   <div  class=" profile__editeAbout__editeContainer__header">
    <h5 class="h5">Add Skills</h5>
-   <span  class=" profile__editeAbout__editeContainer__header__icon">
-    <i class=" i fa fa-window-close" aria-hidden="true"></i></span>
+   <span 
+    class=" profile__editeAbout__editeContainer__header__icon"
+    (click)="displayAddSkillForm()"
+   >
+    <i class=" i fa fa-window-close" aria-hidden="true" ></i></span>
   </div>
   <hr>
   <div class="profile__editeAbout__editeContainer__body">
@@ -178,11 +183,13 @@
 </div>
 </div>
 <!--edite skill-->
-<div class="profile__editeAbout hidden">
+<div class="profile__editeAbout" [ngClass]={hidden:isEditSkillClicked}>
 <div class="profile__editeAbout__editeContainer">
     <div  class=" profile__editeAbout__editeContainer__header">
      <h5 class="h5">Edite skill</h5>
-     <span  class=" profile__editeAbout__editeContainer__header__icon"
+     <span  
+     class=" profile__editeAbout__editeContainer__header__icon"
+(click)="displayEditSkillForm()"
       ><i class=" i fa fa-window-close" aria-hidden="true"></i></span>
     </div>
     <hr>
@@ -222,7 +229,7 @@
 <!--section aside-->
 <div class="profile__aside">
    <div class="profile__aside__picture">
-   <img src="../../../assets/images/man.jp">
+   <img src="../../../assets/images/man.jpg">
 </div>
 <hr>
 <div class="profile__aside__videos" >
