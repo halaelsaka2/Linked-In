@@ -8,8 +8,8 @@ import { ProfileComponent } from './features/profile/profile.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { HomeComponent } from './features/home/home.component';
 import { RouterModule } from '@angular/router';
-import { Users } from './users.services';
-import { Posts } from './post.services';
+import {  UserSrevice } from './users.services';
+import { PostService } from './post.services';
 
 
 const appRoutes = [
@@ -31,7 +31,7 @@ const appRoutes = [
     FormsModule
 
   ],
-  providers: [Users, Posts],
+  providers: [UserSrevice, PostService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,5 +1,6 @@
+import { UserSrevice } from './../../users.services';
 import { Component, OnInit } from '@angular/core';
-import { Users } from 'src/app/users.services';
+
 import { FormsModule } from '@angular/forms';
 import { User } from 'src/app/_model/user.model';
 
@@ -15,11 +16,10 @@ export class ProfileComponent implements OnInit {
   isAddSkillClicked = true;
   isEditSkillClicked = true;
   isAddProfileClick = true;
-  firstName: string = " ";
   user: User[] = [];
   
   
-  constructor(private usersService: Users) { }
+  constructor(private usersService: UserSrevice) { }
   ngOnInit(): void {
     this.user=this.usersService.getAll();
   }
@@ -27,25 +27,36 @@ export class ProfileComponent implements OnInit {
   
   
   
-  onSubmit(myForm:HTMLFormElement){
+  onSubmit(myForm){
     console.log(myForm);
-    this.usersService.users[0].name.firstName=myForm.value.userFirstName;
-    console.log(this.usersService.users[0].name.firstName);
-    
+    // this.usersService.users[0].name.firstName=myForm.value.userFirstName;
+    // console.log(this.usersService.users[0].name.firstName);
     // this.usersService.users[0].name.firstName=firstName.value;
     // console.log(this.usersService.users[0].name.firstName);
-    
+    const user : User = { id:1,
+      name:
+      {firstName:myForm.value.userFirstName,
+        lastName:myForm.value.userLastName },
+        profile:{headLine:myForm.value.headLine},
+        address:myForm.value.address
+      }
+      this.usersService.Update(user)
+      console.log(this.usersService.users);
+      
   }
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
+  onSubmitAbout(myForm2){
+    console.log(myForm2);
+    
+    const user2 :User={
+      id:1,
+      profile:{about:myForm2.value.aboutUser}
+    }  
+    this.usersService.Update(user2)
+    console.log(this.usersService.users);
+    
+  }
+
   displayEditForm() {
     this.isEditProfileClicked = !this.isEditProfileClicked
   }

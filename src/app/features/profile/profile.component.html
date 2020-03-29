@@ -19,31 +19,38 @@
         </div>
       </div>
 
+
       <div class="profile__editForm__editFormContainer__editInput">
         <form #myForm="ngForm">
           <div class="flex">
             <div class="name">
               <h6>FirstName<span>*</span></h6>
-
-              <input ngModel name="userFirstName" #firstName >
+              <input [(ngModel)]="user[0].name.firstName" name="userFirstName" #firstName>
             </div>
             <div class="headline">
               <h6>LastName<span>*</span></h6>
-              <input ngModel name="userLastName">
+              <input [(ngModel)]="user[0].name.lastName" name="userLastName">
             </div>
+
           </div>
           <div class="headline">
             <h6>Headline<span>*</span></h6>
-            <textarea class="edit-form" ngModel name="headLine"></textarea>
+            <textarea [(ngModel)]="user[0].profile.headLine" class="edit-form"  name="headLine"></textarea>
           </div>
           <div class="education">
             <h6>Education<span>*</span></h6>
-            <select class="edit-form">
-              <option>Information Technology Institute</option>
+            <select class="edit-form" >
+              <option *ngFor="let item of user[0].profile.education; let i = index; " >{{item}}</option>
             </select>
           </div>
+
+          <div class="education">
+            <h6>Address<span>*</span></h6>
+            <input [(ngModel)]="user[0].address" name="address"/>
+          </div>
+
           <div class="edit-btn">
-            <button type="submit" class="profile__editeAbout__editeContainer__body__button" (click)="onSubmit(myForm)">Save</button>
+            <button  class="profile__editeAbout__editeContainer__body__button" (click)="onSubmit(myForm)">Save</button>
           </div>
         </form>
       </div>
@@ -72,9 +79,9 @@
     </div>
     <div class="profile__container__persondetails ">
       <h3>{{user[0].name.firstName}}</h3>
-      <h5>Front-End Developer</h5>
+      <h5>{{user[0].profile.headLine}}</h5>
       <div class="profile__container__persondetails__contactInfo">
-        <h6>Alexandria</h6>
+        <h6>{{user[0].address}}</h6>
         <a href="#">Contact Info</a>
       </div>
     </div>
@@ -98,7 +105,7 @@
       </div>
     </div>
     <div class="profile__about__content">
-      <p>developer</p>
+      <p>{{user[0].profile.about}}</p>
     </div>
   </div>
   <!--here add_form_component-->
@@ -111,12 +118,12 @@
       </div>
       <hr>
       <div class="profile__editeAbout__editeContainer__body">
-        <form>
+        <form #myForm2="ngForm">
           <label>Summary</label>
-          <textarea placeholder="Enter Your About" class="profile__editeAbout__editeContainer__body__text"></textarea>
+          <textarea [(ngModel)]="user[0].profile.about" name="aboutUser" placeholder="Enter Your About" class="profile__editeAbout__editeContainer__body__text"></textarea>
           <hr>
           <div>
-            <button class="profile__editeAbout__editeContainer__body__button">Save</button>
+            <button class="profile__editeAbout__editeContainer__body__button" (click)="onSubmitAbout(myForm2)">Save</button>
           </div>
         </form>
       </div>

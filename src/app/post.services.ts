@@ -1,6 +1,6 @@
 import { Post } from './_model/post.model'
 
-export class Posts {
+export class PostService {
     posts: Post[] = [
         {
             userId: 1,
@@ -12,10 +12,9 @@ export class Posts {
     ];
     getAll(): Post[] {
         return this.posts.slice();
-
     }
 
-    getById(id: number): Post {
-        return this.posts.find(a => a.userId === id)
+    getById(id: number): Post[] {
+        return this.posts.filter(a => a.userId === id)
     }
 }

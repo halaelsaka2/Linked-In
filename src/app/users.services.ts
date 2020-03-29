@@ -1,17 +1,18 @@
 import { User } from "./_model/user.model";
 import { Injectable } from '@angular/core';
-import { Posts } from './post.services';
+import {  PostService } from './post.services';
 
 @Injectable()
-export class Users {
-  constructor(private postss: Posts) {
+export class UserSrevice {
+  constructor(private postss: PostService) {
 
   }
   users: User[] = [
     {
       id: 1,
       name: { firstName: "ahmed", lastName: "abd elaziz" },
-      posts: [this.postss.getById(1)]      // {
+      posts: this.postss.getById(1)  
+      // {
       //   postContent: "hala manar aya",
       //   likes: 5,
       //   comments: ["asda", "asda"],
@@ -21,8 +22,10 @@ export class Users {
       profile: {
         headLine: "asdasda",
         education: ["faculty of computer science", "asdfasdf"],
-        bkImgPath: "asdasd"
+        bkImgPath: "asdasd",
+        about:"2aaamer"
       }
+      ,address:"abo Rakaba"
     }
 
 
@@ -37,11 +40,14 @@ export class Users {
   }
 
   Update(user: User) {
+    console.log(user);
+    
     const index = this.users.findIndex(a => a.id === user.id);
     this.users[index] = {
       id: user.id, name: user.name,
-      posts: user.posts, profile: user.profile
+      posts: user.posts, profile: user.profile,address:user.address
     };
+    
   }
 
 
