@@ -6,8 +6,9 @@ export class User {
     firstName?: string;
     lastName?: string;
   };
-  posts?: Post[];
+  // posts?: Post[];
   profile?: Profile;
   address?:string;
+  connetionIds?:number[];
 
 }

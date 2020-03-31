@@ -30,10 +30,7 @@ export class ProfileComponent implements OnInit {
 
   onSubmit(myForm) {
     console.log(myForm);
-    // this.usersService.users[0].name.firstName=myForm.value.userFirstName;
-    // console.log(this.usersService.users[0].name.firstName);
-    // this.usersService.users[0].name.firstName=firstName.value;
-    // console.log(this.usersService.users[0].name.firstName);
+    
     const user: User = {
       id: 1,
       name:
