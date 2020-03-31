@@ -1,5 +1,5 @@
 import { Component, OnInit,Output, Input } from "@angular/core";
-import { PostService } from 'src/app/post.services';
+import { PostsService } from 'src/app/post.services';
 import { Post } from 'src/app/_model/post.model';
 import { UserSrevice } from 'src/app/users.services';
 import { User } from 'src/app/_model/user.model';
@@ -17,15 +17,14 @@ export class HomeComponent implements OnInit {
   // post:Post;
   users:User[]=[];
   numberOfLikes=0;
-  constructor(private postService:PostService,private userService:UserSrevice) {}
+  constructor(private postService:PostsService,private userService:UserSrevice) {}
 
   ngOnInit(): void {
   this.posts=this.postService.getAll();
   for (const post of this.posts) {
-    this.user=this.userService.getById(post.userId);
+    this.user=this.userService.getUserById(post.userId);
     this.users.push(this.user)
     console.log(this.users);
-    
   }
   }
 
@@ -33,8 +32,6 @@ export class HomeComponent implements OnInit {
     
     
   }
-
-
 
   showPostForm() {
     console.log("before in home"+this.isStartPostClicked)
@@ -44,4 +41,6 @@ export class HomeComponent implements OnInit {
   changeClick(isStartPostClicked){
     this.isStartPostClicked = isStartPostClicked;
   }
+
+
 }

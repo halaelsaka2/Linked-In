@@ -1,36 +1,34 @@
 import { User } from "./_model/user.model";
 import { Injectable } from '@angular/core';
-import {  PostService } from './post.services';
-
+import {  PostsService } from './post.services';
+@Injectable()
 export class UserSrevice {
-  
+  constructor(private postsService: PostsService) {
+
+  }
   users: User[] = [
     {
       id: 1,
       name: { firstName: "ahmed", lastName: "abd elaziz" },
-
       profile: {
         headLine: "asdasda",
         education: ["faculty of computer science", "asdfasdf"],
         bkImgPath: "asdasd",
         about:"2aaamer"
-      }
-
-      ,address:"abo Rakaba",
+      },
+      address:"abo Rakaba",
       connetionIds :[2,3,4]
     },
     {
       id: 2,
       name: { firstName: "Hala", lastName: "Elsaka" },
-
       profile: {
         headLine: "Front End",
         education: ["faculty of computer science", "Menofia"],
         bkImgPath: "asdasd",
         about:"2aaamer"
-      }
-
-      ,address:"abo Rakaba",
+      },
+      address:"abo Rakaba",
       connetionIds :[1,3,4]
     }
 
@@ -41,8 +39,10 @@ export class UserSrevice {
 
   }
 
-  getById(id: number): User {
-    return this.users.find(a => a.id === id)
+  getUserById(id: number): User {
+    const user =this.users.find(user => user.id === id); 
+    user.posts = this.postsService.getById(user.id)
+    return user
   }
 
   Update(user: User) {

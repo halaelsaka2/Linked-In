@@ -1,10 +1,10 @@
 import { EventEmitter } from '@angular/core';
 import { Post } from './_model/post.model'
 
-export class PostService {
-    posts: Post[] = [
+export class PostsService {
+    postsList: Post[] = [
         {
-            postId:1,
+           
             userId: 1,
             postContent: "hala manar aya ahmed",
             likes: 0,
@@ -12,7 +12,7 @@ export class PostService {
             imgUrl: "asdasdasd"
         },
         {
-            postId:2,
+           
             userId: 2,
             postContent: "Hollooooooooo",
             likes: 0,
@@ -20,22 +20,22 @@ export class PostService {
             imgUrl: "asdasdasd"
         }
     ];
-
     postAdded = new EventEmitter < Post>();
 
-     getAll(): Post[] {
-        return this.posts.slice();
+    getAll(): Post[] {
+        return this.postsList.slice();
     }
 
     getById(id: number): Post[] {
-        return this.posts.filter(a => a.userId === id)
+        const UserPosts = this.postsList.filter(UserPosts=>UserPosts.userId === id).slice();
+        return UserPosts;
     }
     Update(post: Post) {
         console.log(post);
         
-        const index = this.posts.findIndex(a => a.postId === post.postId);
+        const index = this.postsList.findIndex(a => a.postId === post.postId);
         console.log(index)
-        this.posts[index] = {
+        this.postsList[index] = {
           postId: post.userId, userId: post.userId,
           postContent : post.postContent,
           likes:post.likes

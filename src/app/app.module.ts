@@ -9,14 +9,16 @@ import { HeaderComponent } from './layout/header/header.component';
 import { HomeComponent } from './features/home/home.component';
 import { RouterModule } from '@angular/router';
 import {  UserSrevice } from './users.services';
-import { PostService } from './post.services';
 import { AddPostComponent } from './features/home/add-post/add-post.component';
+import { PostsService } from 'src/app/post.services';
+
 
 
 const appRoutes = [
   { path: "", component: HomeComponent },
   { path: "home", component: HomeComponent },
-  { path: "profile", component: ProfileComponent }
+  { path: "profile/:id", component: ProfileComponent }
+
 ]
 
 @NgModule({
@@ -34,7 +36,7 @@ const appRoutes = [
     FormsModule
 
   ],
-  providers: [UserSrevice, PostService],
+  providers: [UserSrevice, PostsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

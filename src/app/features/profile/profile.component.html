@@ -25,28 +25,28 @@
           <div class="flex">
             <div class="name">
               <h6>FirstName<span>*</span></h6>
-              <input [(ngModel)]="user[0].name.firstName" name="userFirstName" #firstName>
+              <input [(ngModel)]="user.name.firstName" name="userFirstName" #firstName>
             </div>
             <div class="headline">
               <h6>LastName<span>*</span></h6>
-              <input [(ngModel)]="user[0].name.lastName" name="userLastName">
+              <input [(ngModel)]="user.name.lastName" name="userLastName">
             </div>
 
           </div>
           <div class="headline">
             <h6>Headline<span>*</span></h6>
-            <textarea [(ngModel)]="user[0].profile.headLine" class="edit-form" name="headLine"></textarea>
+            <textarea [(ngModel)]="user.profile.headLine" class="edit-form" name="headLine"></textarea>
           </div>
           <div class="education">
             <h6>Education<span>*</span></h6>
             <select class="edit-form">
-              <option *ngFor="let item of user[0].profile.education; let i = index; ">{{item}}</option>
+              <option *ngFor="let item of user.profile.education; let i = index; ">{{item}}</option>
             </select>
           </div>
 
           <div class="education">
             <h6>Address<span>*</span></h6>
-            <input [(ngModel)]="user[0].address" name="address" />
+            <input [(ngModel)]="user.address" name="address" />
           </div>
 
           <div class="edit-btn">
@@ -78,10 +78,10 @@
       </div>
     </div>
     <div class="profile__container__persondetails ">
-      <h3>{{user[0].name.firstName}}</h3>
-      <h5>{{user[0].profile.headLine}}</h5>
+      <h3>{{user.name.firstName}}</h3>
+      <h5>{{user.profile.headLine}}</h5>
       <div class="profile__container__persondetails__contactInfo">
-        <h6>{{user[0].address}}</h6>
+        <h6>{{user.address}}</h6>
         <a href="#">Contact Info</a>
       </div>
     </div>
@@ -105,7 +105,7 @@
       </div>
     </div>
     <div class="profile__about__content">
-      <p>{{user[0].profile.about}}</p>
+      <p>{{user.profile.about}}</p>
     </div>
   </div>
   <!--here add_form_component-->
@@ -120,7 +120,7 @@
       <div class="profile__editeAbout__editeContainer__body">
         <form #myForm2="ngForm" (ngSubmit)="onSubmitAbout(myForm2)">
           <label>Summary</label>
-          <textarea [(ngModel)]="user[0].profile.about" name="aboutUser" placeholder="Enter Your About"
+          <textarea [(ngModel)]="user.profile.about" name="aboutUser" placeholder="Enter Your About"
             class="profile__editeAbout__editeContainer__body__text"></textarea>
           <hr>
           <div>
@@ -145,7 +145,7 @@
         </div>
       </div>
     </div>
-    <div *ngFor="let skill of user[0].profile.skills" class="profile__about__content skill__content">
+    <div *ngFor="let skill of user.profile.skills" class="profile__about__content skill__content">
       <p>{{skill}}</p>
       <hr>
     </div>
@@ -171,7 +171,7 @@
               <option value="Develope">
             </datalist> -->
             <!-- <input class="skill__search__options "> -->
-            <div *ngFor="let skill of user[0].profile.skills" class="skill__search__data">
+            <div *ngFor="let skill of user.profile.skills" class="skill__search__data">
 
               <p style="display: inline-block;" class="para">{{skill}}</p>
 
@@ -204,7 +204,7 @@
         <hr style="margin-top:0.5px;">
         <div>
           <div class="edite-list">
-            <div *ngFor="let item of user[0].profile.skills" class="edite-list__item">
+            <div *ngFor="let item of user.profile.skills" class="edite-list__item">
               <p>{{item}}</p>
               <span (click)="OnSkillDeleted(item)"><i class=" i fa fa-trash" aria-hidden="true"></i></span>
             </div>
