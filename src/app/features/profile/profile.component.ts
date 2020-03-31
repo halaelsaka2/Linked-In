@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { FormsModule } from '@angular/forms';
 import { User } from 'src/app/_model/user.model';
+import { ActivatedRoute } from '@angular/router';
 
 
 @Component({
@@ -16,24 +17,23 @@ export class ProfileComponent implements OnInit {
   isAddSkillClicked = true;
   isEditSkillClicked = true;
   isAddProfileClick = true;
-  user: User[] = [];
+  user: User ={} ;
 
 
-  constructor(private usersService: UserSrevice) { }
-  ngOnInit(): void {
-    this.user = this.usersService.getAll();
-    this.user[0].profile.skills = []
+  constructor(private userService: UserSrevice , private route:ActivatedRoute ) {
+    
+   }
+  ngOnInit() {
+    
+    this.user = this.userService.getUserById(parseInt(this.route.snapshot.params['id']));
+ 
   }
 
 
-
+ 
 
   onSubmit(myForm) {
-    console.log(myForm);
-    // this.usersService.users[0].name.firstName=myForm.value.userFirstName;
-    // console.log(this.usersService.users[0].name.firstName);
-    // this.usersService.users[0].name.firstName=firstName.value;
-    // console.log(this.usersService.users[0].name.firstName);
+   
     const user: User = {
       id: 1,
       name:
@@ -44,8 +44,8 @@ export class ProfileComponent implements OnInit {
       profile: { headLine: myForm.value.headLine },
       address: myForm.value.address
     }
-    this.usersService.Update(user)
-    console.log(this.usersService.users);
+    this.userService.Update(user)
+    console.log(this.userService.users);
 
   }
 
@@ -56,8 +56,8 @@ export class ProfileComponent implements OnInit {
       id: 1,
       profile: { about: myForm2.value.aboutUser }
     }
-    this.usersService.Update(user2)
-    console.log(this.usersService.users);
+    this.userService.Update(user2)
+    console.log(this.userService.users);
 
   }
 

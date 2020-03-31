@@ -10,12 +10,14 @@ import { HomeComponent } from './features/home/home.component';
 import { RouterModule } from '@angular/router';
 import {  UserSrevice } from './users.services';
 import { PostsService } from './post.services';
+// import { AddPost } from './features/home/add-post.component/add-post.component.component';
 
 
 const appRoutes = [
   { path: "", component: HomeComponent },
   { path: "home", component: HomeComponent },
-  { path: "profile", component: ProfileComponent }
+  { path: "profile/:id", component: ProfileComponent }
+
 ]
 
 @NgModule({
@@ -23,7 +25,8 @@ const appRoutes = [
     AppComponent,
     ProfileComponent,
     HeaderComponent,
-    HomeComponent
+    HomeComponent,
+    // AddPost
   ],
   imports: [
     BrowserModule,

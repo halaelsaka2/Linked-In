@@ -9,5 +9,7 @@ export class User {
   posts?: Post[];
   profile?: Profile;
   address?:string;
+  connetionIds?:number[];
+
 
 }
