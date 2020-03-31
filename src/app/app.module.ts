@@ -10,7 +10,7 @@ import { HomeComponent } from './features/home/home.component';
 import { RouterModule } from '@angular/router';
 import {  UserSrevice } from './users.services';
 import { PostService } from './post.services';
-import { AddPost } from './home/add-post.component/add-post.component.component';
+import { AddPostComponent } from './features/home/add-post/add-post.component';
 
 
 const appRoutes = [
@@ -25,7 +25,8 @@ const appRoutes = [
     ProfileComponent,
     HeaderComponent,
     HomeComponent,
-    AddPost.ComponentComponent
+    AddPostComponent,
+    
   ],
   imports: [
     BrowserModule,

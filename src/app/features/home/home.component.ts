@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit,Output, Input } from "@angular/core";
 import { PostService } from 'src/app/post.services';
 import { Post } from 'src/app/_model/post.model';
 import { UserSrevice } from 'src/app/users.services';
@@ -10,7 +10,7 @@ import { User } from 'src/app/_model/user.model';
   styleUrls: ["./home.component.scss"]
 })
 export class HomeComponent implements OnInit {
-  isStartPostClicked = true;
+ @Input() isStartPostClicked = true;
   
   posts:Post[];
   user:User;
@@ -37,10 +37,11 @@ export class HomeComponent implements OnInit {
 
 
   showPostForm() {
+    console.log("before in home"+this.isStartPostClicked)
     this.isStartPostClicked = false;
+    console.log("after in home"+this.isStartPostClicked);
   }
-  hidePostContainer() {
-    this.isStartPostClicked = true;
-  
+  changeClick(isStartPostClicked){
+    this.isStartPostClicked = isStartPostClicked;
   }
 }

@@ -1,3 +1,4 @@
+import { EventEmitter } from '@angular/core';
 import { Post } from './_model/post.model'
 
 export class PostService {
@@ -20,6 +21,7 @@ export class PostService {
         }
     ];
 
+    postAdded = new EventEmitter < Post>();
 
      getAll(): Post[] {
         return this.posts.slice();
@@ -40,4 +42,6 @@ export class PostService {
         };
         
       }
+
+
 }

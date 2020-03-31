@@ -1,0 +1,35 @@
+<div
+     class="profile__editeAbout" 
+    [ngClass]={hidden:isStartPostClicked}
+    
+     >
+      <div class="writePost profile__editeAbout__editeContainer" >
+        <div class="writePost__header">
+            <h4 class="writePost__header__content">Create post</h4>
+            <div class="writePost__header__image">
+              <img src="../../../assets/images/user.jpg" alt="image of user" />
+            <div class="writePost__header__image__username">Hala Elsaka</div>
+            </div>
+        </div>
+        <div class="writePost__content">
+          <textarea placeholder="What do you want to talk about" rows="10" cols="73" #postContent></textarea>
+            <div class="writePost__content__list">
+              <ul class="writePost__content__list__listIcons">
+                <li class="writePost__content__list__listIcons__icon">
+                  <img src="../../../assets/images/001-camera.svg" width="30rem" />
+                </li>
+                <li class="writePost__content__list__listIcons__icon">
+                  <img src="../../../assets/images/002-film.svg" width="30rem" />
+                </li>
+                <li class="writePost__content__list__listIcons__icon">
+                  <img src="../../../assets/images/003-document.svg" width="25rem" />
+                </li>
+              </ul>
+              
+            </div>
+            <button class="btn" (click)="addpost(postContent)">Post </button>
+            <button class="btn"  (click)="hidePostContainer()">Cancel</button>
+
+      </div>
+      </div>  
+    </div>
