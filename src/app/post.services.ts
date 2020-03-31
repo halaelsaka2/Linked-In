@@ -1,3 +1,4 @@
+import { EventEmitter } from '@angular/core';
 import { Post } from './_model/post.model'
 
 export class PostsService {
@@ -19,6 +20,8 @@ export class PostsService {
             imgUrl: "asdasdasd"
         }
     ];
+    postAdded = new EventEmitter < Post>();
+
     getAll(): Post[] {
         return this.postsList.slice();
     }
@@ -37,5 +40,13 @@ export class PostsService {
           likes:post.likes
         };
         
-      }
+    }
+
+    addPost(post:Post):Post[]{
+        this.postsList.push(post);
+        return this.postsList;
+    }
+
+
+
 }

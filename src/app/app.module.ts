@@ -9,8 +9,9 @@ import { HeaderComponent } from './layout/header/header.component';
 import { HomeComponent } from './features/home/home.component';
 import { RouterModule } from '@angular/router';
 import {  UserSrevice } from './users.services';
-import { PostsService } from './post.services';
-// import { AddPost } from './features/home/add-post.component/add-post.component.component';
+import { AddPostComponent } from './features/home/add-post/add-post.component';
+import { PostsService } from 'src/app/post.services';
+
 
 
 const appRoutes = [
@@ -26,7 +27,8 @@ const appRoutes = [
     ProfileComponent,
     HeaderComponent,
     HomeComponent,
-    // AddPost
+    AddPostComponent,
+    
   ],
   imports: [
     BrowserModule,

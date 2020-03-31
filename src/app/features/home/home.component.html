@@ -59,41 +59,8 @@
         <a> Write an artical</a>on linkedIn
       </div>
     </div>
-    <div
-     class="profile__editeAbout" 
-    [ngClass]={hidden:isStartPostClicked}
-    
-     >
-      <div class="writePost profile__editeAbout__editeContainer" >
-        <div class="writePost__header">
-            <h4 class="writePost__header__content">Create post</h4>
-            <div class="writePost__header__image">
-              <img src="../../../assets/images/user.jpg" alt="image of user" />
-            <div class="writePost__header__image__username">Hala Elsaka</div>
-            </div>
-        </div>
-        <div class="writePost__content">
-          <textarea placeholder="What do you want to talk about" rows="10" cols="73"></textarea>
-            <div class="writePost__content__list">
-              <ul class="writePost__content__list__listIcons">
-                <li class="writePost__content__list__listIcons__icon">
-                  <img src="../../../assets/images/001-camera.svg" width="30rem" />
-                </li>
-                <li class="writePost__content__list__listIcons__icon">
-                  <img src="../../../assets/images/002-film.svg" width="30rem" />
-                </li>
-                <li class="writePost__content__list__listIcons__icon">
-                  <img src="../../../assets/images/003-document.svg" width="25rem" />
-                </li>
-              </ul>
-              
-            </div>
-            <button class="btn">Post</button>
-            <button class="btn"  (click)="hidePostContainer()">Cancel</button>
-
-      </div>
-      </div>  
-    </div>
+    <!-- //////////////////////////////////////////////////////////////////////////// -->
+    <app-add-post [isStartPostClicked]="isStartPostClicked" (changeClicked)="changeClick($event)"></app-add-post>
     <div class="postContainer" *ngFor="let post of posts;let i =index;">
       <div class="postContainer__info">
         <div class="postContainer__info__img">
