@@ -1,8 +1,10 @@
 import { User } from "./_model/user.model";
 import { Injectable } from '@angular/core';
 import {  PostsService } from './post.services';
+import { Subject } from 'rxjs';
 @Injectable()
 export class UserSrevice {
+  updatedUser = new Subject<User>()
   constructor(private postsService: PostsService) {
 
   }
@@ -45,15 +47,15 @@ export class UserSrevice {
     return user
   }
 
-  Update(user: User) {
-    console.log(user);
-    
-    const index = this.users.findIndex(a => a.id === user.id);
-    this.users[index] = {
+  updateUser(user: User) {
+    const users = this.users.slice()
+    const index = users.findIndex(a => a.id === user.id);
+    users[index] = {
       id: user.id, name: user.name,
       profile: user.profile,address:user.address
     };
-    
+    this.updatedUser.next(user)
+
   }
 
 

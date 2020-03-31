@@ -31,7 +31,6 @@ export class PostsService {
         console.log(post);
         
         const index = this.postsList.findIndex(a => a.postId === post.postId);
-        console.log(index)
         this.postsList[index] = {
           postId: post.userId, userId: post.userId,
           postContent : post.postContent,
