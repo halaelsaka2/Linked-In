@@ -9,7 +9,7 @@ import { HeaderComponent } from './layout/header/header.component';
 import { HomeComponent } from './features/home/home.component';
 import { RouterModule } from '@angular/router';
 import {  UserSrevice } from './users.services';
-import { PostService } from './post.services';
+import { PostsService } from './post.services';
 
 
 const appRoutes = [
@@ -31,7 +31,7 @@ const appRoutes = [
     FormsModule
 
   ],
-  providers: [UserSrevice, PostService],
+  providers: [UserSrevice, PostsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
