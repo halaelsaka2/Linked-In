@@ -1,8 +1,9 @@
 import { UserSrevice } from './../../users.services';
 import { Component, OnInit } from '@angular/core';
-
+import { ActivatedRoute } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { User } from 'src/app/_model/user.model';
+import { from } from 'rxjs';
 
 
 @Component({
@@ -17,25 +18,25 @@ export class ProfileComponent implements OnInit {
   isEditSkillClicked = true;
   isAddProfileClick = true;
   user: User[] = [];
+  id: any;
 
-
-  constructor(private usersService: UserSrevice) { }
+  constructor(private usersService: UserSrevice, private activatedRoute: ActivatedRoute) {
+  }
   ngOnInit(): void {
     this.user = this.usersService.getAll();
     this.user[0].profile.skills = []
-  }
 
+    console.log(this.activatedRoute.snapshot.params);
+    this.id = this.activatedRoute.snapshot.params;
+    console.log(this.id);
+  }
 
 
 
   onSubmit(myForm) {
     console.log(myForm);
-    // this.usersService.users[0].name.firstName=myForm.value.userFirstName;
-    // console.log(this.usersService.users[0].name.firstName);
-    // this.usersService.users[0].name.firstName=firstName.value;
-    // console.log(this.usersService.users[0].name.firstName);
     const user: User = {
-      id: 1,
+      id: this.id,
       name:
       {
         firstName: myForm.value.userFirstName,
@@ -92,10 +93,4 @@ export class ProfileComponent implements OnInit {
       })
     }
   }
-  // onTagAdded(tagName: HTMLInputElement) {
-  //   this.product.tags.push({ name: tagName.value });
-  //   tagName.value = "";
-  //   //console.log(this.product.tags);
-  // }
-
 }
