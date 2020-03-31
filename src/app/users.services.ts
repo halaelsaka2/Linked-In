@@ -1,16 +1,21 @@
 import { User } from "./_model/user.model";
 import { Injectable } from '@angular/core';
+<<<<<<< HEAD
 import { PostService } from './post.services';
 
+=======
+import {  PostsService } from './post.services';
+>>>>>>> 4980a9ca2d75b0bf24ad253c6554d81ec69f7fa0
 @Injectable()
 export class UserSrevice {
-  constructor(private postss: PostService) {
+  constructor(private postsService: PostsService) {
 
   }
   users: User[] = [
     {
       id: 1,
       name: { firstName: "ahmed", lastName: "abd elaziz" },
+<<<<<<< HEAD
       posts: this.postss.getById(1)
       // {
       //   postContent: "hala manar aya",
@@ -83,6 +88,28 @@ export class UserSrevice {
         about: ""
       }
       , address: "Alexandria"
+=======
+      profile: {
+        headLine: "asdasda",
+        education: ["faculty of computer science", "asdfasdf"],
+        bkImgPath: "asdasd",
+        about:"2aaamer"
+      },
+      address:"abo Rakaba",
+      connetionIds :[2,3,4]
+    },
+    {
+      id: 2,
+      name: { firstName: "Hala", lastName: "Elsaka" },
+      profile: {
+        headLine: "Front End",
+        education: ["faculty of computer science", "Menofia"],
+        bkImgPath: "asdasd",
+        about:"2aaamer"
+      },
+      address:"abo Rakaba",
+      connetionIds :[1,3,4]
+>>>>>>> 4980a9ca2d75b0bf24ad253c6554d81ec69f7fa0
     }
 
 
@@ -92,8 +119,10 @@ export class UserSrevice {
 
   }
 
-  getById(id: number): User {
-    return this.users.find(a => a.id === id)
+  getUserById(id: number): User {
+    const user =this.users.find(user => user.id === id); 
+    user.posts = this.postsService.getById(user.id)
+    return user
   }
 
   Update(user: User) {
@@ -102,7 +131,11 @@ export class UserSrevice {
     const index = this.users.findIndex(a => a.id === user.id);
     this.users[index] = {
       id: user.id, name: user.name,
+<<<<<<< HEAD
       posts: user.posts, profile: user.profile, address: user.address
+=======
+      profile: user.profile,address:user.address
+>>>>>>> 4980a9ca2d75b0bf24ad253c6554d81ec69f7fa0
     };
 
   }
