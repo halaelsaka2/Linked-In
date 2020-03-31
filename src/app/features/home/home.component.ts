@@ -26,21 +26,30 @@ export class HomeComponent implements OnInit {
     this.users.push(this.user)
     console.log(this.users);
   }
+  this.postService.postAdded.subscribe(
+    (post)=>{
+      console.log(post);
+      this.postService.Update(post);
+      this.posts=this.postService.addPost(post)
+      console.log(this.postService.getAll());
+    })
   }
 
   addLike(){
-    
-    
+      
   }
+
 
   showPostForm() {
     console.log("before in home"+this.isStartPostClicked)
     this.isStartPostClicked = false;
     console.log("after in home"+this.isStartPostClicked);
   }
+  
   changeClick(isStartPostClicked){
     this.isStartPostClicked = isStartPostClicked;
   }
 
+  
 
 }

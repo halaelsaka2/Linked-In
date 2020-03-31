@@ -41,7 +41,13 @@ export class PostsService {
           likes:post.likes
         };
         
-      }
+    }
+
+    addPost(post:Post):Post[]{
+        this.postsList.push(post);
+        return this.postsList;
+    }
+
 
 
 }
