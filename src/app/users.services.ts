@@ -144,7 +144,8 @@ export class UserSrevice implements OnInit {
         headLine: "3la bab allah",
         education: ["faculty of Computer scince Ismalia university"],
         profileImgPath: "../../../assets/images/user.jpg",
-        about: "worked for Microsoft For ten years "
+        about: "worked for Microsoft For ten years ",
+        
       },
       address: "Ismalia",
       connetionIds: [8, 1, 4]

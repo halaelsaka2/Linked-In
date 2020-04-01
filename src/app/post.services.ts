@@ -12,7 +12,7 @@ export class PostsService {
       postContent: "Celebrating the launch of #whatsapp for business with Mr Eletreby, Mr Akef ,Mr hossam and banquemisr digital innovation team, banque misr was the first bank to launch whatsapp for business & For the first time in Egypt a Bank allows the purchase of the CD 15% annual certificate through WhatsApp ",
       likesNum: 1,
       commentsNum: 5,
-      comments: ["asda", "asda"],
+      comments: ["well Done", "amazing"],
       imgUrl: "asdasdasd"
     },
     {
@@ -21,7 +21,7 @@ export class PostsService {
       postContent: "We think you should follow your dreams. Join our internship challenge for the chance to win a 6-month paid global internship at JTI, Japan Tobacco International.",
       likesNum: 1,
       commentsNum: 5,
-      comments: ["asda", "asda"],
+      comments: [],
       imgUrl: "asdasdasd"
     },
     {
@@ -30,7 +30,7 @@ export class PostsService {
       postContent: "It’s fantastic to see the creativity of students using Minecraft to maintain the sense of community and belonging that is so important in times like this.",
       likesNum: 1,
       commentsNum: 5,
-      comments: ["asda", "asda"],
+      comments: ["wow"],
       imgUrl: "asdasdasd"
     },
     {
@@ -48,7 +48,7 @@ export class PostsService {
       postContent: "حظر مش مانعنا نخلص كورساتنا على خير في ال iti 🤷😻 يارب العوده سريعا",
       likesNum: 1,
       commentsNum: 5,
-      comments: ["asda", "asda"],
+      comments: ["Okaaay"],
       imgUrl: "asdasdasd"
     },
     {
