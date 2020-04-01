@@ -6,10 +6,11 @@ export class User {
     firstName?: string;
     lastName?: string;
   };
+  email?: string;
   posts?: Post[];
   profile?: Profile;
-  address?:string;
-  connetionIds?:number[];
+  address?: string;
+  connetionIds?: number[];
 
 
 }

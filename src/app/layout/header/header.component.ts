@@ -2,6 +2,7 @@ import { Component, OnInit, Output } from '@angular/core';
 import { UserSrevice } from './../../users.services';
 import { User } from 'src/app/_model/user.model';
 import { Subject } from 'rxjs';
+import { Router, ActivatedRoute } from '@angular/router';
 
 
 @Component({
@@ -14,7 +15,7 @@ export class HeaderComponent implements OnInit {
   allUsers = [];
   tempUsers: User[];
   isSearchClicked = true;
-  constructor(private userService: UserSrevice) { }
+  constructor(private userService: UserSrevice,private router:Router ,private route:ActivatedRoute) { }
 
   ngOnInit(): void {
     this.allUsers = this.userService.getAll();
@@ -62,5 +63,9 @@ export class HeaderComponent implements OnInit {
   displaySearchBox() {
     this.isSearchClicked = !this.isSearchClicked
 
+  }
+  onProfileLoad(){
+console.log(this.route.snapshot.params['id'])
+this.router.navigate(["/profile/", parseInt(this.route.snapshot.params['id'])  ])
   }
 }
