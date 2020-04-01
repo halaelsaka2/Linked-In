@@ -61,16 +61,34 @@
                 
                 display: inline-block;
             }
+            .item__link{
+                margin-top:0px;
+            }
             .image{
                 // background-image: url(../images/user.png);
-                background-size: cover;
-                height: $small-size;
-                width: $small-size;
+                height: 1.1rem;
+                width: 1.1rem;
                 border-radius: 50%;
-                border-color: $primary-font-color;
+                border-color: #e1e9ee;
                 border-style: solid;
                 border-width: 0.5px;
+                margin-left: 2px;
+                margin-top: -41px;
+               
+                           
             }
+            // .image__border{
+                
+            // }
+            // .sora{
+            //     margin-top: -10px;
+            // }
+            // .imageWhite{
+            //     border:0.5px solid white;
+            //     height: 25px;
+            //     // margin-top: -25px;
+            //     width: 32px;
+            // }
           
             i{
                 display: flex;
@@ -103,9 +121,10 @@
           
         
     }
-    .border{
-        border-right: solid $primary-font-color 0.5px;
-    }
+    // .border{
+        // border-right:  solid $primary-font-color 0.5px;
+        
+    // }
 }
 .searchBox-container{
     

@@ -222,7 +222,8 @@ body{background-color: rgb(241, 241, 241);}
            
             }
             &__data{
-                display:flex;
+                // display:flex;
+                display: inline-flex;
                 margin-left: 20px;
                 margin-top:20px;
                 .para{

@@ -1,26 +1,55 @@
-.newPostContainer {
+.newPostContainer{
   margin: 1rem;
+  margin-top:-2rem;
+  margin-left: 0rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  background-color: white;
+  width: 476px;
+  background-color:white;
+  border:1px solid #d9d9d9;
   &__listIcons {
+    width: 600px;
     padding: 0rem;
     margin: 0rem;
     display: flex;
+    margin-left: 47px;
     // align-items: center;
     list-style-type: none;
 
     &__icon {
       padding: 1rem;
       border: 1px solid #d9d9d9;
+      // margin-left:10px;
+      &:hover{
+        background-color:rgb(213, 236, 241) ;
+        cursor: pointer;
+      }
+      
+   }
+   &__write{
+    p{
+    margin-top:-5px;
+    padding: 1rem;
+    padding-left:-33px;
+    margin-left: -4.1rem;
+    &:hover{
+      color:rgb(37, 137, 184);
+      cursor: pointer;
     }
   }
+   }
+  }
   &__writeArtical {
+    width: 450px;
+    background-color:rgb(213, 236, 241) ;
     a{
       padding: 0.3rem;
       color: $primary-blue;
-
+      &:hover{
+        color:rgb(37, 137, 184);
+        cursor: pointer;
+      }
     }
     padding: 0.5rem;
     color: $fourthly-gray;
