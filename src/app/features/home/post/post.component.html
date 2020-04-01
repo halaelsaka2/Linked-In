@@ -20,7 +20,7 @@
     <div class="postContainer__content" >
       {{post.postContent}}
     </div>
-    <div>{{post.likesNum}} likes. {{post.commentsNum}} comments</div>
+    <div>{{post.likesNum}} likes. {{post.comments.length}} comments</div>
     <div class="postContainer__reaction">
       <div class="postContainer__reaction__icon" (click)="addLike()">
         <img src="../../../assets/images/004-like.svg" width="17rem"/>
@@ -28,22 +28,24 @@
       </div>
       <div class="postContainer__reaction__icon">
         <img src="../../../assets/images/005-comment.svg" width="17rem"/>
-        <span>comment</span>
+        <span (click)="showComment()">comment</span>
       </div>
       <div class="postContainer__reaction__icon">
         <img src="../../../assets/images/006-share.svg" width="17rem"> <span>share</span>
         
       </div>
     </div>
-    <div class="postContainer__commentAdd">
-      <img  src="../../../../assets/images/one.png">
-      <input placeholder="write your comment">
+    <div class="postContainer__commentAdd" [ngClass]={hidden:isCommentHidden}>
+      <img  src={{user.profile.profileImgPath}}>
+      <input placeholder="write your comment" (keydown)="addNewComment($event,newComment.value)" #newComment>
     </div>
-    <div class="postContainer__commentContainer">
-      <img  src="../../../../assets/images/one.png">
+    <div class="postContainer__commentContainer"
+     *ngFor="let comment of post.comments"
+     [ngClass]={hidden:isCommentHidden}>
+      <img  src={{user.profile.profileImgPath}}>
       <div class="myComment">
-        <p>Aya Rabea</p>
-        <p>it's amazzzzinggg</p>
+        <p>{{user.name.firstName}}</p>
+        <p>{{comment}}</p>
       </div>
       
     </div>

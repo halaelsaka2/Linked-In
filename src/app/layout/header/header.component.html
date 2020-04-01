@@ -2,13 +2,13 @@
     <div class="nav__logo">
         <img src="../../../assets/images/linkedin-512.png">
     </div>
-    <div class="nav__search">
+    <div class="nav__search" (click)="displaySearchBox()">
         <i class="fas fa-search"></i>
-        <input class="search_box " placeholder="  Search">
+        <input class="search_box " placeholder="  Search" #search (keyup)="onSearch(search)">
     </div>
     <ul class="nav__menu">
-        <li class="menu__item" routerLink="home/2">
-            <a class="item__link" >
+        <li class="menu__item" routerLink="">
+            <a class="item__link">
                 <div>
                     <i class="fas fa-home"></i>
                     Home
@@ -67,4 +67,28 @@
         </li>
 
     </ul>
+
+</div>
+<div class="searchBox-container" [ngClass]={hidden:isSearchClicked} (click)="displaySearchBox()">
+    <div class="searchBox">
+        <div *ngFor="let item of tempUsers" class="searchBox__item" (click)="GetUser(item,search)"
+            [routerLink]="['/others-profile',item.id]">
+            <span class="item__photo">
+                <img src="../../../assets/images/user.jpg">
+            </span>
+            <span>
+                <h6>{{item.name.firstName}} </h6>
+
+
+            </span>
+        </div>
+        <div class="searchBox__item">
+            <span class="item__photo">
+                <img src="../../../assets/images/user.jpg">
+            </span>
+            <span>
+                <h6>Manarr</h6>
+            </span>
+        </div>
+    </div>
 </div>

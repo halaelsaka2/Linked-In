@@ -1,6 +1,6 @@
 import { User } from "./_model/user.model";
 import { Injectable, OnInit } from '@angular/core';
-import {  PostsService } from './post.services';
+import { PostsService } from './post.services';
 import { Subject } from 'rxjs';
 import { Post } from './_model/post.model';
 @Injectable()
@@ -10,11 +10,11 @@ export class UserSrevice implements OnInit {
 
   }
   ngOnInit(): void {
-// this.postsService.onePostAdded.subscribe((post)=>{
-//  const userAddedPost =  this.users.findIndex((user)=>{user.id === post.userId})
-//  this.users[userAddedPost].posts.push(post)
-//  console.log(this.users)
-// })
+    // this.postsService.onePostAdded.subscribe((post)=>{
+    //  const userAddedPost =  this.users.findIndex((user)=>{user.id === post.userId})
+    //  this.users[userAddedPost].posts.push(post)
+    //  console.log(this.users)
+    // })
   }
   users: User[] = [
     {
@@ -24,7 +24,8 @@ export class UserSrevice implements OnInit {
         headLine: "Front End developer ",
         education: ["faculty of computer science"],
         profileImgPath: "../../../assets/images/ManUser.jpeg",
-        about: "work for big company beo beo "
+        about: "work for big company beo beo ",
+        skills:[]
       },
       address: "bort said",
       connetionIds: [2, 3, 4]
@@ -36,7 +37,8 @@ export class UserSrevice implements OnInit {
         headLine: "Full stack developer",
         education: ["faculty of computer science Menofia university"],
         profileImgPath: "../../../assets/images/user.jpg",
-        about: "worked for microsoft for three years "
+        about: "worked for microsoft for three years ",
+        skills:[]
       },
       address: "Menoifa",
       connetionIds: [1, 3, 4]
@@ -48,7 +50,8 @@ export class UserSrevice implements OnInit {
         headLine: "Mean stack developer",
         education: ["faculty of computer science Banha university"],
         profileImgPath: "../../../assets/images/user.jpg",
-        about: "worked for Google for three years "
+        about: "worked for Google for three years",
+        skills:[]
       },
       address: "Banha",
       connetionIds: [1, 2, 4]
@@ -60,7 +63,8 @@ export class UserSrevice implements OnInit {
         headLine: "UI developer",
         education: ["faculty of computer science Mansoura university"],
         profileImgPath: "../../../assets/images/user.jpg",
-        about: "worked for Andela for three years "
+        about: "worked for Andela for three years ",
+        skills:[]
       },
       address: "Behera",
       connetionIds: [3, 2, 5]
@@ -72,7 +76,8 @@ export class UserSrevice implements OnInit {
         headLine: "Tester developer",
         education: ["faculty of computer science Ismalia university"],
         profileImgPath: "../../../assets/images/user.jpg",
-        about: "worked for microsoft for three years "
+        about: "worked for microsoft for three years ",
+        skills:[]
       },
       address: "Ismalia",
       connetionIds: [1, 2, 4]
@@ -84,7 +89,8 @@ export class UserSrevice implements OnInit {
         headLine: "Manager at Google",
         education: ["faculty of science Cairo university"],
         profileImgPath: "../../../assets/images/user.jpg",
-        about: "worked Now at Google "
+        about: "worked Now at Google ",
+        skills:[]
       },
       address: "Cairo",
       connetionIds: [3, 5, 4]
@@ -96,7 +102,8 @@ export class UserSrevice implements OnInit {
         headLine: "UI/Ux developer",
         education: ["faculty of Commerce Port said university"],
         profileImgPath: "../../../assets/images/ManUser.jpeg",
-        about: "worked for Vodafon For two years "
+        about: "worked for Vodafon For two years ",
+        skills:[]
       },
       address: "Port said",
       connetionIds: [3, 5, 4]
@@ -108,7 +115,8 @@ export class UserSrevice implements OnInit {
         headLine: "Hr Manager",
         education: ["faculty of scince Ismalia university"],
         profileImgPath: "../../../assets/images/user.jpg",
-        about: "worked for Google For two years "
+        about: "worked for Google For two years ",
+        skills:[]
       },
       address: "El swees",
       connetionIds: [3, 7, 6]
@@ -120,7 +128,8 @@ export class UserSrevice implements OnInit {
         headLine: "CEO at Vodafon",
         education: ["faculty of Computer scince Ismalia university"],
         profileImgPath: "../../../assets/images/user.jpg",
-        about: "worked for Microsoft For ten years "
+        about: "worked for Microsoft For ten years ",
+        skills:[]
       },
       address: "Al xour",
       connetionIds: [8, 7, 5]
@@ -132,7 +141,8 @@ export class UserSrevice implements OnInit {
         headLine: "Photo shop",
         education: ["faculty of Computer scince Ismalia university"],
         profileImgPath: "../../../assets/images/ManUser.jpeg",
-        about: "worked for Microsoft For ten years "
+        about: "worked for Microsoft For ten years ",
+        skills:[]
       },
       address: "Ismalia",
       connetionIds: [4, 1, 5]
@@ -144,21 +154,22 @@ export class UserSrevice implements OnInit {
         headLine: "3la bab allah",
         education: ["faculty of Computer scince Ismalia university"],
         profileImgPath: "../../../assets/images/user.jpg",
-        about: "worked for Microsoft For ten years "
+        about: "worked for Microsoft For ten years ",
+        skills:[]
       },
       address: "Ismalia",
       connetionIds: [8, 1, 4]
     }
 
-    
+
 
 
   ];
   getAll(): User[] {
     const users = this.users.slice();
-    users.forEach((user)=>{
-    user.posts = this.postsService.getById(user.id)  
-    }) 
+    users.forEach((user) => {
+      user.posts = this.postsService.getById(user.id)
+    })
     return users;
 
   }
@@ -180,6 +191,6 @@ export class UserSrevice implements OnInit {
 
   }
 
-  
+
 
 }
