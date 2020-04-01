@@ -1,66 +1,5 @@
 <div class="profile">
-    <!-- edit profile data here active for display-->
-    <!-- <div class="profile__editForm profile__editeAbout ">
-        <div class=" profile__editeAbout__editeContainer profile__editForm__editFormContainer">
 
-            <div class=" profile__editeAbout__editeContainer__header ">
-          <h5 class="h5">Edite Info</h5>
-          <span class=" profile__editeAbout__editeContainer__header__icon" ><i
-              class=" i fa fa-window-close" aria-hidden="true"></i></span>
-        </div>
-
-            <div class="profile__editeAbout__editeContainer__body ">
-                <div class="profile__editForm__editFormContainer__body__picturesEdite">
-                    <div class="profile__editForm__editFormContainer__body__picturesEdite__background">
-                        <img class="profile__pictures__background" alt="cover"
-                            src="../../../assets/images/download.jpg">
-
-                    </div>
-                    <img alt="profile" class="profile__pictures__photo" src="../../../assets/images/one.png">
-                </div>
-            </div>
-
-
-            <div class="profile__editForm__editFormContainer__editInput">
-                <form #myForm="ngForm" (ngSubmit)="onSubmit(myForm)">
-                    <div class="flex">
-                        <div class="name">
-                            <h6>FirstName<span>*</span></h6>
-                            <input [ngModel]="user.name.firstName" name="userFirstName" #firstName>
-                        </div>
-                        <div class="headline">
-                            <h6>LastName<span>*</span></h6>
-                            <input [ngModel]="user.name.lastName" name="userLastName">
-                        </div>
-
-                    </div>
-                    <div class="headline">
-                        <h6>Headline<span>*</span></h6>
-                        <textarea [(ngModel)]="user.profile.headLine" class="edit-form" name="headLine"></textarea>
-                    </div>
-                    <div class="education">
-                        <h6>Education<span>*</span></h6>
-                        <select class="edit-form">
-                            <option *ngFor="let item of user.profile.education; let i = index; ">{{item}}</option>
-                        </select>
-                    </div>
-
-                    <div class="education">
-                        <h6>Address<span>*</span></h6>
-                        <input [(ngModel)]="user.address" name="address" />
-                    </div>
-
-                    <div class="edit-btn">
-                        <button class="profile__editeAbout__editeContainer__body__button" type="submit">Save</button>
-                    </div>
-                </form>
-            </div>
-
-        </div>
-
-
-    </div> -->
-    <!-- --------------------/////------------------------- -->
     <div class="profile__pictures">
         <div class="profile__pictures__background">
             <img class="profile__pictures__background" alt="cover" src="../../../assets/images/download.jpg">
@@ -68,17 +7,7 @@
         <img alt="profile" class="profile__pictures__photo" src="../../../assets/images/one.png">
     </div>
     <div class="profile__container">
-        <!-- <div class="profile__container__controls">
-        <button class="profile__container__controls__addsection" (click)="dispalyAddProfileForm()">
-  
-          Add Profile Section
-          <span><i >&blacktriangledown;</i></span>
-        </button>
-        <button type="button" class="profile__container__controls__morebtn">More...</button>
-        <div class="profile__container__controls__editebtn" (click)="displayEditForm()">
-          <span><i class="fas fa-pencil-alt edit_pen"></i></span>
-        </div>
-      </div> -->
+
         <div class=" others-details">
             <h3>{{user.name.firstName}}</h3>
             <h5>{{user.profile.headLine}}</h5>
@@ -88,138 +17,31 @@
             </div>
         </div>
     </div>
-    <!-- <div class="profile__dropdown " [ngClass]={hidden:isAddProfileClick}>
-      <ul>
-        <li><a (click)="displayEditForm()">Intro</a></li>
-        <li><a>About</a></li>
-        <li><a>Featured</a></li>
-        <li><a>Skill</a></li>
-        <li><a>background</a></li>
-  
-      </ul>
-    </div> -->
+
     <!--About section-->
     <div class="profile__about">
         <div class="profile__about__header">
             <h4 class="h4">About</h4>
-            <!-- <div class=" profile__about__header__btn  profile__container__controls__editebtn">
-          <span (click)="displayAboutForm()"><i class="fas fa-pencil-alt edit_pen"></i></span>
-        </div> -->
+
         </div>
         <div class="profile__about__content">
             <p>{{user.profile.about}}</p>
         </div>
     </div>
-    <!--here add_form_component-->
-    <!-- <div class="profile__editeAbout " [ngClass]={hidden:isAboutFormClicked}>
-      <div class="profile__editeAbout__editeContainer">
-        <div class=" profile__editeAbout__editeContainer__header">
-          <h5 class="h5">Edite about</h5>
-          <span class=" profile__editeAbout__editeContainer__header__icon" (click)="displayAboutForm()"><i
-              class=" i fa fa-window-close" aria-hidden="true"></i></span>
-        </div>
-        <hr>
-        <div class="profile__editeAbout__editeContainer__body">
-          <form #myForm2="ngForm" (ngSubmit)="onSubmitAbout(myForm2)">
-            <label>Summary</label>
-            <textarea [ngModel]="user.profile.about" name="aboutUser" placeholder="Enter Your About"
-              class="profile__editeAbout__editeContainer__body__text"></textarea>
-            <hr>
-            <div>
-              <button class="profile__editeAbout__editeContainer__body__button" type="submit">Save</button>
-            </div>
-          </form>
-        </div>
-  
-  
-      </div>
-    </div> -->
-    <!--end of add_form_component -->
+
 
     <!-- skill section-->
     <div class="profile__about ">
         <div class="profile__about__header">
             <h4 class="h4">Skills &Endorsements</h4>
-            <!-- <div class="skill__edite">
-          <button class="skill__edite__btn" (click)="displayAddSkillForm()">Add a new skill</button>
-          <div class=" profile__container__controls__editebtn skill__edite__icon">
-            <span (click)="displayEditSkillForm()"><i class="fas fa-pencil-alt edit_pen"></i></span>
-          </div>
-        </div> -->
+
         </div>
         <div *ngFor="let skill of user.profile.skills" class="profile__about__content skill__content">
             <p>{{skill}}</p>
             <hr>
         </div>
     </div>
-    <!--here add_form_component for skill-->
-    <!-- <div class="profile__editeAbout " [ngClass]={hidden:isAddSkillClicked}>
-      <div class="profile__editeAbout__editeContainer">
-        <div class=" profile__editeAbout__editeContainer__header">
-          <h5 class="h5">Add Skills</h5>
-          <span class=" profile__editeAbout__editeContainer__header__icon" (click)="displayAddSkillForm()">
-            <i class=" i fa fa-window-close" aria-hidden="true"></i></span>
-        </div>
-        <hr>
-        <div class="profile__editeAbout__editeContainer__body">
-          <div class="skill__search ">
-            <form>
-             
-              <input #skill (keyup.enter)="onSkillAdded(skill)" placeholder="Skill (ex:Data Anaysis)" type="text"
-                class="skill__search__input" list="skillName">
-              <div *ngFor="let skill of user.profile.skills" class="skill__search__data">
-  
-                <p style="display: inline-block;" class="para">{{skill}}</p>
-  
-  
-              </div>
-              <div class="skill__search__submit">
-                <hr>
-                <button class="profile__editeAbout__editeContainer__body__button">Add</button>
-              </div>
-            </form>
-          </div>
-        
-        </div>
-  
-      </div>
-    </div> -->
-    <!--edite skill-->
-    <!-- <div class="profile__editeAbout" [ngClass]={hidden:isEditSkillClicked}>
-      <div class="profile__editeAbout__editeContainer">
-        <div class=" profile__editeAbout__editeContainer__header">
-          <h5 class="h5">Edite skill</h5>
-          <span class=" profile__editeAbout__editeContainer__header__icon" (click)="displayEditSkillForm()"><i
-              class=" i fa fa-window-close" aria-hidden="true"></i></span>
-        </div>
-        <hr>
-        <div class="profile__editeAbout__editeContainer__body">
-          <div class="top-skill">
-            <p>Top Skills</p>
-          </div>
-          <hr style="margin-top:0.5px;">
-          <div>
-            <div class="edite-list">
-              <div *ngFor="let item of user.profile.skills" class="edite-list__item">
-                <p>{{item}}</p>
-                <span><i class=" i fa fa-trash" aria-hidden="true"></i></span>
-              </div>
-              <hr style="margin-top:0px ;">
-            </div>
-  
-          </div>
-  
-          <div class="saveEdite">
-            <hr>
-            <button class="profile__editeAbout__editeContainer__body__button">Save</button>
-          </div>
-        </div>
-      </div>
-    </div> -->
 
-
-
-    <!--end of skill-->
 
     <!-- iterest section-->
     <div class="profile__interest">

@@ -48,7 +48,7 @@ export class UserSrevice implements OnInit {
         headLine: "Mean stack developer",
         education: ["faculty of computer science Banha university"],
         profileImgPath: "../../../assets/images/user.jpg",
-        about: "worked for Google for three years "
+        about: "worked for Google for three years"
       },
       address: "Banha",
       connetionIds: [1, 2, 4]
