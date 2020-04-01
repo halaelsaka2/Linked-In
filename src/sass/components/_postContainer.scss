@@ -35,7 +35,7 @@
         input{
           border:1px solid rgb(151, 151, 151);
           border-radius:20px;
-          width: 400px;
+          width: 440px;
           padding: 1px;
           padding-left: 5px;
           &:focus{
@@ -59,7 +59,7 @@
             margin-left: 10px;
             border-radius: 0px 12px 12px 12px ;
             background-color: rgba(180, 217, 228, 0.89);
-            width: 380px;
+            width: 400px;
             min-height: 40px;
             max-height: fit-content;
             padding-left:2px;
@@ -67,6 +67,7 @@
                 padding: 0px;
                 margin-top: 5px;
                 margin-left: 5px;
+            
             }
         }
     }
