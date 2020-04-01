@@ -3,7 +3,7 @@
     <div class="card">
       <div class="card__body">
         <header class="card__body__image">
-          <img src="../../../assets/images/user.jpg" alt="image of user" />
+          <img src={{user.profile.profileImgPath}} alt="image of user" />
         </header>
         <h3 class="card__body__name">{{user.name.firstName}}</h3>
         <p class="card__body__title">
@@ -62,6 +62,8 @@
     <app-add-post 
     [isStartPostClicked]="isStartPostClicked"
      (changeClicked)="changeClick($event)"
+      [imageProfile]="user.profile.profileImgPath"
+     [userName]="user.name.firstName"
      ></app-add-post>
     <app-post 
     *ngFor="let post of posts ;let i =index;" 
