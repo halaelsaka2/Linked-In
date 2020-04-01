@@ -5,10 +5,12 @@ export interface Post {
     user?:User
     userId?: number;
     postContent?: string;
-    likes?: number;
+    likesNum?: number;
+    commentsNum?:number;
     comments?: string[];
     imgUrl?: string;
     videoUrl?: string;
     documentUrl?: string;
+
 
 }

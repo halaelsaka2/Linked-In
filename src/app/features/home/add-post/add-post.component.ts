@@ -12,7 +12,7 @@ import { ActivatedRoute } from '@angular/router';
 export class AddPostComponent implements OnInit {
   @Input() isStartPostClicked :boolean=true;
   @Output() changeClicked = new EventEmitter<boolean>();
-  post :Post={};
+  post :Post={likesNum:0,commentsNum:0};
   constructor(private postService : PostsService,private userService:UserSrevice ,private route:ActivatedRoute) { }
 
   ngOnInit(): void {

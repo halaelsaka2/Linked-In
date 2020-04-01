@@ -8,21 +8,25 @@ export class PostsService {
     postsList: Post[] = [
         {
             userId: 1,
+            postId:1,
             postContent: "hala manar aya ahmed",
-            likes: 0,
+            likesNum: 1,
+            commentsNum:5,
             comments: ["asda", "asda"],
             imgUrl: "asdasdasd"
         },
         {
-           
+           postId:2,
             userId: 2,
             postContent: "Hollooooooooo",
-            likes: 0,
+            likesNum: 3,
+            commentsNum:7,
             comments: ["asda", "asda"],
             imgUrl: "asdasdasd"
         }
     ];
     postAdded = new Subject< Post[]>();
+    postUpdated = new Subject< Post>();
 
     getAll(): Post[] {
         return this.postsList.slice();
@@ -33,14 +37,9 @@ export class PostsService {
         return UserPosts;
     }
     Update(post: Post) {
-        console.log(post);
-        
         const index = this.postsList.findIndex(a => a.postId === post.postId);
-        this.postsList[index] = {
-          postId: post.userId, userId: post.userId,
-          postContent : post.postContent,
-          likes:post.likes
-        };
+        this.postsList[index] = post;
+       this.postUpdated.next(post)
         
     }
 

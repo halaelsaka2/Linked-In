@@ -31,6 +31,8 @@ export class HomeComponent implements OnInit {
       post.user = this.userService.getUserById(post.userId);
       console.log(post);
     });
+
+
     this.posts = posts;
     this.postService.postAdded.subscribe(posts => {
       this.posts = posts;
@@ -41,8 +43,7 @@ export class HomeComponent implements OnInit {
     })
   }
 
-  addLike() {}
-
+ 
   showPostForm() {
     console.log("before in home" + this.isStartPostClicked);
     this.isStartPostClicked = false;
