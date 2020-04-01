@@ -19,28 +19,138 @@ export class UserSrevice implements OnInit {
   users: User[] = [
     {
       id: 1,
-      name: { firstName: "ahmed", lastName: "abd elaziz" },
+      name: { firstName: "ahmed abd-elaziz", lastName: "abd elaziz" },
       profile: {
-        headLine: "asdasda",
-        education: ["faculty of computer science", "asdfasdf"],
-        bkImgPath: "../../../assets/images/004-like.svg",
-        about: "2aaamer"
+        headLine: "Front End developer ",
+        education: ["faculty of computer science"],
+        profileImgPath: "../../../assets/images/ManUser.jpeg",
+        about: "work for big company beo beo "
       },
-      address: "abo Rakaba",
+      address: "bort said",
       connetionIds: [2, 3, 4]
     },
     {
       id: 2,
-      name: { firstName: "Hala", lastName: "Elsaka" },
+      name: { firstName: "Hala Elsaka", lastName: "Elsaka" },
       profile: {
-        headLine: "Front End",
-        education: ["faculty of computer science", "Menofia"],
-        bkImgPath: "../../../assets/images/004-like.svg",
-        about: "2aaamer"
+        headLine: "Full stack developer",
+        education: ["faculty of computer science Menofia university"],
+        profileImgPath: "../../../assets/images/user.jpg",
+        about: "worked for microsoft for three years "
       },
-      address: "abo Rakaba",
+      address: "Menoifa",
       connetionIds: [1, 3, 4]
+    },
+    {
+      id: 3,
+      name: { firstName: "Manar Karam", lastName: "Karam" },
+      profile: {
+        headLine: "Mean stack developer",
+        education: ["faculty of computer science Banha university"],
+        profileImgPath: "../../../assets/images/user.jpg",
+        about: "worked for Google for three years "
+      },
+      address: "Banha",
+      connetionIds: [1, 2, 4]
+    },
+    {
+      id: 4,
+      name: { firstName: "Aya Rabee", lastName: "Karam" },
+      profile: {
+        headLine: "UI developer",
+        education: ["faculty of computer science Mansoura university"],
+        profileImgPath: "../../../assets/images/user.jpg",
+        about: "worked for Andela for three years "
+      },
+      address: "Behera",
+      connetionIds: [3, 2, 5]
+    },
+    {
+      id: 5,
+      name: { firstName: "Farah Mahmoud", lastName: "Mahmoud" },
+      profile: {
+        headLine: "Tester developer",
+        education: ["faculty of computer science Ismalia university"],
+        profileImgPath: "../../../assets/images/user.jpg",
+        about: "worked for microsoft for three years "
+      },
+      address: "Ismalia",
+      connetionIds: [1, 2, 4]
+    },
+    {
+      id: 6,
+      name: { firstName: "Eman Elsayed", lastName: "Elsayed" },
+      profile: {
+        headLine: "Manager at Google",
+        education: ["faculty of science Cairo university"],
+        profileImgPath: "../../../assets/images/user.jpg",
+        about: "worked Now at Google "
+      },
+      address: "Cairo",
+      connetionIds: [3, 5, 4]
+    },
+    {
+      id: 7,
+      name: { firstName: "Eslam Taha", lastName: "Taha" },
+      profile: {
+        headLine: "UI/Ux developer",
+        education: ["faculty of Commerce Port said university"],
+        profileImgPath: "../../../assets/images/ManUser.jpeg",
+        about: "worked for Vodafon For two years "
+      },
+      address: "Port said",
+      connetionIds: [3, 5, 4]
+    },
+    {
+      id: 8,
+      name: { firstName: "Nada Ahmed", lastName: "Ahmed" },
+      profile: {
+        headLine: "Hr Manager",
+        education: ["faculty of scince Ismalia university"],
+        profileImgPath: "../../../assets/images/user.jpg",
+        about: "worked for Google For two years "
+      },
+      address: "El swees",
+      connetionIds: [3, 7, 6]
+    },
+    {
+      id: 9,
+      name: { firstName: "Mai Eltayeb", lastName: "Ahmed" },
+      profile: {
+        headLine: "CEO at Vodafon",
+        education: ["faculty of Computer scince Ismalia university"],
+        profileImgPath: "../../../assets/images/user.jpg",
+        about: "worked for Microsoft For ten years "
+      },
+      address: "Al xour",
+      connetionIds: [8, 7, 5]
+    },
+    {
+      id: 9,
+      name: { firstName: "Bola Magdy", lastName: "Magdy" },
+      profile: {
+        headLine: "Photo shop",
+        education: ["faculty of Computer scince Ismalia university"],
+        profileImgPath: "../../../assets/images/ManUser.jpeg",
+        about: "worked for Microsoft For ten years "
+      },
+      address: "Ismalia",
+      connetionIds: [4, 1, 5]
+    },
+    {
+      id: 10,
+      name: { firstName: "Mariam Magdy", lastName: "Magdy" },
+      profile: {
+        headLine: "3la bab allah",
+        education: ["faculty of Computer scince Ismalia university"],
+        profileImgPath: "../../../assets/images/user.jpg",
+        about: "worked for Microsoft For ten years "
+      },
+      address: "Ismalia",
+      connetionIds: [8, 1, 4]
     }
+
+    
 
 
   ];

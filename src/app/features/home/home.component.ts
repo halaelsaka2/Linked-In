@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
   @Input() isStartPostClicked = true;
 
   posts: Post[] = [];
-  user:User
+    user:User
  
   constructor(
     private postService: PostsService,
@@ -42,7 +42,6 @@ export class HomeComponent implements OnInit {
     })
   }
 
- 
   showPostForm() {
     console.log("before in home" + this.isStartPostClicked);
     this.isStartPostClicked = false;
