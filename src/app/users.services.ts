@@ -37,7 +37,11 @@ export class UserSrevice {
 
   ];
   getAll(): User[] {
-    return this.users.slice();
+    const users = this.users.slice();
+    users.forEach((user)=>{
+    user.posts = this.postsService.getById(user.id)  
+    }) 
+    return users;
 
   }
 

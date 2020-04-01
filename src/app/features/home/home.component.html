@@ -17,7 +17,7 @@
         </div>
         <div class="card__body__textContainer">
             <h5 class="card__body__textContainer__connections">Connections</h5>
-            <span class="card__body__textContainer__numberConnections">{{users[0].connetionIds.length}}</span>
+            <span class="card__body__textContainer__numberConnections"></span>
         </div>
       </div>
     </div>
@@ -61,7 +61,7 @@
     </div>
     <!-- //////////////////////////////////////////////////////////////////////////// -->
     <app-add-post [isStartPostClicked]="isStartPostClicked" (changeClicked)="changeClick($event)"></app-add-post>
-    <div class="postContainer" *ngFor="let post of posts;let i =index;">
+    <div class="postContainer" *ngFor="let user of users;let i =index;">
       <div class="postContainer__info">
         <div class="postContainer__info__img">
           <img src="https://media-exp1.licdn.com/dms/image/C5603AQGGfmPGzsTgCg/profile-displayphoto-shrink_100_100/0?e=1590624000&v=beta&t=wwEDcdtUtjfqwBGEGavkAYfDjDvSvKnrYYOkxWM1hxY"
@@ -70,10 +70,10 @@
         </div>
         <div class="postContainer__info__details">
           <div class="postContainer__info__details__name">
-            <a>{{users[i].name.firstName}}</a>
+            <a>{{user.name.firstName}}</a>
           </div>
           <div class="postContainer__info__details__job">
-            {{users[i].profile.headLine}}
+            {{user.profile.headLine}}
           </div>
           <div class="postContainer__info__details__postingTime">
             <span> 1W</span> <img src="../../../assets/images/world.svg" width="10rem">
@@ -81,7 +81,7 @@
         </div>
       </div>
       <div class="postContainer__content" >
-        {{post.postContent}}
+        {{user.posts[0].postContent}}
       </div>
       <div>{{numberOfLikes}} likes. 4 comments</div>
       <div class="postContainer__reaction">

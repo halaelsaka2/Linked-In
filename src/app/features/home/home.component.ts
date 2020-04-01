@@ -12,26 +12,28 @@ import { User } from 'src/app/_model/user.model';
 export class HomeComponent implements OnInit {
  @Input() isStartPostClicked = true;
   
-  posts:Post[];
-  user:User;
+  posts:Post[] =[];
+  userName:string;
   // post:Post;
   users:User[]=[];
   numberOfLikes=0;
   constructor(private postService:PostsService,private userService:UserSrevice) {}
 
   ngOnInit(): void {
-  this.posts=this.postService.getAll();
-  for (const post of this.posts) {
-    this.user=this.userService.getUserById(post.userId);
-    this.users.push(this.user)
-    console.log(this.users);
-  }
+
+this.posts = this.postService.getAll();
+
+    this.users=this.userService.getAll();
+   this.users.forEach((user)=>{
+     for(let i ; i<user.posts.length;i++){
+      this.posts.push(user.posts[i])
+     }
+   })
+  
   this.postService.postAdded.subscribe(
-    (post)=>{
-      console.log(post);
-      this.postService.Update(post);
-      this.posts=this.postService.addPost(post)
-      console.log(this.postService.getAll());
+    (posts)=>{
+     this.posts = posts;
+     console.log(this.posts);
     })
   }
 

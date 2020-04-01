@@ -21,17 +21,13 @@ export class AddPostComponent implements OnInit {
     this.changeClicked.next(this.isStartPostClicked);
   }
 
-
-
-
   addpost(content){
     //close
     this.isStartPostClicked = true;
     this.changeClicked.next(this.isStartPostClicked);
-
-    
     this.post.postContent=content.value;
-    this.postService.postAdded.next(this.post);
+    this.postService.addPost(this.post);
+    this.postService.postAdded.next();
     console.log(this.post.postContent);
   }
 

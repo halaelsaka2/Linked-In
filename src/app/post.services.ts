@@ -1,10 +1,12 @@
-import { EventEmitter } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { Post } from './_model/post.model'
-
+import { Subject } from 'rxjs';
+import { UserSrevice } from './users.services';
+@Injectable()
 export class PostsService {
+    constructor(){}
     postsList: Post[] = [
         {
-           
             userId: 1,
             postContent: "hala manar aya ahmed",
             likes: 0,
@@ -20,7 +22,7 @@ export class PostsService {
             imgUrl: "asdasdasd"
         }
     ];
-    postAdded = new EventEmitter < Post>();
+    postAdded = new Subject< Post[]>();
 
     getAll(): Post[] {
         return this.postsList.slice();
@@ -42,9 +44,9 @@ export class PostsService {
         
     }
 
-    addPost(post:Post):Post[]{
+    addPost(post:Post){
         this.postsList.push(post);
-        return this.postsList;
+       this.postAdded.next(this.postsList)
     }
 
 
