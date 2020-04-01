@@ -65,6 +65,7 @@ export class HeaderComponent implements OnInit {
 
   }
   onProfileLoad(){
-this.router.navigate(["/profile/", this.route.snapshot.params['id'] ])
+console.log(this.route.snapshot.params['id'])
+this.router.navigate(["/profile/", parseInt(this.route.snapshot.params['id'])  ])
   }
 }
