@@ -27,6 +27,7 @@ export class PostsService {
     ];
     postAdded = new Subject< Post[]>();
     postUpdated = new Subject< Post>();
+    // onePostAdded = new Subject<Post>();
 
     getAll(): Post[] {
         return this.postsList.slice();
@@ -46,6 +47,7 @@ export class PostsService {
     addPost(post:Post){
         this.postsList.unshift(post);
        this.postAdded.next(this.postsList)
+    //    this.onePostAdded.next(post)
     }
 
 

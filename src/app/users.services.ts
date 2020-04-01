@@ -1,12 +1,20 @@
 import { User } from "./_model/user.model";
-import { Injectable } from '@angular/core';
+import { Injectable, OnInit } from '@angular/core';
 import {  PostsService } from './post.services';
 import { Subject } from 'rxjs';
+import { Post } from './_model/post.model';
 @Injectable()
-export class UserSrevice {
+export class UserSrevice implements OnInit {
   updatedUser = new Subject<User>()
   constructor(private postsService: PostsService) {
 
+  }
+  ngOnInit(): void {
+// this.postsService.onePostAdded.subscribe((post)=>{
+//  const userAddedPost =  this.users.findIndex((user)=>{user.id === post.userId})
+//  this.users[userAddedPost].posts.push(post)
+//  console.log(this.users)
+// })
   }
   users: User[] = [
     {

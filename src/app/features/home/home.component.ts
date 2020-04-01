@@ -35,6 +35,7 @@ export class HomeComponent implements OnInit {
 
     this.posts = posts;
     this.postService.postAdded.subscribe(posts => {
+      
       this.posts = posts;
       console.log(this.posts);
     });

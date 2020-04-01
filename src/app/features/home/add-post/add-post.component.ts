@@ -29,6 +29,7 @@ export class AddPostComponent implements OnInit {
     this.changeClicked.next(this.isStartPostClicked);
 
     this.post.postContent=content.value;
+    this.post.userId = parseInt(this.route.snapshot.params['id']);
     this.post.user = this.userService.getUserById(parseInt(this.route.snapshot.params['id']) )
     this.postService.addPost(this.post);
   }
