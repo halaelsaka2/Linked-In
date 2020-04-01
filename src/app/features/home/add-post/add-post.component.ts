@@ -1,3 +1,4 @@
+import { Profile } from './../../../_model/profile.model';
 import { Post } from 'src/app/_model/post.model';
 import { PostsService } from 'src/app/post.services';
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
@@ -30,19 +31,13 @@ export class AddPostComponent implements OnInit {
     this.isStartPostClicked = true;
     this.changeClicked.next(this.isStartPostClicked);
 
-    // this.post.postContent = content.value;
-    // this.post.userId = parseInt(this.route.snapshot.params['id']);
-    // this.post.user = this.userService.getUserById(parseInt(this.route.snapshot.params['id']) )
-    const p:Post={
-      ...this.post,
-      postContent:content.value,
-      userId:parseInt(this.route.snapshot.params['id']),
-      user:this.userService.getUserById(parseInt(this.route.snapshot.params['id'])),
-      comments:[]
-      
-    }
-    // this.post.user.profile.profileImgPath = this.imageProfile;
-    this.postService.addPost(p);
+    this.post.postContent = content.value;
+    this.post.userId = parseInt(this.route.snapshot.params['id']);
+     console.log(this.userService.getUserById(parseInt(this.route.snapshot.params['id']) ));
+    // console.log(this.post.user.profile);
+    
+    this.post.comments=[];
+    this.postService.addPost(this.post);
   }
 
 

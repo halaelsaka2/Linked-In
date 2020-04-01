@@ -60,12 +60,14 @@
     </div>
     <!-- //////////////////////////////////////////////////////////////////////////// -->
     <app-add-post 
+    
     [isStartPostClicked]="isStartPostClicked"
      (changeClicked)="changeClick($event)"
       [imageProfile]="user.profile.profileImgPath"
      [userName]="user.name.firstName"
      ></app-add-post>
-    <app-post 
+    
+     <app-post 
     *ngFor="let post of posts ;let i =index;" 
     [post]="post" 
     [user]="user"

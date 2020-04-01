@@ -35,11 +35,14 @@ export class HomeComponent implements OnInit {
     this.posts = posts;
     this.postService.postAdded.subscribe(posts => {
       this.posts = posts;
+      console.log(this.posts[0]);
       console.log(this.posts);
     });
     this.route.params.subscribe((params)=>{
       this.user = this.userService.getUserById(parseInt(params['id']) )
     })
+
+    
   }
 
   showPostForm() {

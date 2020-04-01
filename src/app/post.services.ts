@@ -195,6 +195,7 @@ export class PostsService {
 
   getAll(): Post[] {
     return this.postsList.slice();
+    
   }
 
   getById(id: number): Post[] {
@@ -210,6 +211,7 @@ export class PostsService {
   }
 
   addPost(post: Post) {
+    
     this.postsList.unshift(post);
     this.postAdded.next(this.postsList);
     //    this.onePostAdded.next(post)
