@@ -54,28 +54,32 @@ body{background-color: rgb(241, 241, 241);}
     
     &__pictures{
         position: relative;
+        margin-bottom: 30px;
         &__background{
             width:100%;
             padding: 0em;
             margin: 0em;
             display: block;
         }
-        &__photo{
-            border: 3px solid rgb(241, 238, 238);
-            border-radius: 50%;
-            width:170px;
-            margin-top: -85px;
-            margin-left: 5%;
-            position: absolute; 
-            z-index: 1;
-
-        }
+        
+      
+            &__photo{
+                border: 3px solid rgb(241, 238, 238);
+                border-radius: 50%;
+                width:170px;
+                margin-top: -85px;
+                margin-left: 5%;
+                position: absolute; 
+                z-index: 1;
+    
+            }
+        
     }
     &__container{
         background-color: #ffffff;
-        height: 215px;
+        //height: 215px;
         //position: relative;
-        border: 1px solid rgb(178, 180, 182);
+        border: 1px solid rgb(114, 117, 119);
         box-shadow:0.5px 0.5px 5px #888888 ;
         padding:0%;
         width: 100%;
@@ -88,9 +92,6 @@ body{background-color: rgb(241, 241, 241);}
             margin-top:5px;
 
         }
-        // .group{
-        //     display:flex;
-        // }
         &__persondetails{
             margin-top: 36px;
             margin-left: 5%;
@@ -103,6 +104,19 @@ body{background-color: rgb(241, 241, 241);}
                     margin-left:5px;
                 }
             }
+        }
+
+        &__square{
+            //display: flex;
+            height: 80px;
+            border: 1px dashed $secondary-gray;
+            padding-top: 10px;
+            padding-left: 20px;
+            margin:30px ;
+            p{
+                color: $primary-blue;
+            }
+            
         }
     }
     &__dropdown{
@@ -184,6 +198,19 @@ body{background-color: rgb(241, 241, 241);}
             }
             &__content{
                 margin-left:12px;
+            }
+            &__topSkills{
+                border: 1px solid $primary-blue;
+                width: 12%;
+                height: 30px;
+                color: $primary-blue;
+                font-weight: bold;
+                border-radius: 10%;
+                margin-left: 20px;
+                p{
+                    padding-left: 10px;
+                    
+                }
             }
             
         }
@@ -285,6 +312,40 @@ body{background-color: rgb(241, 241, 241);}
            margin-top:100px;
         }
         //end of skill
+
+        &__interest{
+            margin-top:10px;
+                ///display:flex;
+                padding-left: 12px;
+                h4{
+                    margin-left:5px;
+                    margin-top:10px;
+                }
+                .item{
+                    display: flex;
+                    .photo{
+                        margin: 5px;
+                        width: 80px;
+                        height: 80px;
+                        img{
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                    .titles{
+                        margin-top: 20px;
+                        width: 70%;
+                        margin-left: 20px ;
+                        .p1{
+                            font-weight: bold;
+                            font-size: 18px;
+                        }
+                    }
+                  
+                
+                   
+                }
+        }
 
 }
    

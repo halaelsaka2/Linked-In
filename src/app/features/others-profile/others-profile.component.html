@@ -1,22 +1,38 @@
 <div class="profile">
 
+
     <div class="profile__pictures">
         <div class="profile__pictures__background">
             <img class="profile__pictures__background" alt="cover" src="../../../assets/images/download.jpg">
         </div>
-        <img alt="profile" class="profile__pictures__photo" src="../../../assets/images/one.png">
+
+        <img alt="profile" class="profile__pictures__photo" src={{user.profile.profileImgPath}}>
+
+
+
+
     </div>
     <div class="profile__container">
 
         <div class=" others-details">
             <h3>{{user.name.firstName}}</h3>
-
+            <h5>{{user.profile.headLine}}</h5>
             <div class="profile__container__persondetails__contactInfo">
                 <h6>{{user.address}}</h6>
+
+            </div>
+            <div>
                 <a href="#">Contact Info</a>
+                <span> | {{user.email}}</span>
+            </div>
+            <div class="profile__container__square">
+                show recuriters you're open to job opportunities__ you control who sees this.
+                <br>
+                <p>Get Started</p>
             </div>
         </div>
     </div>
+
 
     <!--About section-->
     <div class="profile__about">
@@ -45,7 +61,30 @@
 
     <!-- iterest section-->
     <div class="profile__interest">
+        <h4>Education</h4>
+        <div class="item">
+            <div class="photo">
+                <img src="../../../assets/images/iti.jpg">
 
+            </div>
+            <div class="titles">
+                <p class="p1">{{user.profile.education[1]}}</p>
+
+                <p class="p2">Trainee</p>
+            </div>
+        </div>
+        <hr>
+        <div class="item">
+            <div class="photo">
+                <img src="../../../assets/images/cs.png">
+
+            </div>
+            <div class="titles">
+                <p class="p1">{{user.profile.education[0]}}</p>
+
+                <p class="p2">Grduate</p>
+            </div>
+        </div>
     </div>
 
     <!--section aside-->
@@ -61,3 +100,5 @@
     </div>
 
 </div>
+
+<!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->

@@ -64,9 +64,15 @@
     <div class="profile__pictures__background">
       <img class="profile__pictures__background" alt="cover" src="../../../assets/images/download.jpg">
     </div>
-    <img alt="profile" class="profile__pictures__photo" src="../../../assets/images/one.png">
+
+    <img alt="profile" class="profile__pictures__photo" src={{user.profile.profileImgPath}}>
+
+
+
+
   </div>
   <div class="profile__container">
+
     <div class="profile__container__controls">
       <button class="profile__container__controls__addsection" (click)="dispalyAddProfileForm()">
 
@@ -83,10 +89,20 @@
       <h5>{{user.profile.headLine}}</h5>
       <div class="profile__container__persondetails__contactInfo">
         <h6>{{user.address}}</h6>
+
+      </div>
+      <div>
         <a href="#">Contact Info</a>
+        <span> | {{user.email}}</span>
       </div>
     </div>
+    <div class="profile__container__square">
+      show recuriters you're open to job opportunities__ you control who sees this.
+      <br>
+      <p>Get Started</p>
+    </div>
   </div>
+
   <div class="profile__dropdown " [ngClass]={hidden:isAddProfileClick}>
     <ul>
       <li><a (click)="displayEditForm()">Intro</a></li>
@@ -97,6 +113,7 @@
 
     </ul>
   </div>
+
   <!--About section-->
   <div class="profile__about">
     <div class="profile__about__header">
@@ -134,11 +151,39 @@
     </div>
   </div>
   <!--end of add_form_component -->
+  <!-- Education -->
+  <div class="profile__interest">
+    <h4>Education</h4>
+    <div class="item">
+      <div class="photo">
+        <img src="../../../assets/images/iti.jpg">
 
+      </div>
+      <div class="titles">
+        <p class="p1">{{user.profile.education[1]}}</p>
+
+        <p class="p2">Trainee</p>
+      </div>
+    </div>
+    <hr>
+    <div class="item">
+      <div class="photo">
+        <img src="../../../assets/images/cs.png">
+
+      </div>
+      <div class="titles">
+        <p class="p1">{{user.profile.education[0]}}</p>
+
+        <p class="p2">Grduate</p>
+      </div>
+    </div>
+
+  </div>
   <!-- skill section-->
   <div class="profile__about ">
     <div class="profile__about__header">
       <h4 class="h4">Skills &Endorsements</h4>
+
       <div class="skill__edite">
         <button class="skill__edite__btn" (click)="displayAddSkillForm()">Add a new skill</button>
         <div class=" profile__container__controls__editebtn skill__edite__icon">
@@ -146,13 +191,16 @@
         </div>
       </div>
     </div>
+    <div class="profile__about__topSkills">
+      <p>Top Skills</p>
+    </div>
     <div *ngFor="let skill of user.profile.skills" class="profile__about__content skill__content">
       <p>{{skill}}</p>
       <hr>
     </div>
   </div>
   <!--here add_form_component for skill-->
-  <div class="profile__editeAbout " [ngClass]={hidden:isAddSkillClicked}>
+  <div class="profile__editeAbout" [ngClass]={hidden:isAddSkillClicked}>
     <div class="profile__editeAbout__editeContainer">
       <div class=" profile__editeAbout__editeContainer__header">
         <h5 class="h5">Add Skills</h5>
@@ -202,21 +250,22 @@
         <div class="top-skill">
           <p>Top Skills</p>
         </div>
-        <hr style="margin-top:0.5px;">
+
         <div>
           <div class="edite-list">
             <div *ngFor="let item of user.profile.skills" class="edite-list__item">
               <p>{{item}}</p>
               <span (click)="OnSkillDeleted(item)"><i class=" i fa fa-trash" aria-hidden="true"></i></span>
             </div>
-            <hr style="margin-top:0px ;">
+
           </div>
 
         </div>
 
         <div class="saveEdite">
           <hr>
-          <button class="profile__editeAbout__editeContainer__body__button">Save</button>
+          <button class="profile__editeAbout__editeContainer__body__button"
+            (click)="displayEditSkillForm()">Save</button>
         </div>
       </div>
     </div>
@@ -227,9 +276,7 @@
   <!--end of skill-->
 
   <!-- iterest section-->
-  <div class="profile__interest">
 
-  </div>
 
   <!--section aside-->
   <div class="profile__aside">

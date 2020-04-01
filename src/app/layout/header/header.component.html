@@ -7,7 +7,7 @@
         <input class="search_box " placeholder="  Search" #search (keyup)="onSearch(search)">
     </div>
     <ul class="nav__menu">
-        <li class="menu__item" routerLink="">
+        <li class="menu__item" (click)="onHomeClick()">
             <a class="item__link">
                 <div>
                     <i class="fas fa-home"></i>
@@ -48,7 +48,9 @@
             </a>
         </li>
         <li class="menu__item sora">
-            <a class=" item__link" routerLink="/profile/1">
+            <!-- <a class=" item__link" routerLink="/profile/1"> -->
+        <!-- <li class="menu__item border"> -->
+            <a class="item__link" (click)="onProfileLoad()">
                 <!-- <div class="image"></div> -->
                 
                 <div class="imageWhite">
@@ -56,6 +58,7 @@
                     <!-- Me <span>&blacktriangledown; </span> -->
                 </div>
             </a>
+
         </li>
         <li class="menu__item">
             <a class="item__link">
@@ -75,7 +78,7 @@
         <div *ngFor="let item of tempUsers" class="searchBox__item" (click)="GetUser(item,search)"
             [routerLink]="['/others-profile',item.id]">
             <span class="item__photo">
-                <img src="../../../assets/images/user.jpg">
+                <img src={{item.profile.profileImgPath}}>
             </span>
             <span>
                 <h6>{{item.name.firstName}} </h6>
@@ -83,13 +86,13 @@
 
             </span>
         </div>
-        <div class="searchBox__item">
+        <!-- <div class="searchBox__item">
             <span class="item__photo">
                 <img src="../../../assets/images/user.jpg">
             </span>
             <span>
                 <h6>Manarr</h6>
             </span>
-        </div>
+        </div> -->
     </div>
 </div>
