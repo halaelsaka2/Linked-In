@@ -23,7 +23,7 @@ export class UserSrevice implements OnInit {
       profile: {
         headLine: "asdasda",
         education: ["faculty of computer science", "asdfasdf"],
-        bkImgPath: "asdasd",
+        bkImgPath: "../../../assets/images/004-like.svg",
         about: "2aaamer"
       },
       address: "abo Rakaba",
@@ -35,7 +35,7 @@ export class UserSrevice implements OnInit {
       profile: {
         headLine: "Front End",
         education: ["faculty of computer science", "Menofia"],
-        bkImgPath: "asdasd",
+        bkImgPath: "../../../assets/images/004-like.svg",
         about: "2aaamer"
       },
       address: "abo Rakaba",

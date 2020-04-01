@@ -26,7 +26,7 @@ export class HomeComponent implements OnInit {
 
     this.user = this.userService.getUserById(parseInt( this.route.snapshot.params['id']))
 
-    const posts = this.postService.getAll();
+    const posts = this.postService.getPostsOfConnections(this.user.connetionIds,this.user.id);
     posts.forEach(post => {
       post.user = this.userService.getUserById(post.userId);
       console.log(post);
@@ -35,7 +35,7 @@ export class HomeComponent implements OnInit {
 
     this.posts = posts;
     this.postService.postAdded.subscribe(posts => {
-      
+
       this.posts = posts;
       console.log(this.posts);
     });
