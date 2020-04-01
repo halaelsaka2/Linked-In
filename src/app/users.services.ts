@@ -24,7 +24,8 @@ export class UserSrevice implements OnInit {
         headLine: "Front End developer ",
         education: ["faculty of computer science"],
         profileImgPath: "../../../assets/images/ManUser.jpeg",
-        about: "work for big company beo beo "
+        about: "work for big company beo beo ",
+        skills:[]
       },
       address: "bort said",
       connetionIds: [2, 3, 4]
@@ -36,7 +37,8 @@ export class UserSrevice implements OnInit {
         headLine: "Full stack developer",
         education: ["faculty of computer science Menofia university"],
         profileImgPath: "../../../assets/images/user.jpg",
-        about: "worked for microsoft for three years "
+        about: "worked for microsoft for three years ",
+        skills:[]
       },
       address: "Menoifa",
       connetionIds: [1, 3, 4]
@@ -48,7 +50,8 @@ export class UserSrevice implements OnInit {
         headLine: "Mean stack developer",
         education: ["faculty of computer science Banha university"],
         profileImgPath: "../../../assets/images/user.jpg",
-        about: "worked for Google for three years"
+        about: "worked for Google for three years",
+        skills:[]
       },
       address: "Banha",
       connetionIds: [1, 2, 4]
@@ -60,7 +63,8 @@ export class UserSrevice implements OnInit {
         headLine: "UI developer",
         education: ["faculty of computer science Mansoura university"],
         profileImgPath: "../../../assets/images/user.jpg",
-        about: "worked for Andela for three years "
+        about: "worked for Andela for three years ",
+        skills:[]
       },
       address: "Behera",
       connetionIds: [3, 2, 5]
@@ -72,7 +76,8 @@ export class UserSrevice implements OnInit {
         headLine: "Tester developer",
         education: ["faculty of computer science Ismalia university"],
         profileImgPath: "../../../assets/images/user.jpg",
-        about: "worked for microsoft for three years "
+        about: "worked for microsoft for three years ",
+        skills:[]
       },
       address: "Ismalia",
       connetionIds: [1, 2, 4]
@@ -84,7 +89,8 @@ export class UserSrevice implements OnInit {
         headLine: "Manager at Google",
         education: ["faculty of science Cairo university"],
         profileImgPath: "../../../assets/images/user.jpg",
-        about: "worked Now at Google "
+        about: "worked Now at Google ",
+        skills:[]
       },
       address: "Cairo",
       connetionIds: [3, 5, 4]
@@ -96,7 +102,8 @@ export class UserSrevice implements OnInit {
         headLine: "UI/Ux developer",
         education: ["faculty of Commerce Port said university"],
         profileImgPath: "../../../assets/images/ManUser.jpeg",
-        about: "worked for Vodafon For two years "
+        about: "worked for Vodafon For two years ",
+        skills:[]
       },
       address: "Port said",
       connetionIds: [3, 5, 4]
@@ -108,7 +115,8 @@ export class UserSrevice implements OnInit {
         headLine: "Hr Manager",
         education: ["faculty of scince Ismalia university"],
         profileImgPath: "../../../assets/images/user.jpg",
-        about: "worked for Google For two years "
+        about: "worked for Google For two years ",
+        skills:[]
       },
       address: "El swees",
       connetionIds: [3, 7, 6]
@@ -120,7 +128,8 @@ export class UserSrevice implements OnInit {
         headLine: "CEO at Vodafon",
         education: ["faculty of Computer scince Ismalia university"],
         profileImgPath: "../../../assets/images/user.jpg",
-        about: "worked for Microsoft For ten years "
+        about: "worked for Microsoft For ten years ",
+        skills:[]
       },
       address: "Al xour",
       connetionIds: [8, 7, 5]
@@ -132,7 +141,8 @@ export class UserSrevice implements OnInit {
         headLine: "Photo shop",
         education: ["faculty of Computer scince Ismalia university"],
         profileImgPath: "../../../assets/images/ManUser.jpeg",
-        about: "worked for Microsoft For ten years "
+        about: "worked for Microsoft For ten years ",
+        skills:[]
       },
       address: "Ismalia",
       connetionIds: [4, 1, 5]
@@ -145,7 +155,7 @@ export class UserSrevice implements OnInit {
         education: ["faculty of Computer scince Ismalia university"],
         profileImgPath: "../../../assets/images/user.jpg",
         about: "worked for Microsoft For ten years ",
-        
+        skills:[]
       },
       address: "Ismalia",
       connetionIds: [8, 1, 4]
