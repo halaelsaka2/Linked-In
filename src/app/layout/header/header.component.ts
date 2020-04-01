@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import { UserSrevice } from './../../users.services';
 import { User } from 'src/app/_model/user.model';
+import { Subject } from 'rxjs';
 
 
 @Component({
@@ -19,10 +20,13 @@ export class HeaderComponent implements OnInit {
     this.allUsers = this.userService.getAll();
   }
 
-  GetUser(item) {
+
+  GetUser(item, search) {
     console.log(item);
     // this.user = this.userService.getUserById(parseInt(this.route.snapshot.params['id']));
     this.user = this.userService.getUserById(item.id)
+
+    search.value = ''
 
   }
   onSearch(search) {
@@ -43,6 +47,7 @@ export class HeaderComponent implements OnInit {
           console.log("notFound");
 
         }
+
       }
 
     } else {

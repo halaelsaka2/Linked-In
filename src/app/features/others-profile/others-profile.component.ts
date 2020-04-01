@@ -17,7 +17,9 @@ export class OthersProfileComponent implements OnInit {
 
   ngOnInit(): void {
     this.user = this.userService.getUserById(parseInt(this.route.snapshot.params['id']));
-
+    this.route.params.subscribe((params) => {
+      this.user = this.userService.getUserById(parseInt(params['id']))
+    })
     console.log(this.user);
   }
 

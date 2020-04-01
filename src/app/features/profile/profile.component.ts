@@ -71,7 +71,7 @@ export class ProfileComponent implements OnInit {
 
   onSkillAdded(skill) {
     this.user.profile.skills.push(skill.value)
-    skill.value = ""
+    skill.value = "";
     console.log(this.user.profile.skills);
 
   }

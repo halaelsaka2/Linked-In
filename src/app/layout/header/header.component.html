@@ -71,14 +71,14 @@
 </div>
 <div class="searchBox-container" [ngClass]={hidden:isSearchClicked} (click)="displaySearchBox()">
     <div class="searchBox">
-        <div *ngFor="let item of tempUsers" class="searchBox__item" (click)="GetUser(item)"
+        <div *ngFor="let item of tempUsers" class="searchBox__item" (click)="GetUser(item,search)"
             [routerLink]="['/others-profile',item.id]">
             <span class="item__photo">
                 <img src="../../../assets/images/user.jpg">
             </span>
             <span>
                 <h6>{{item.name.firstName}} </h6>
-                <h6>{{item.name.lastName}}</h6>
+
 
             </span>
         </div>

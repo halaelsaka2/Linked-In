@@ -1,7 +1,7 @@
 <div class="profile">
   <!-- edit profile data here active for display-->
-<div class="profile__editForm profile__editeAbout hidden">
-  <div class=" profile__editeAbout__editeContainer profile__editForm__editFormContainer" >
+  <div class="profile__editForm profile__editeAbout " [ngClass]={hidden:isEditProfileClicked}>
+    <div class=" profile__editeAbout__editeContainer profile__editForm__editFormContainer">
 
       <div class=" profile__editeAbout__editeContainer__header ">
         <h5 class="h5">Edite Info</h5>
@@ -89,35 +89,25 @@
   </div>
   <div class="profile__dropdown " [ngClass]={hidden:isAddProfileClick}>
     <ul>
-        <li><a href="#">Intro</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Featured</a></li>
-        <li><a href="#">Skill</a></li>
-        <li><a href="#">background</a></li>
+      <li><a (click)="displayEditForm()">Intro</a></li>
+      <li><a>About</a></li>
+      <li><a>Featured</a></li>
+      <li><a>Skill</a></li>
+      <li><a>background</a></li>
+
     </ul>
   </div>
-  <hr>
-  <div class="profile__editeAbout__editeContainer__body">
-  <div class="skill__search ">
-  <form>
- <!-- <span class="fa fa-search form-control-feedback"></span> -->
- <input placeholder="Skill (ex:Data Anaysis)" type="text" class="skill__search__input"  list="skillName" >
-<datalist class="skill__search__options " id="skillName">
-  <option value=" Adobe Photoshop">
-  <option value="Drawing">
-  <option value="Develope">
-</datalist>
-<div class="skill__search__data">
-  <span class="para">Photoshop</span>
-  <span class="para">Photoshop</span>
-</div>
-<div class="skill__search__submit">
-  <hr>
-    <button class="profile__editeAbout__editeContainer__body__button">Add</button>
-</div>
-</form>
-   </div>
-    <!---->
+  <!--About section-->
+  <div class="profile__about">
+    <div class="profile__about__header">
+      <h4 class="h4">About</h4>
+      <div class=" profile__about__header__btn  profile__container__controls__editebtn">
+        <span (click)="displayAboutForm()"><i class="fas fa-pencil-alt edit_pen"></i></span>
+      </div>
+    </div>
+    <div class="profile__about__content">
+      <p>{{user.profile.about}}</p>
+    </div>
   </div>
   <!--here add_form_component-->
   <div class="profile__editeAbout " [ngClass]={hidden:isAboutFormClicked}>
