@@ -35,17 +35,16 @@ this.postService.postUpdated.subscribe((post)=>{
   addNewComment(event,newComment){
     
     if(event.key==="Enter"){
+      if(newComment!==""){
       var d = new Date();
       var minutes = d.getHours() * 60 + d.getMinutes();
-      // const time= Date.now();
       var hours = (minutes / 60);
       var rhours = Math.floor(hours);
       var minutes = (hours - rhours) * 60;
       var rminutes = Math.round(minutes);
       console.log(  rhours + ":" + rminutes);
-      
-      // console.log(minutes);    
       this.post.comments.push(newComment);
+    }
       console.log(this.postService.postsList);
       // const post={...this.post,}
     }

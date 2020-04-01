@@ -5,7 +5,7 @@ import { NgModel } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { ProfileComponent } from './features/profile/profile.component';
-import { OthersProfileComponent } from './features/others-profile/others-profile.component'
+import { OthersProfileComponent } from './features/others-profile/others-profile.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { HomeComponent } from './features/home/home.component';
 import { RouterModule } from '@angular/router';
