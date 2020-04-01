@@ -45,16 +45,10 @@ export class PostComponent implements OnInit {
   addNewComment(event, newComment) {
     if (event.key === "Enter") {
       if (newComment !== "") {
-        var d = new Date();
-        var minutes = d.getHours() * 60 + d.getMinutes();
-        var hours = minutes / 60;
-        var rhours = Math.floor(hours);
-        var minutes = (hours - rhours) * 60;
-        var rminutes = Math.round(minutes);
-        console.log(rhours + ":" + rminutes);
+        console.log(event.target.value)
         this.post.comments.push(newComment);
+        event.target.value="";
       }
-      // const post={...this.post,}
     }
   }
 }
