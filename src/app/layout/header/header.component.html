@@ -74,7 +74,7 @@
         <div *ngFor="let item of tempUsers" class="searchBox__item" (click)="GetUser(item,search)"
             [routerLink]="['/others-profile',item.id]">
             <span class="item__photo">
-                <img src="../../../assets/images/user.jpg">
+                <img src={{item.profile.profileImgPath}}>
             </span>
             <span>
                 <h6>{{item.name.firstName}} </h6>
@@ -82,13 +82,13 @@
 
             </span>
         </div>
-        <div class="searchBox__item">
+        <!-- <div class="searchBox__item">
             <span class="item__photo">
                 <img src="../../../assets/images/user.jpg">
             </span>
             <span>
                 <h6>Manarr</h6>
             </span>
-        </div>
+        </div> -->
     </div>
 </div>
