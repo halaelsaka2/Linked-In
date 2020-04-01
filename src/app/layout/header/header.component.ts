@@ -15,9 +15,13 @@ export class HeaderComponent implements OnInit {
   allUsers = [];
   tempUsers: User[];
   isSearchClicked = true;
+  id:number 
   constructor(private userService: UserSrevice,private router:Router ,private route:ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.userService.currenRouteId.subscribe((id)=>{
+      this.id = id;
+      })
     this.allUsers = this.userService.getAll();
   }
 
@@ -65,7 +69,10 @@ export class HeaderComponent implements OnInit {
 
   }
   onProfileLoad(){
-console.log(this.route.snapshot.params['id'])
-this.router.navigate(["/profile/", parseInt(this.route.snapshot.params['id'])  ])
+
+this.router.navigate(["/profile", this.id  ])
+  }
+  onHomeClick(){
+    this.router.navigate(["/home", this.id  ])
   }
 }
