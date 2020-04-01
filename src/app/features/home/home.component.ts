@@ -4,6 +4,7 @@ import { Post } from "src/app/_model/post.model";
 import { UserSrevice } from "src/app/users.services";
 import { User } from "src/app/_model/user.model";
 import { ActivatedRoute } from '@angular/router';
+import { Subject } from 'rxjs';
 
 @Component({
   selector: "app-home",
@@ -15,15 +16,15 @@ export class HomeComponent implements OnInit {
 
   posts: Post[] = [];
     user:User
- 
   constructor(
     private postService: PostsService,
     private userService: UserSrevice,
     private route:ActivatedRoute
+    
   ) {}
 
   ngOnInit(): void {
-
+this.userService.currenRouteId.next(parseInt( this.route.snapshot.params['id']));
     this.user = this.userService.getUserById(parseInt( this.route.snapshot.params['id']))
 
     const posts = this.postService.getPostsOfConnections(this.user.connetionIds,this.user.id);

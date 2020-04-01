@@ -7,7 +7,7 @@
         <input class="search_box " placeholder="  Search" #search (keyup)="onSearch(search)">
     </div>
     <ul class="nav__menu">
-        <li class="menu__item" routerLink="">
+        <li class="menu__item" (click)="onHomeClick()">
             <a class="item__link">
                 <div>
                     <i class="fas fa-home"></i>

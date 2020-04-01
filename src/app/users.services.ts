@@ -6,6 +6,7 @@ import { Post } from './_model/post.model';
 @Injectable()
 export class UserSrevice implements OnInit {
   updatedUser = new Subject<User>()
+  currenRouteId = new Subject<number>()
   constructor(private postsService: PostsService) {
 
   }

@@ -21,6 +21,7 @@ export class ProfileComponent implements OnInit {
     private route: ActivatedRoute
   ) { }
   ngOnInit() {
+    this.userService.currenRouteId.next( parseInt(this.route.snapshot.params["id"]))
     this.user = this.userService.getUserById(
       parseInt(this.route.snapshot.params["id"])
     );
