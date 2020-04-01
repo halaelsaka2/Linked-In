@@ -45,7 +45,7 @@ export class PostsService {
     }
 
     addPost(post:Post){
-        this.postsList.push(post);
+        this.postsList.unshift(post);
        this.postAdded.next(this.postsList)
     }
 

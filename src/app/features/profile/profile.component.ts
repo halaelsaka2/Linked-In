@@ -1,7 +1,6 @@
 import { UserSrevice } from "./../../users.services";
 import { Component, OnInit } from "@angular/core";
 
-import { FormsModule } from "@angular/forms";
 import { User } from "src/app/_model/user.model";
 import { ActivatedRoute } from "@angular/router";
 
@@ -25,10 +24,9 @@ export class ProfileComponent implements OnInit {
     this.user = this.userService.getUserById(
       parseInt(this.route.snapshot.params["id"])
     );
-    this.userService.updatedUser.subscribe(
-      (updatedUser)=>{
-        this.user=updatedUser
-      })
+    this.userService.updatedUser.subscribe(updatedUser => {
+      this.user = updatedUser;
+    });
   }
 
   onSubmit(myForm) {
@@ -46,15 +44,12 @@ export class ProfileComponent implements OnInit {
   }
 
   onSubmitAbout(myForm2) {
-    console.log(myForm2);
-
     const user2: User = {
-      id: 1,
+      ...this.user,
       profile: { about: myForm2.value.aboutUser }
     };
     this.userService.updateUser(user2);
     this.isAboutFormClicked = true;
-  
   }
 
   displayEditForm() {
@@ -86,9 +81,4 @@ export class ProfileComponent implements OnInit {
       });
     }
   }
-  // onTagAdded(tagName: HTMLInputElement) {
-  //   this.product.tags.push({ name: tagName.value });
-  //   tagName.value = "";
-  //   //console.log(this.product.tags);
-  // }
 }

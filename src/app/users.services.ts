@@ -16,10 +16,10 @@ export class UserSrevice {
         headLine: "asdasda",
         education: ["faculty of computer science", "asdfasdf"],
         bkImgPath: "asdasd",
-        about:"2aaamer"
+        about: "2aaamer"
       },
-      address:"abo Rakaba",
-      connetionIds :[2,3,4]
+      address: "abo Rakaba",
+      connetionIds: [2, 3, 4]
     },
     {
       id: 2,
@@ -28,10 +28,10 @@ export class UserSrevice {
         headLine: "Front End",
         education: ["faculty of computer science", "Menofia"],
         bkImgPath: "asdasd",
-        about:"2aaamer"
+        about: "2aaamer"
       },
-      address:"abo Rakaba",
-      connetionIds :[1,3,4]
+      address: "abo Rakaba",
+      connetionIds: [1, 3, 4]
     }
 
 
@@ -46,7 +46,7 @@ export class UserSrevice {
   }
 
   getUserById(id: number): User {
-    const user =this.users.find(user => user.id === id); 
+    const user = this.users.find(user => user.id === id);
     user.posts = this.postsService.getById(user.id)
     return user
   }
@@ -56,23 +56,12 @@ export class UserSrevice {
     const index = users.findIndex(a => a.id === user.id);
     users[index] = {
       id: user.id, name: user.name,
-      profile: user.profile,address:user.address
+      profile: user.profile, address: user.address
     };
     this.updatedUser.next(user)
 
   }
 
+  
 
-  //  add (user: User){
-  //      const productItem : product = {id : this.products.length, data: product.data,
-  //          price: product.price, discound:product.discound, imgsUrl:product.imgsUrl,
-  //           category:product.category,
-  //          paymentTypes:product.paymentTypes, tags: product.tags};
-  //      this.products.push(productItem);
-  //  }
-
-  //  delete (id: number){
-  //      const index = this.products.findIndex(a => a.id === id);
-  //      this.products.splice(index, 1);
-  //  }
 }

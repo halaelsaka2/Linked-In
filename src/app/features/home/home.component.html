@@ -5,19 +5,18 @@
         <header class="card__body__image">
           <img src="../../../assets/images/user.jpg" alt="image of user" />
         </header>
-        <h3 class="card__body__name">Hala Elsaka</h3>
+        <h3 class="card__body__name">{{user.name.firstName}}</h3>
         <p class="card__body__title">
-          Web&UI development Trainee at ITI (Information Technology
-          Institute)
+          {{user.profile.headLine}}
         </p>
         <hr />
         <div class="card__body__textContainer">
             <h5 class="card__body__textContainer__profile">Who viewed your profile</h5>
-            <span class="card__body__textContainer__numberProfile">45</span>
+            <span class="card__body__textContainer__numberProfile">{{user.connetionIds.length+123}}</span>
         </div>
         <div class="card__body__textContainer">
             <h5 class="card__body__textContainer__connections">Connections</h5>
-            <span class="card__body__textContainer__numberConnections"></span>
+            <span class="card__body__textContainer__numberConnections">{{user.connetionIds.length}}</span>
         </div>
       </div>
     </div>
@@ -60,8 +59,15 @@
       </div>
     </div>
     <!-- //////////////////////////////////////////////////////////////////////////// -->
-    <app-add-post [isStartPostClicked]="isStartPostClicked" (changeClicked)="changeClick($event)"></app-add-post>
-    <div class="postContainer" *ngFor="let user of users;let i =index;">
+    <app-add-post 
+    [isStartPostClicked]="isStartPostClicked"
+     (changeClicked)="changeClick($event)"
+     ></app-add-post>
+    <app-post 
+    *ngFor="let post of posts ;let i =index;" 
+    [post]="post" 
+    ></app-post>
+    <!-- <div class="postContainer" *ngFor="let post of posts ;let i =index;">
       <div class="postContainer__info">
         <div class="postContainer__info__img">
           <img src="https://media-exp1.licdn.com/dms/image/C5603AQGGfmPGzsTgCg/profile-displayphoto-shrink_100_100/0?e=1590624000&v=beta&t=wwEDcdtUtjfqwBGEGavkAYfDjDvSvKnrYYOkxWM1hxY"
@@ -70,10 +76,10 @@
         </div>
         <div class="postContainer__info__details">
           <div class="postContainer__info__details__name">
-            <a>{{user.name.firstName}}</a>
+            <a>{{post.user.name.firstName}}</a>
           </div>
           <div class="postContainer__info__details__job">
-            {{user.profile.headLine}}
+            {{post.user.profile.headLine}}
           </div>
           <div class="postContainer__info__details__postingTime">
             <span> 1W</span> <img src="../../../assets/images/world.svg" width="10rem">
@@ -81,7 +87,7 @@
         </div>
       </div>
       <div class="postContainer__content" >
-        {{user.posts[0].postContent}}
+        {{post.postContent}}
       </div>
       <div>{{numberOfLikes}} likes. 4 comments</div>
       <div class="postContainer__reaction">
@@ -98,7 +104,7 @@
           
         </div>
       </div>
-    </div>
+    </div> -->
     
   </div>
   <div class="rightContainer">

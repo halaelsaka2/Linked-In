@@ -1,6 +1,8 @@
 import { Post } from 'src/app/_model/post.model';
 import { PostsService } from 'src/app/post.services';
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { UserSrevice } from 'src/app/users.services';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-add-post',
@@ -11,7 +13,7 @@ export class AddPostComponent implements OnInit {
   @Input() isStartPostClicked :boolean=true;
   @Output() changeClicked = new EventEmitter<boolean>();
   post :Post={};
-  constructor(private postService : PostsService) { }
+  constructor(private postService : PostsService,private userService:UserSrevice ,private route:ActivatedRoute) { }
 
   ngOnInit(): void {
   }
@@ -25,10 +27,10 @@ export class AddPostComponent implements OnInit {
     //close
     this.isStartPostClicked = true;
     this.changeClicked.next(this.isStartPostClicked);
+
     this.post.postContent=content.value;
+    this.post.user = this.userService.getUserById(parseInt(this.route.snapshot.params['id']) )
     this.postService.addPost(this.post);
-    this.postService.postAdded.next();
-    console.log(this.post.postContent);
   }
 
 

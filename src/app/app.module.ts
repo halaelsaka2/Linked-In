@@ -8,18 +8,18 @@ import { ProfileComponent } from './features/profile/profile.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { HomeComponent } from './features/home/home.component';
 import { RouterModule } from '@angular/router';
-import {  UserSrevice } from './users.services';
+import { UserSrevice } from './users.services';
 import { AddPostComponent } from './features/home/add-post/add-post.component';
 import { PostsService } from 'src/app/post.services';
+import { PostComponent } from './features/home/post/post.component';
 // import { PostComponent } from './src/features/home/post/post.component';
 
 
 
 const appRoutes = [
-  { path: "", component: HomeComponent },
-  { path: "home", component: HomeComponent },
+  { path: "", redirectTo:"home/1" ,pathMatch:"full" },
+  { path: "home/:id", component: HomeComponent },
   { path: "profile/:id", component: ProfileComponent }
-
 ]
 
 @NgModule({
@@ -29,8 +29,7 @@ const appRoutes = [
     HeaderComponent,
     HomeComponent,
     AddPostComponent,
-    // PostComponent,
-    
+    PostComponent,
   ],
   imports: [
     BrowserModule,

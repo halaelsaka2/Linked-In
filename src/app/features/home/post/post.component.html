@@ -1,0 +1,38 @@
+<div class="postContainer" >
+    <div class="postContainer__info">
+      <div class="postContainer__info__img">
+        <img src="https://media-exp1.licdn.com/dms/image/C5603AQGGfmPGzsTgCg/profile-displayphoto-shrink_100_100/0?e=1590624000&v=beta&t=wwEDcdtUtjfqwBGEGavkAYfDjDvSvKnrYYOkxWM1hxY"
+        width="30rem"
+        style=" border-radius: 50%;" />
+      </div>
+      <div class="postContainer__info__details">
+        <div class="postContainer__info__details__name">
+          <a>{{post.user.name.firstName}}</a>
+        </div>
+        <div class="postContainer__info__details__job">
+          {{post.user.profile.headLine}}
+        </div>
+        <div class="postContainer__info__details__postingTime">
+          <span> 1W</span> <img src="../../../assets/images/world.svg" width="10rem">
+        </div>
+      </div>
+    </div>
+    <div class="postContainer__content" >
+      {{post.postContent}}
+    </div>
+    <div>{{numberOfLikes}} likes. 4 comments</div>
+    <div class="postContainer__reaction">
+      <div class="postContainer__reaction__icon" (click)="addLike()">
+        <img src="../../../assets/images/004-like.svg" width="17rem"/>
+        <span>like</span>
+      </div>
+      <div class="postContainer__reaction__icon">
+        <img src="../../../assets/images/005-comment.svg" width="17rem"/>
+        <span>comment</span>
+      </div>
+      <div class="postContainer__reaction__icon">
+        <img src="../../../assets/images/006-share.svg" width="17rem"> <span>share</span>
+        
+      </div>
+    </div>
+  </div>
