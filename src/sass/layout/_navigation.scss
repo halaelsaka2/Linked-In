@@ -105,3 +105,37 @@
         border-right: solid $primary-font-color 0.5px;
     }
 }
+
+.searchBox{
+    display: none;
+    background-color: $primary-font-color;
+    width: 40%;
+    margin-left: 19%;
+    cursor: pointer;
+    &__item{
+        
+        display: flex;
+        padding: 5px;
+        .item__photo{
+            margin-left: 10px;
+            padding-right: 10px;
+            img{
+                border-radius: 50%;
+                height: 2rem;
+                width: 2rem;
+            }
+           
+            
+        }
+        span{
+            display: flex;
+        }
+        h6{
+            padding-top: 5px;
+            
+        }
+    }
+}
+.active{
+    display: block;
+}

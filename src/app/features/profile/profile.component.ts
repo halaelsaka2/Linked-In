@@ -79,15 +79,15 @@ export class ProfileComponent implements OnInit {
   }
 
   onSkillAdded(skill) {
-    this.user[0].profile.skills.push(skill.value)
+    this.user.profile.skills.push(skill.value)
     skill.value = ""
-    console.log(this.user[0].profile.skills);
+    console.log(this.user.profile.skills);
 
   }
   OnSkillDeleted(itm) {
-    for (let i = 0; i < this.user[0].profile.skills.length; i++) {
+    for (let i = 0; i < this.user.profile.skills.length; i++) {
 
-      this.user[0].profile.skills = this.user[0].profile.skills.filter(ele => {
+      this.user.profile.skills = this.user.profile.skills.filter(ele => {
         return ele !== itm;
       })
     }

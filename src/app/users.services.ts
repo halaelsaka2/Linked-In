@@ -14,19 +14,22 @@ export class UserSrevice {
         headLine: "asdasda",
         education: ["faculty of computer science", "asdfasdf"],
         bkImgPath: "asdasd",
-        about: "2aaamer"
+        about: "2aaamer",
+        skills: []
+
       },
       address: "abo Rakaba",
       connetionIds: [2, 3, 4]
     },
     {
       id: 2,
-      name: { firstName: "Hala", lastName: "Elsaka" },
+      name: { firstName: "aya", lastName: "Elsaka" },
       profile: {
         headLine: "Front End",
         education: ["faculty of computer science", "Menofia"],
         bkImgPath: "asdasd",
-        about: "2aaamer"
+        about: "2aaamer",
+        skills: []
       },
       address: "abo Rakaba",
       connetionIds: [1, 3, 4]
