@@ -68,7 +68,7 @@ export class UserSrevice implements OnInit {
         education: ["Faculty of Computer Science Mansoura University", "Information Technology Institute"],
         profileImgPath: "../../../assets/images/aya.png",
         about: "worked for Andela for three years - ITI trainee - Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, ",
-        skills: []
+        skills: ["Drawing", "PhotoShop", "Illustrator", "Frontend technologies"]
       },
       email: "ayaRabee@hotmail.com",
       address: "Behera",
@@ -82,7 +82,7 @@ export class UserSrevice implements OnInit {
         education: ["Faculty of Computer Science SuezCanal University", "Information Technology Institute"],
         profileImgPath: "../../../assets/images/user.jpg",
         about: "worked for microsoft for three years - ITI trainee - Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, ",
-        skills: []
+        skills: ["Frontend", "Angular", "JS", "ES6", "UI Design"]
       },
       address: "Ismalia",
       email: "farahfaroha@gmail.com",
@@ -96,7 +96,7 @@ export class UserSrevice implements OnInit {
         education: ["Faculty of Computer Science", "Information Technology Institute"],
         profileImgPath: "../../../assets/images/user.jpg",
         about: "worked Now at Google - ITI trainee - Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, ",
-        skills: []
+        skills: ["C#", "Backend", "OOP", "React"]
       },
       email: "Eman156@gmail.com",
       address: "Cairo",
@@ -110,7 +110,7 @@ export class UserSrevice implements OnInit {
         education: ["Faculty of Computer Science Port Saied University", "Information Technology Institute"],
         profileImgPath: "../../../assets/images/ManUser.jpeg",
         about: "worked for Vodafon For two years - ITI trainee - Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, ",
-        skills: []
+        skills: ["OOP", "DataBase", "C#", "Frontend"]
       },
       email: "Eslamtaha@gmail.com",
       address: "Port said",
@@ -124,7 +124,7 @@ export class UserSrevice implements OnInit {
         education: ["Faculty of Science", "Information Technology Institute"],
         profileImgPath: "../../../assets/images/nada.jpg",
         about: "worked for Google For two years - ITI trainee - Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,  ",
-        skills: []
+        skills: ["UI Development", "Angular", "JS", "HTML"]
       },
       email: "NadaAhmed@gmail.com",
       address: "El swees",
@@ -138,7 +138,7 @@ export class UserSrevice implements OnInit {
         education: ["faculty of Computer scince Ismalia university", "Information Technology Institute"],
         profileImgPath: "../../../assets/images/user.jpg",
         about: "worked for Microsoft For ten years - ITI trainee - Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, ",
-        skills: []
+        skills: ["JavaScript", "Windows Forms", "Database", "FrontEnd"]
       },
       email: "MaiLuxor@gmail.com",
       address: "Luxor",
@@ -152,7 +152,7 @@ export class UserSrevice implements OnInit {
         education: ["faculty of Computer scince Ismalia university", ",Information Technology Institute"],
         profileImgPath: "../../../assets/images/ManUser.jpeg",
         about: "worked for Microsoft For ten years - ITI trainee - Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, ",
-        skills: []
+        skills: ["PhotoShop", "Illustrator", "XD", "HTML", "CSS"]
       },
       email: "BolaLeader@gmail.com",
       address: "Ismalia",
@@ -166,7 +166,7 @@ export class UserSrevice implements OnInit {
         education: ["faculty of Engineering Mansoura University", "Information Technology Institute"],
         profileImgPath: "../../../assets/images/user.jpg",
         about: "worked for Microsoft For ten years - ITI trainee - Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, ",
-        skills: []
+        skills: ["FrontEnd", "BackEnd", "C#", "OOP"]
       },
       email: "Marioma@hotmail.com",
       address: "Tanta",
@@ -180,7 +180,7 @@ export class UserSrevice implements OnInit {
         education: ["faculty of CS SeuzCanal University", "Information Technology Institute"],
         profileImgPath: "../../../assets/images/yl.jpg",
         about: "worked for Microsoft For ten years - ITI trainee - Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, ",
-        skills: []
+        skills: ["FrontEnd", "UI", "Js", "XMl"]
       },
       email: "YoustinaLamie166@hotmail.com",
       address: "Ismalia",
