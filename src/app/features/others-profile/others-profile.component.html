@@ -1,0 +1,63 @@
+<div class="profile">
+
+    <div class="profile__pictures">
+        <div class="profile__pictures__background">
+            <img class="profile__pictures__background" alt="cover" src="../../../assets/images/download.jpg">
+        </div>
+        <img alt="profile" class="profile__pictures__photo" src="../../../assets/images/one.png">
+    </div>
+    <div class="profile__container">
+
+        <div class=" others-details">
+            <h3>{{user.name.firstName}}</h3>
+
+            <div class="profile__container__persondetails__contactInfo">
+                <h6>{{user.address}}</h6>
+                <a href="#">Contact Info</a>
+            </div>
+        </div>
+    </div>
+
+    <!--About section-->
+    <div class="profile__about">
+        <div class="profile__about__header">
+            <h4 class="h4">About</h4>
+
+        </div>
+        <div class="profile__about__content">
+            <p>{{user.profile.about}}</p>
+        </div>
+    </div>
+
+
+    <!-- skill section-->
+    <div class="profile__about ">
+        <div class="profile__about__header">
+            <h4 class="h4">Skills &Endorsements</h4>
+
+        </div>
+        <div *ngFor="let skill of user.profile.skills" class="profile__about__content skill__content">
+            <p>{{skill}}</p>
+            <hr>
+        </div>
+    </div>
+
+
+    <!-- iterest section-->
+    <div class="profile__interest">
+
+    </div>
+
+    <!--section aside-->
+    <div class="profile__aside">
+        <div class="profile__aside__picture">
+            <img src="../../../assets/images/man.jpg">
+        </div>
+        <hr>
+        <div class="profile__aside__videos">
+
+        </div>
+
+    </div>
+
+</div>

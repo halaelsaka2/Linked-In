@@ -5,6 +5,7 @@ import { NgModel } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { ProfileComponent } from './features/profile/profile.component';
+import { OthersProfileComponent } from './features/others-profile/others-profile.component'
 import { HeaderComponent } from './layout/header/header.component';
 import { HomeComponent } from './features/home/home.component';
 import { RouterModule } from '@angular/router';
@@ -17,9 +18,10 @@ import { PostComponent } from './features/home/post/post.component';
 
 
 const appRoutes = [
-  { path: "", redirectTo:"home/1" ,pathMatch:"full" },
+  { path: "", redirectTo: "home/1", pathMatch: "full" },
   { path: "home/:id", component: HomeComponent },
-  { path: "profile/:id", component: ProfileComponent }
+  { path: "profile/:id", component: ProfileComponent },
+  { path: "others-profile/:id", component: OthersProfileComponent }
 ]
 
 @NgModule({
@@ -29,6 +31,9 @@ const appRoutes = [
     HeaderComponent,
     HomeComponent,
     AddPostComponent,
+    OthersProfileComponent,
+
+
     PostComponent,
   ],
   imports: [

@@ -1,6 +1,6 @@
 import { User } from "./_model/user.model";
 import { Injectable, OnInit } from '@angular/core';
-import {  PostsService } from './post.services';
+import { PostsService } from './post.services';
 import { Subject } from 'rxjs';
 import { Post } from './_model/post.model';
 @Injectable()
@@ -10,11 +10,11 @@ export class UserSrevice implements OnInit {
 
   }
   ngOnInit(): void {
-// this.postsService.onePostAdded.subscribe((post)=>{
-//  const userAddedPost =  this.users.findIndex((user)=>{user.id === post.userId})
-//  this.users[userAddedPost].posts.push(post)
-//  console.log(this.users)
-// })
+    // this.postsService.onePostAdded.subscribe((post)=>{
+    //  const userAddedPost =  this.users.findIndex((user)=>{user.id === post.userId})
+    //  this.users[userAddedPost].posts.push(post)
+    //  console.log(this.users)
+    // })
   }
   users: User[] = [
     {
@@ -48,7 +48,7 @@ export class UserSrevice implements OnInit {
         headLine: "Mean stack developer",
         education: ["faculty of computer science Banha university"],
         profileImgPath: "../../../assets/images/user.jpg",
-        about: "worked for Google for three years "
+        about: "worked for Google for three years"
       },
       address: "Banha",
       connetionIds: [1, 2, 4]
@@ -151,15 +151,15 @@ export class UserSrevice implements OnInit {
       connetionIds: [8, 1, 4]
     }
 
-    
+
 
 
   ];
   getAll(): User[] {
     const users = this.users.slice();
-    users.forEach((user)=>{
-    user.posts = this.postsService.getById(user.id)  
-    }) 
+    users.forEach((user) => {
+      user.posts = this.postsService.getById(user.id)
+    })
     return users;
 
   }
@@ -181,6 +181,6 @@ export class UserSrevice implements OnInit {
 
   }
 
-  
+
 
 }

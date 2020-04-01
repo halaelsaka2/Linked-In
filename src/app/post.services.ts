@@ -4,7 +4,7 @@ import { Subject } from "rxjs";
 import { UserSrevice } from "./users.services";
 @Injectable()
 export class PostsService {
-  constructor() {}
+  constructor() { }
   postsList: Post[] = [
     {
       userId: 1,
@@ -215,7 +215,7 @@ export class PostsService {
     //    this.onePostAdded.next(post)
   }
 
-  getPostsOfConnections(connections: number[] ,userId:number) {
+  getPostsOfConnections(connections: number[], userId: number) {
     let posts: Post[] = [];
     connections.forEach(connectionId => {
       posts.push(
