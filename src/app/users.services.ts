@@ -23,7 +23,7 @@ export class UserSrevice implements OnInit {
       profile: {
         headLine: "Front End developer ",
         education: ["Faculty of Computer Science", "Information Technology Institute"],
-        profileImgPath: "../../../assets/images/ManUser.jpeg",
+        profileImgPath: "../../../assets/images/ahmed.jpeg",
         about: "work for big company - ITI trainee - Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,  ",
         skills: ["C#", "OOP", "Java Script", "Angular", "React"]
       },
@@ -80,7 +80,7 @@ export class UserSrevice implements OnInit {
       profile: {
         headLine: "Tester developer",
         education: ["Faculty of Computer Science SuezCanal University", "Information Technology Institute"],
-        profileImgPath: "../../../assets/images/user.jpg",
+        profileImgPath: "../../../assets/images/farah.jpg",
         about: "worked for microsoft for three years - ITI trainee - Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, ",
         skills: ["Frontend", "Angular", "JS", "ES6", "UI Design"]
       },
@@ -94,7 +94,7 @@ export class UserSrevice implements OnInit {
       profile: {
         headLine: "Manager at Google",
         education: ["Faculty of Computer Science", "Information Technology Institute"],
-        profileImgPath: "../../../assets/images/user.jpg",
+        profileImgPath: "../../../assets/images/eman.jpeg",
         about: "worked Now at Google - ITI trainee - Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, ",
         skills: ["C#", "Backend", "OOP", "React"]
       },
@@ -108,7 +108,7 @@ export class UserSrevice implements OnInit {
       profile: {
         headLine: "UI/Ux developer",
         education: ["Faculty of Computer Science Port Saied University", "Information Technology Institute"],
-        profileImgPath: "../../../assets/images/ManUser.jpeg",
+        profileImgPath: "../../../assets/images/islam.jpeg",
         about: "worked for Vodafon For two years - ITI trainee - Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, ",
         skills: ["OOP", "DataBase", "C#", "Frontend"]
       },
@@ -145,12 +145,12 @@ export class UserSrevice implements OnInit {
       connetionIds: [8, 7, 5]
     },
     {
-      id: 9,
+      id: 10,
       name: { firstName: "Bola Magdy", lastName: "Magdy" },
       profile: {
         headLine: "Photo shop",
         education: ["faculty of Computer scince Ismalia university", ",Information Technology Institute"],
-        profileImgPath: "../../../assets/images/ManUser.jpeg",
+        profileImgPath: "../../../assets/images/bola.jpeg",
         about: "worked for Microsoft For ten years - ITI trainee - Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, ",
         skills: ["PhotoShop", "Illustrator", "XD", "HTML", "CSS"]
       },
@@ -159,21 +159,21 @@ export class UserSrevice implements OnInit {
       connetionIds: [4, 1, 5]
     },
     {
-      id: 10,
-      name: { firstName: "Mariam Magdy", lastName: "Magdy" },
+      id: 11,
+      name: { firstName: "Salma Wagdy", lastName: "Wagdy" },
       profile: {
-        headLine: "3la bab allah",
-        education: ["faculty of Engineering Mansoura University", "Information Technology Institute"],
-        profileImgPath: "../../../assets/images/user.jpg",
+        headLine: "UI Developer",
+        education: ["faculty of BIS", "Information Technology Institute"],
+        profileImgPath: "../../../assets/images/salma.jpeg",
         about: "worked for Microsoft For ten years - ITI trainee - Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, ",
         skills: ["FrontEnd", "BackEnd", "C#", "OOP"]
       },
-      email: "Marioma@hotmail.com",
+      email: "Salmiction122@hotmail.com",
       address: "Tanta",
       connetionIds: [8, 1, 4]
     },
     {
-      id: 11,
+      id: 12,
       name: { firstName: "Youstina Lamie", lastName: "Lamie" },
       profile: {
         headLine: "3la bab allah",
