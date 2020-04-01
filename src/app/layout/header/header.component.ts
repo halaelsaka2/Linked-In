@@ -12,7 +12,7 @@ export class HeaderComponent implements OnInit {
   user: User = {};
   allUsers = [];
   tempUsers: User[];
-  isSearchClicked = false;
+  isSearchClicked = true;
   constructor(private userService: UserSrevice) { }
 
   ngOnInit(): void {

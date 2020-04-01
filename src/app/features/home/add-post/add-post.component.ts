@@ -1,6 +1,8 @@
 import { Post } from 'src/app/_model/post.model';
 import { PostsService } from 'src/app/post.services';
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { UserSrevice } from 'src/app/users.services';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-add-post',
@@ -10,8 +12,8 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class AddPostComponent implements OnInit {
   @Input() isStartPostClicked :boolean=true;
   @Output() changeClicked = new EventEmitter<boolean>();
-  post :Post={};
-  constructor(private postService : PostsService) { }
+  post :Post={likesNum:0,commentsNum:0};
+  constructor(private postService : PostsService,private userService:UserSrevice ,private route:ActivatedRoute) { }
 
   ngOnInit(): void {
   }
@@ -21,18 +23,15 @@ export class AddPostComponent implements OnInit {
     this.changeClicked.next(this.isStartPostClicked);
   }
 
-
-
-
   addpost(content){
     //close
     this.isStartPostClicked = true;
     this.changeClicked.next(this.isStartPostClicked);
 
-    
     this.post.postContent=content.value;
-    this.postService.postAdded.next(this.post);
-    console.log(this.post.postContent);
+    this.post.userId = parseInt(this.route.snapshot.params['id']);
+    this.post.user = this.userService.getUserById(parseInt(this.route.snapshot.params['id']) )
+    this.postService.addPost(this.post);
   }
 
 

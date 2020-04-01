@@ -1,8 +1,9 @@
-import { Component, OnInit,Output, Input } from "@angular/core";
-import { PostsService } from 'src/app/post.services';
-import { Post } from 'src/app/_model/post.model';
-import { UserSrevice } from 'src/app/users.services';
-import { User } from 'src/app/_model/user.model';
+import { Component, OnInit, Output, Input } from "@angular/core";
+import { PostsService } from "src/app/post.services";
+import { Post } from "src/app/_model/post.model";
+import { UserSrevice } from "src/app/users.services";
+import { User } from "src/app/_model/user.model";
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: "app-home",
@@ -10,46 +11,47 @@ import { User } from 'src/app/_model/user.model';
   styleUrls: ["./home.component.scss"]
 })
 export class HomeComponent implements OnInit {
- @Input() isStartPostClicked = true;
-  
-  posts:Post[];
-  user:User;
-  // post:Post;
-  users:User[]=[];
-  numberOfLikes=0;
-  constructor(private postService:PostsService,private userService:UserSrevice) {}
+  @Input() isStartPostClicked = true;
+
+  posts: Post[] = [];
+  user:User
+ 
+  constructor(
+    private postService: PostsService,
+    private userService: UserSrevice,
+    private route:ActivatedRoute
+  ) {}
 
   ngOnInit(): void {
-  this.posts=this.postService.getAll();
-  for (const post of this.posts) {
-    this.user=this.userService.getUserById(post.userId);
-    this.users.push(this.user)
-    console.log(this.users);
-  }
-  this.postService.postAdded.subscribe(
-    (post)=>{
+
+    this.user = this.userService.getUserById(parseInt( this.route.snapshot.params['id']))
+
+    const posts = this.postService.getPostsOfConnections(this.user.connetionIds,this.user.id);
+    posts.forEach(post => {
+      post.user = this.userService.getUserById(post.userId);
       console.log(post);
-      this.postService.Update(post);
-      this.posts=this.postService.addPost(post)
-      console.log(this.postService.getAll());
+    });
+
+
+    this.posts = posts;
+    this.postService.postAdded.subscribe(posts => {
+
+      this.posts = posts;
+      console.log(this.posts);
+    });
+    this.route.params.subscribe((params)=>{
+      this.user = this.userService.getUserById(parseInt(params['id']) )
     })
   }
 
-  addLike(){
-      
-  }
-
-
+ 
   showPostForm() {
-    console.log("before in home"+this.isStartPostClicked)
+    console.log("before in home" + this.isStartPostClicked);
     this.isStartPostClicked = false;
-    console.log("after in home"+this.isStartPostClicked);
+    console.log("after in home" + this.isStartPostClicked);
   }
-  
-  changeClick(isStartPostClicked){
+
+  changeClick(isStartPostClicked) {
     this.isStartPostClicked = isStartPostClicked;
   }
-
-  
-
 }

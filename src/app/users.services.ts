@@ -1,10 +1,20 @@
 import { User } from "./_model/user.model";
-import { Injectable } from '@angular/core';
+import { Injectable, OnInit } from '@angular/core';
 import { PostsService } from './post.services';
+import { Subject } from 'rxjs';
+import { Post } from './_model/post.model';
 @Injectable()
-export class UserSrevice {
+export class UserSrevice implements OnInit {
+  updatedUser = new Subject<User>()
   constructor(private postsService: PostsService) {
 
+  }
+  ngOnInit(): void {
+    // this.postsService.onePostAdded.subscribe((post)=>{
+    //  const userAddedPost =  this.users.findIndex((user)=>{user.id === post.userId})
+    //  this.users[userAddedPost].posts.push(post)
+    //  console.log(this.users)
+    // })
   }
   users: User[] = [
     {
@@ -38,7 +48,11 @@ export class UserSrevice {
 
   ];
   getAll(): User[] {
-    return this.users.slice();
+    const users = this.users.slice();
+    users.forEach((user) => {
+      user.posts = this.postsService.getById(user.id)
+    })
+    return users;
 
   }
 
@@ -48,15 +62,17 @@ export class UserSrevice {
     return user
   }
 
-  Update(user: User) {
-    console.log(user);
-
-    const index = this.users.findIndex(a => a.id === user.id);
-    this.users[index] = {
+  updateUser(user: User) {
+    const users = this.users.slice()
+    const index = users.findIndex(a => a.id === user.id);
+    users[index] = {
       id: user.id, name: user.name,
       profile: user.profile, address: user.address
     };
+    this.updatedUser.next(user)
 
   }
+
+
 
 }

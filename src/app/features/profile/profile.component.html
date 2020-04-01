@@ -25,11 +25,11 @@
           <div class="flex">
             <div class="name">
               <h6>FirstName<span>*</span></h6>
-              <input [(ngModel)]="user.name.firstName" name="userFirstName" #firstName>
+              <input [ngModel]="user.name.firstName" name="userFirstName" #firstName>
             </div>
             <div class="headline">
               <h6>LastName<span>*</span></h6>
-              <input [(ngModel)]="user.name.lastName" name="userLastName">
+              <input [ngModel]="user.name.lastName" name="userLastName">
             </div>
 
           </div>
@@ -56,6 +56,7 @@
       </div>
 
     </div>
+
 
   </div>
   <!-- --------------------/////------------------------- -->
@@ -120,7 +121,7 @@
       <div class="profile__editeAbout__editeContainer__body">
         <form #myForm2="ngForm" (ngSubmit)="onSubmitAbout(myForm2)">
           <label>Summary</label>
-          <textarea [(ngModel)]="user.profile.about" name="aboutUser" placeholder="Enter Your About"
+          <textarea [ngModel]="user.profile.about" name="aboutUser" placeholder="Enter Your About"
             class="profile__editeAbout__editeContainer__body__text"></textarea>
           <hr>
           <div>
