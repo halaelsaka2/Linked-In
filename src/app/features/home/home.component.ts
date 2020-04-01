@@ -29,13 +29,11 @@ export class HomeComponent implements OnInit {
     const posts = this.postService.getPostsOfConnections(this.user.connetionIds,this.user.id);
     posts.forEach(post => {
       post.user = this.userService.getUserById(post.userId);
-      console.log(post);
     });
 
     this.posts = posts;
     this.postService.postAdded.subscribe(posts => {
       this.posts = posts;
-      console.log(this.posts);
     });
     this.route.params.subscribe((params)=>{
       this.user = this.userService.getUserById(parseInt(params['id']) )

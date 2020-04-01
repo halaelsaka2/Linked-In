@@ -209,9 +209,10 @@ export class PostsService {
     this.postUpdated.next(post);
   }
 
-  addPost(post: Post) {
-    this.postsList.unshift(post);
-    this.postAdded.next(this.postsList);
+  addPost(post: Post ,currentPosts:Post[]) {
+    this.postsList.push(post);
+    currentPosts.unshift(post)
+    this.postAdded.next(currentPosts);
     //    this.onePostAdded.next(post)
   }
 
