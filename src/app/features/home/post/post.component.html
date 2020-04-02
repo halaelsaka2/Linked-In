@@ -23,15 +23,15 @@
     <div>{{post.likesNum}} likes.{{post.comments.length}} comments</div>
     <div class="postContainer__reaction">
       <div class="postContainer__reaction__icon" (click)="addLike()">
-        <img src="../../../assets/images/004-like.svg" width="17rem"/>
+        <img class="iconz" src="../../../assets/images/004-like.svg" width="17rem"/>
         <span>like</span>
       </div>
       <div class="postContainer__reaction__icon">
-        <img src="../../../assets/images/005-comment.svg" width="17rem"/>
+        <img class="iconz" src="../../../assets/images/005-comment.svg" width="17rem"/>
         <span (click)="showComment()">comment</span>
       </div>
       <div class="postContainer__reaction__icon">
-        <img src="../../../assets/images/006-share.svg" width="17rem"> <span>share</span>
+        <img class="iconz" src="../../../assets/images/006-share.svg" width="17rem"> <span>share</span>
         
       </div>
     </div>
@@ -44,7 +44,10 @@
      [ngClass]={hidden:isCommentHidden}>
       <img  src={{user.profile.profileImgPath}}>
       <div class="myComment">
+       <div class="myComment__title">
         <p>{{user.name.firstName}}</p>
+        <span>2:15</span>
+       </div> 
         <p>{{comment}}</p>
       </div>
       

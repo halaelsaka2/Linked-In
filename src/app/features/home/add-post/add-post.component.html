@@ -13,6 +13,7 @@
         </div>
         <div class="writePost__content">
           <textarea placeholder="What do you want to talk about" rows="10" cols="73" #postContent></textarea>
+         
             <div class="writePost__content__list">
               <ul class="writePost__content__list__listIcons">
                 <li class="writePost__content__list__listIcons__icon">
@@ -27,6 +28,7 @@
               </ul>
               
             </div>
+            <hr>
             <button class="btn" (click)="addpost(postContent)">Post </button>
             <button class="btn"  (click)="hidePostContainer()">Cancel</button>
 
