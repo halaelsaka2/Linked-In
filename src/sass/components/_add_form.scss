@@ -9,9 +9,9 @@
     z-index: 10;
 
    &__editeContainer{
-    width:700px;
+    width:43.75rem;
     overflow-y: auto;
-    height:100% ;
+    min-height: 22.375rem;
     //min-height:350px;
     max-height: fit-content;
     background-color: white;
@@ -31,9 +31,9 @@
             }
             &__icon{
             //position: relative;
-            margin-left: 560px;
-            margin-top:15px;
-            width:15px;
+            margin-left: 35rem;
+            margin-top:0.9375rem;
+            width:0.9375rem;
            .i{
                color:  rgb(12, 127, 189);
             &:hover{
@@ -50,21 +50,21 @@
         justify-content: center;
          &__text{
             width: 90%;
-            height:150px;
-            padding:12px 20px;
+            height:9.375rem;
+            padding:0.75rem 1.25rem;
             position: relative;
             border: 1px solid #ccc;
-            border-radius: 4px;
+            border-radius: 0.25rem;
             box-sizing: border-box;
-            margin-top: 6px;
+            margin-top: 0.375rem;
             margin-bottom: 0px;
-            margin-left: 20px;;
-            max-height: 150px;
-            min-height:150px ;
+            margin-left: 1.25rem;;
+            max-height: 9.375rem;
+            min-height:9.375rem ;
             
         }
         label{
-            margin-left: 20px;
+            margin-left: 1.25rem;
         }
         // &__button{
         //     position: static;
