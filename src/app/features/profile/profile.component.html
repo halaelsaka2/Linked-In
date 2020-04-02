@@ -15,7 +15,7 @@
             <img class="profile__pictures__background" alt="cover" src="../../../assets/images/download.jpg">
 
           </div>
-          <img alt="profile" class="profile__pictures__photo" src="../../../assets/images/one.png">
+          <img alt="profile" class="profile__pictures__photo" src="../../../assets/images/ahmed.jpeg">
         </div>
       </div>
 
@@ -72,7 +72,7 @@
 
   </div>
   <div class="profile__container">
-
+    
     <div class="profile__container__controls">
       <button class="profile__container__controls__addsection" (click)="dispalyAddProfileForm()">
 
@@ -83,6 +83,16 @@
       <div class="profile__container__controls__editebtn" (click)="displayEditForm()">
         <span><i class="fas fa-pencil-alt edit_pen"></i></span>
       </div>
+    </div>
+    <div class="profile__dropdown " [ngClass]={hidden:isAddProfileClick}>
+      <ul>
+        <li><a (click)="displayEditForm()">Intro</a></li>
+        <li><a>About</a></li>
+        <li><a>Featured</a></li>
+        <li><a>Skill</a></li>
+        <li><a>background</a></li>
+  
+      </ul>
     </div>
     <div class="profile__container__persondetails ">
       <h3>{{user.name.firstName}}</h3>
@@ -103,16 +113,7 @@
     </div>
   </div>
 
-  <div class="profile__dropdown " [ngClass]={hidden:isAddProfileClick}>
-    <ul>
-      <li><a (click)="displayEditForm()">Intro</a></li>
-      <li><a>About</a></li>
-      <li><a>Featured</a></li>
-      <li><a>Skill</a></li>
-      <li><a>background</a></li>
-
-    </ul>
-  </div>
+  
 
   <!--About section-->
   <div class="profile__about">
@@ -279,7 +280,7 @@
 
 
   <!--section aside-->
-  <div class="profile__aside">
+  <div class="profile__aside hidden">
     <div class="profile__aside__picture">
       <img src="../../../assets/images/man.jpg">
     </div>

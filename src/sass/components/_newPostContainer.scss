@@ -9,11 +9,11 @@
   background-color:white;
   border:1px solid #d9d9d9;
   &__listIcons {
-    width: 600px;
+    width: 37.5rem;
     padding: 0rem;
     margin: 0rem;
     display: flex;
-    margin-left: 96px;
+    margin-left: 6rem;
     // align-items: center;
     list-style-type: none;
 
@@ -28,11 +28,13 @@
       
    }
    &__write{
+    margin-right: -3.18rem;
     p{
-    margin-top:-5px;
+    margin-top:-0.3125rem;
     padding: 1rem;
-    padding-left:-33px;
+    padding-left:-2.0625rem;
     margin-left: -7.1rem;
+    margin-right:0rem;
     &:hover{
       color:rgb(37, 137, 184);
       cursor: pointer;
@@ -41,7 +43,7 @@
    }
   }
   &__writeArtical {
-    width: 450px;
+    width: 28.125rem;
     background-color:rgb(213, 236, 241) ;
     a{
       padding: 0.3rem;
