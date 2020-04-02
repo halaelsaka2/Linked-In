@@ -15,6 +15,12 @@ export class PostComponent implements OnInit {
   commentsNum = 0;
   isCommentHidden = true;
   isLiked = false;
+
+         d:Date ;
+         minutes:number;
+         hours :number;
+         rhours :number;
+         rminutes :number;
   constructor(private postService: PostsService) {}
 
   ngOnInit(): void {
@@ -45,10 +51,18 @@ export class PostComponent implements OnInit {
   addNewComment(event, newComment) {
     if (event.key === "Enter") {
       if (newComment !== "") {
-        console.log(event.target.value)
+         this.d = new Date();
+         this.minutes = this.d.getHours() * 60 + this.d.getMinutes();
+         this.hours = this.minutes / 60;
+         this.rhours = Math.floor(this.hours);
+         this.minutes = (this.hours - this.rhours) * 60;
+         this.rminutes = Math.round(this.minutes);
+        console.log(this.rhours + ":" + this.rminutes);
+        
         this.post.comments.push(newComment);
-        event.target.value="";
+        event.target.value=""
       }
+      // const post={...this.post,}
     }
   }
 }
