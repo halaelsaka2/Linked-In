@@ -37,7 +37,9 @@ export class ProfileComponent implements OnInit {
         firstName: myForm.value.userFirstName,
         lastName: myForm.value.userLastName
       },
-      profile: { headLine: myForm.value.headLine },
+
+      profile: { ...this.user.profile,
+        headLine: myForm.value.headLine},
       address: myForm.value.address
     };
     this.userService.updateUser(user);
@@ -47,7 +49,7 @@ export class ProfileComponent implements OnInit {
   onSubmitAbout(myForm2) {
     const user2: User = {
       ...this.user,
-      profile: { about: myForm2.value.aboutUser }
+      profile: {...this.user.profile, about: myForm2.value.aboutUser }
     };
     this.userService.updateUser(user2);
     this.isAboutFormClicked = true;
@@ -69,12 +71,17 @@ export class ProfileComponent implements OnInit {
   dispalyAddProfileForm() {
     this.isAddProfileClick = !this.isAddProfileClick;
   }
+  hideAddSkills(){
+    this.isAddSkillClicked = !this.isAddSkillClicked;
+  }
 
-  onSkillAdded(skill) {
-    this.user.profile.skills.push(skill.value)
-    skill.value = "";
-    console.log(this.user.profile.skills);
+  onSkillAdded(event,skill) {
+    if(event.key==="Enter" && skill.value !== ""){
 
+      this.user.profile.skills.push(skill.value)
+      skill.value = "";
+      console.log(this.user.profile.skills);
+    }
   }
   OnSkillDeleted(itm) {
     for (let i = 0; i < this.user.profile.skills.length; i++) {

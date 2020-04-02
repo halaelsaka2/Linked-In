@@ -23,7 +23,7 @@ export class UserSrevice implements OnInit {
       name: { firstName: "ahmed abd-elaziz", lastName: "abd elaziz" },
       profile: {
         headLine: "Front End developer ",
-        education: ["Faculty of Computer Science", "Information Technology Institute"],
+        education:"Information Technology Institute",
         profileImgPath: "../../../assets/images/ahmed.jpeg",
         about: "work for big company - ITI trainee - Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,  ",
         skills: ["C#", "OOP", "Java Script", "Angular", "React"]
@@ -37,7 +37,7 @@ export class UserSrevice implements OnInit {
       name: { firstName: "Hala Elsaka", lastName: "Elsaka" },
       profile: {
         headLine: "Full stack developer",
-        education: ["Faculty of Computer Science Menoufia University", "Information Technology Institute"],
+        education:"Information Technology Institute",
         profileImgPath: "../../../assets/images/hala.jpg",
 
         about: "worked for microsoft for three years - ITI trainee - Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, ",
@@ -52,7 +52,7 @@ export class UserSrevice implements OnInit {
       name: { firstName: "Manar Karam", lastName: "Karam" },
       profile: {
         headLine: "FrontEnd Web developer",
-        education: ["Faculty of Computers and Artificial Intelligence", "Information Technology Institute"],
+        education:"Information Technology Institute",
         profileImgPath: "../../../assets/images/Manar2.jpg",
         about: "Graduated From Benha University - Computer Science Faculty 2019 - ITI trainee - Willing to work as a frontend developer Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, ",
         skills: ["HTML", "CSS3", "SASS", "Java Script", "Angular", "React"]
@@ -66,7 +66,7 @@ export class UserSrevice implements OnInit {
       name: { firstName: "Aya Rabee", lastName: "Karam" },
       profile: {
         headLine: "UI developer",
-        education: ["Faculty of Computer Science Mansoura University", "Information Technology Institute"],
+        education:"Information Technology Institute",
         profileImgPath: "../../../assets/images/aya.png",
         about: "worked for Andela for three years - ITI trainee - Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, ",
         skills: ["Drawing", "PhotoShop", "Illustrator", "Frontend technologies"]
@@ -80,7 +80,7 @@ export class UserSrevice implements OnInit {
       name: { firstName: "Farah Mahmoud", lastName: "Mahmoud" },
       profile: {
         headLine: "Tester developer",
-        education: ["Faculty of Computer Science SuezCanal University", "Information Technology Institute"],
+        education:"Information Technology Institute",
         profileImgPath: "../../../assets/images/farah.jpg",
         about: "worked for microsoft for three years - ITI trainee - Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, ",
         skills: ["Frontend", "Angular", "JS", "ES6", "UI Design"]
@@ -94,7 +94,7 @@ export class UserSrevice implements OnInit {
       name: { firstName: "Eman Elsayed", lastName: "Elsayed" },
       profile: {
         headLine: "Manager at Google",
-        education: ["Faculty of Computer Science", "Information Technology Institute"],
+        education:"Information Technology Institute",
         profileImgPath: "../../../assets/images/eman.jpeg",
         about: "worked Now at Google - ITI trainee - Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, ",
         skills: ["C#", "Backend", "OOP", "React"]
@@ -108,7 +108,7 @@ export class UserSrevice implements OnInit {
       name: { firstName: "Eslam Taha", lastName: "Taha" },
       profile: {
         headLine: "UI/Ux developer",
-        education: ["Faculty of Computer Science Port Saied University", "Information Technology Institute"],
+        education:"Information Technology Institute",
         profileImgPath: "../../../assets/images/islam.jpeg",
         about: "worked for Vodafon For two years - ITI trainee - Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, ",
         skills: ["OOP", "DataBase", "C#", "Frontend"]
@@ -122,7 +122,7 @@ export class UserSrevice implements OnInit {
       name: { firstName: "Nada Ahmed", lastName: "Ahmed" },
       profile: {
         headLine: "Hr Manager",
-        education: ["Faculty of Science", "Information Technology Institute"],
+        education:"Information Technology Institute",
         profileImgPath: "../../../assets/images/nada.jpg",
         about: "worked for Google For two years - ITI trainee - Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,  ",
         skills: ["UI Development", "Angular", "JS", "HTML"]
@@ -136,7 +136,7 @@ export class UserSrevice implements OnInit {
       name: { firstName: "Mai Eltayeb", lastName: "Ahmed" },
       profile: {
         headLine: "CEO at Vodafon",
-        education: ["faculty of Computer scince Ismalia university", "Information Technology Institute"],
+        education:"Information Technology Institute",
         profileImgPath: "../../../assets/images/user.jpg",
         about: "worked for Microsoft For ten years - ITI trainee - Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, ",
         skills: ["JavaScript", "Windows Forms", "Database", "FrontEnd"]
@@ -150,7 +150,7 @@ export class UserSrevice implements OnInit {
       name: { firstName: "Bola Magdy", lastName: "Magdy" },
       profile: {
         headLine: "Photo shop",
-        education: ["faculty of Computer scince Ismalia university", ",Information Technology Institute"],
+        education:"Information Technology Institute",
         profileImgPath: "../../../assets/images/bola.jpeg",
         about: "worked for Microsoft For ten years - ITI trainee - Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, ",
         skills: ["PhotoShop", "Illustrator", "XD", "HTML", "CSS"]
@@ -164,7 +164,7 @@ export class UserSrevice implements OnInit {
       name: { firstName: "Salma Wagdy", lastName: "Wagdy" },
       profile: {
         headLine: "UI Developer",
-        education: ["faculty of BIS", "Information Technology Institute"],
+        education:"Information Technology Institute",
         profileImgPath: "../../../assets/images/salma.jpeg",
         about: "worked for Microsoft For ten years - ITI trainee - Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, ",
         skills: ["FrontEnd", "BackEnd", "C#", "OOP"]
@@ -178,7 +178,7 @@ export class UserSrevice implements OnInit {
       name: { firstName: "Youstina Lamie", lastName: "Lamie" },
       profile: {
         headLine: "3la bab allah",
-        education: ["faculty of CS SeuzCanal University", "Information Technology Institute"],
+        education:"Information Technology Institute",
         profileImgPath: "../../../assets/images/yl.jpg",
         about: "worked for Microsoft For ten years - ITI trainee - Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, ",
         skills: ["FrontEnd", "UI", "Js", "XMl"]

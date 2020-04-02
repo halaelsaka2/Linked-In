@@ -15,7 +15,7 @@
             <img class="profile__pictures__background" alt="cover" src="../../../assets/images/download.jpg">
 
           </div>
-          <img alt="profile" class="profile__pictures__photo" src="../../../assets/images/one.png">
+          <img alt="profile" class="profile__pictures__photo" src={{user.profile.profileImgPath}}>
         </div>
       </div>
 
@@ -35,18 +35,19 @@
           </div>
           <div class="headline">
             <h6>Headline<span>*</span></h6>
-            <textarea [(ngModel)]="user.profile.headLine" class="edit-form" name="headLine"></textarea>
+            <textarea [ngModel]="user.profile.headLine" class="edit-form" name="headLine"></textarea>
           </div>
           <div class="education">
             <h6>Education<span>*</span></h6>
-            <select class="edit-form">
+            <!-- <select class="edit-form">
               <option *ngFor="let item of user.profile.education; let i = index; ">{{item}}</option>
-            </select>
+            </select> -->
+            <input  class="edit-form" [ngModel]="user.profile.education" type="text" name="education"  />
           </div>
 
           <div class="education">
             <h6>Address<span>*</span></h6>
-            <input [(ngModel)]="user.address" name="address" />
+            <input class="edit-form" [(ngModel)]="user.address" name="address" />
           </div>
 
           <div class="edit-btn">
@@ -160,7 +161,7 @@
 
       </div>
       <div class="titles">
-        <p class="p1">{{user.profile.education[1]}}</p>
+        <p class="p1">{{user.profile.education}}</p>
 
         <p class="p2">Trainee</p>
       </div>
@@ -172,7 +173,7 @@
 
       </div>
       <div class="titles">
-        <p class="p1">{{user.profile.education[0]}}</p>
+        <p class="p1">Faculty Of computer science </p>
 
         <p class="p2">Grduate</p>
       </div>
@@ -212,7 +213,7 @@
         <div class="skill__search ">
           <form>
             <!-- <span class="fa fa-search form-control-feedback"></span> -->
-            <input #skill (keyup.enter)="onSkillAdded(skill)" placeholder="Skill (ex:Data Anaysis)" type="text"
+            <input #skill (keydown)="onSkillAdded($event,skill)" placeholder="Skill (ex:Data Anaysis)" type="text"
               class="skill__search__input" list="skillName">
             <!-- <datalist class="skill__search__options " id="skillName">
               <option value=" Adobe Photoshop">
@@ -228,7 +229,7 @@
             </div>
             <div class="skill__search__submit">
               <hr>
-              <button class="profile__editeAbout__editeContainer__body__button">Add</button>
+              <button class="profile__editeAbout__editeContainer__body__button" (click)="hideAddSkills()">Add</button>
             </div>
           </form>
         </div>
